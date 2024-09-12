@@ -52,9 +52,6 @@ Starts an asynchronous download of the content files that are associated with th
 
 A value from the [DownloadType](ne-wuapi-downloadtype.md) specifying the type of download to perform, full download or downloading only the update bootstrapper. 
 
-> [!NOTE]
-> Attempting to download the update bootstrapper for an update that does not contain one is a no-op.
-
 ### -param onProgressChanged
 
 An [IDownloadProgressChangedCallback](nn-wuapi-idownloadprogresschangedcallback.md) interface that is called periodically for download progress changes before download is complete.
@@ -84,13 +81,14 @@ An **HRESULT** including one of the following values:
 | WU_E_INVALID_OPERATION | The computer cannot access the update site. |
 | WU_E_NO_UPDATE | The Windows Update Agent (WUA) does not have  updates in the collection. |
 | WU_E_NOT_INITIALIZED | The Windows Update Agent (WUA) is not initialized. |
+| WU_E_NOT_SUPPORTED | The bootstrapper download was attempted on an update that doesn't contain one. |
 
 
 ## -remarks
 
- As an alternative to implementing the [IDownloadProgressChangedCallback](n-wuapi-idownloadprogresschangedcallback.md) interface, you can use a script to implement a callback routine of any identifier with DISPID 0 on an automation object. The type of the  *onProgressChanged* parameter is **IUnknown**.
+As an alternative to implementing the [IDownloadProgressChangedCallback](n-wuapi-idownloadprogresschangedcallback.md) interface, you can use a script to implement a callback routine of any identifier with DISPID 0 on an automation object. The type of the  *onProgressChanged* parameter is **IUnknown**.
 
-  As an alternative to implementing the [IDownloadCompletedCallback](nn-wuapi-idownloadcompletedcallback.md) interface, you can use a script to   implement a callback routine of any identifier with DISPID 0 on an automation object. The type of the *onCompleted* parameter is **IUnknown**.
+As an alternative to implementing the [IDownloadCompletedCallback](nn-wuapi-idownloadcompletedcallback.md) interface, you can use a script to   implement a callback routine of any identifier with DISPID 0 on an automation object. The type of the *onCompleted* parameter is **IUnknown**.
 
 This method returns **WU_E_INVALID_OPERATION** if the object that is implementing the interface is  locked down.
 

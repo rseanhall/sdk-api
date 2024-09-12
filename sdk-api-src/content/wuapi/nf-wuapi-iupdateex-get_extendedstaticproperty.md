@@ -44,7 +44,7 @@ helpviewer_keywords:
 
 ## -description
 
-Gets the value for the extended property being queried. This value is read-only.
+Gets the value of an extended static property being queried. This value is read-only.
 
 ## -parameters
 
@@ -65,7 +65,8 @@ An **HRESULT** including one of the following values:
 | Value | Description |
 |-------|-------------|
 | S_OK | Success. |
-| WU_E_NOT_SUPPORTED | The specified property is invalid or unsupported. |
+| E_INVALIDARG | The specified property is invalid. |
+| WU_E_NOT_SUPPORTED | The specified property or operation is unsupported. |
 
 ## -remarks
 

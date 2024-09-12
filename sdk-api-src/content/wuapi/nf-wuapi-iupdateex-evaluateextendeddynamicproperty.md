@@ -50,7 +50,7 @@ Evaluates the value of an extended dynamic property. This value is read-only.
 
 ### -param propertyName [in]
 
-TThe name of the dynamic extended property whose value should be evaluated. The following values are currently supported:
+The name of the dynamic extended property whose value should be evaluated. The following values are currently supported:
 
 * "DoesUpdateRequireReboot" - Evaluating this attribute requires the update bootstrapper to be downloaded at a minimum.
 
@@ -65,7 +65,8 @@ An **HRESULT** including one of the following values:
 | Value | Description |
 |-------|-------------|
 | S_OK | Success. |
-| WU_E_NOT_SUPPORTED | The specified property is invalid or the update doesn't contain the required update bootstrapper. |
+| E_INVALIDARG | The specified property is invalid. |
+| WU_E_NOT_SUPPORTED | The specified property is unsupported for reasons such as when the update doesn't contain the required update bootstrapper. |
 | WU_E_DM_NOTDOWNLOADED | The update contains an update bootstrapper, but it was not downloaded. |
 
 

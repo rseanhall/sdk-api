@@ -66,6 +66,7 @@ An **HRESULT** including one of the following values:
 | WU_E_INVALID_OPERATION | The computer cannot access the update site. |
 | WU_E_NO_UPDATE | The Windows Update Agent (WUA) does not have  updates in the collection. |
 | WU_E_NOT_INITIALIZED | The Windows Update Agent (WUA) is not initialized. |
+| WU_E_NOT_SUPPORTED | The bootstrapper download was attempted on an update that doesn't contain one. |
 
 ## -remarks
 
