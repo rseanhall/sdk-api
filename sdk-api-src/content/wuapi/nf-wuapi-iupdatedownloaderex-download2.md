@@ -53,7 +53,7 @@ Starts a synchronous download of the content files that are associated with the 
 A value from the [DownloadType](ne-wuapi-downloadtype.md) specifying the type of download to perform, full download or downloading only the update bootstrapper.
 
 > [!NOTE]
-> Attempting to download the update bootstrapper for an update that does not contain one will return the error code WU_E_NOT_SUPPORTED.
+> Attempting to download the update bootstrapper for an update that does not contain one will faile with the error code WU_E_NOT_SUPPORTED.
 
 ### -param retval
 
