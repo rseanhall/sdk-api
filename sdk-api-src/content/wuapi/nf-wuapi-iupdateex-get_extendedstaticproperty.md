@@ -44,7 +44,7 @@ helpviewer_keywords:
 
 ## -description
 
-Gets the value of an extended static property being queried. This value is read-only.
+Gets the value of an extended static property. This value is read-only.
 
 ## -parameters
 
