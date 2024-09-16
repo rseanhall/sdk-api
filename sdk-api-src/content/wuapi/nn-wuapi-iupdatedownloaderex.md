@@ -42,7 +42,7 @@ Downloads updates from the server.
 
 ## -remarks
 
-This interface inherits from [IUpdateDownloader](nn-wuapi-iupdatedownloaderex.md).
+This interface inherits from [IUpdateDownloader](nn-wuapi-iupdatedownloader.md).
 
 ## -see-also
 
