@@ -233,7 +233,6 @@ The
 <li>Console input</li>
 <li>Event</li>
 <li>Memory resource notification</li>
-<li>Mutex</li>
 <li>Process</li>
 <li>Semaphore</li>
 <li>Thread</li>
