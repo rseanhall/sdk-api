@@ -6,7 +6,7 @@ helpviewer_keywords: ["QueryUnbiasedInterruptTimePrecise","QueryUnbiasedInterrup
 old-location: base\queryunbiasedinterrupttimeprecise.htm
 tech.root: winprog
 ms.assetid: FADFC168-A3CF-4676-9B6E-7A4028049423
-ms.date: 12/05/2018
+ms.date: 09/26/2024
 ms.keywords: QueryUnbiasedInterruptTimePrecise, QueryUnbiasedInterruptTimePrecise function, base.queryunbiasedinterrupttimeprecise, realtimeapiset/QueryUnbiasedInterruptTimePrecise
 req.header: realtimeapiset.h
 req.include-header: 
@@ -22,7 +22,7 @@ req.max-support:
 req.namespace: 
 req.assembly: 
 req.type-library: 
-req.lib: Kernel32.lib
+req.lib: Mincore.lib
 req.dll: Kernel32.dll
 req.irql: 
 targetos: Windows
