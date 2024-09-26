@@ -263,8 +263,8 @@ The first parameter, <i>lpApplicationName</i>, can be <b>NULL</b>, in which case
 
 
 ``` syntax
-	LPTSTR szCmdline = _tcsdup(TEXT("C:\\Program Files\\MyApp -L -S"));
-	CreateProcess(NULL, szCmdline, /* ... */);
+    LPTSTR szCmdline = _tcsdup(TEXT("C:\\Program Files\\MyApp -L -S"));
+    CreateProcess(NULL, szCmdline, /* ... */);
 ```
 
 If a malicious user were to create an application called "Program.exe" on a system, any program that incorrectly calls 
@@ -274,8 +274,8 @@ To avoid this problem, do not pass <b>NULL</b> for <i>lpApplicationName</i>. If 
 
 
 ``` syntax
-	LPTSTR szCmdline[] = _tcsdup(TEXT("\"C:\\Program Files\\MyApp\" -L -S"));
-	CreateProcess(NULL, szCmdline, /*...*/);
+    LPTSTR szCmdline[] = _tcsdup(TEXT("\"C:\\Program Files\\MyApp\" -L -S"));
+    CreateProcess(NULL, szCmdline, /*...*/);
 ```
 
 
