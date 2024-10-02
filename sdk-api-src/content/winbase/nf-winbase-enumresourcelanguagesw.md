@@ -82,7 +82,7 @@ The name of the resource for which the language is being enumerated. Alternately
 
 Type: <b>ENUMRESLANGPROC</b>
 
-A pointer to the callback function to be called for each enumerated resource language. For more information, see [EnumResLangProcW](nc-libloaderapi-enumreslangprocw.md).
+A pointer to the callback function to be called for each enumerated resource language. For more information, see [EnumResLangProcW](/windows/win32/api/libloaderapi/nc-libloaderapi-enumreslangprocw).
 
 ### -param lParam [in]
 
@@ -133,7 +133,7 @@ For an example, see <a href="/windows/desktop/menurc/using-resources">Creating a
 
 
 
-<a href="nc-libloaderapi-enumreslangprocw.md">EnumResLangProc</a>
+<a href="/windows/win32/api/libloaderapi/nc-libloaderapi-enumreslangprocw">EnumResLangProc</a>
 
 
 

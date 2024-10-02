@@ -230,7 +230,7 @@ If a file has a long file name, the complete name appears in the <b>cFileName</b
     value. This remains true for all subsequent calls to the 
     <a href="/windows/desktop/api/fileapi/nf-fileapi-findnextfilea">FindNextFile</a> function. As an alternative method of 
     retrieving the 8.3 format version of a file name, you can use the 
-    <a href="/windows/desktop/api/fileapi/nf-fileapi-getshortpathnamea">GetShortPathName</a> function. For more information about
+    <a href="/windows/win32/api/fileapi/nf-fileapi-getshortpathnamew">GetShortPathName</a> function. For more information about
     file names, see <a href="/windows/desktop/FileIO/naming-a-file">File Names, Paths, and Namespaces</a>.
 
 Not all file systems can record creation and last access times, and not all file systems record them in the 
@@ -284,4 +284,4 @@ Not all file systems can record creation and last access times, and not all file
 
 
 
-<a href="/windows/desktop/api/fileapi/nf-fileapi-getshortpathnamea">GetShortPathName</a>
+<a href="/windows/win32/api/fileapi/nf-fileapi-getshortpathnamew">GetShortPathName</a>
