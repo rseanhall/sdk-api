@@ -1,7 +1,7 @@
 ---
 UID: NF:fileapi.GetTempPath2A
 title: GetTempPath2A
-ms.date: 08/14/2024
+ms.date: 10/03/2024
 ms.topic: language-reference
 targetos: Windows
 description: Retrieves the path of the directory designated for temporary files, based on the privileges of the calling process. (ANSI)
@@ -20,7 +20,7 @@ req.lib: Kernel32.lib
 req.max-support: 
 req.namespace: 
 req.redist: 
-req.target-min-winverclnt: Windows 10 Build 20348
+req.target-min-winverclnt: Windows 11 Build 22000
 req.target-min-winversvr: Windows Server Build 20348
 req.target-type: 
 req.type-library: 
