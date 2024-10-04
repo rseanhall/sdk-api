@@ -1,10 +1,10 @@
 ---
 UID: NS:dxcore_interface.DXCoreProcessMemoryQueryInput
-tech.root: 
 title: DXCoreProcessMemoryQueryInput
-ms.date: 
+description: For a memory query, represents physical adapter index, and memory type (dedicated or shared), and process ID.
+ms.date: 10/04/2024
+tech.root: dxcore
 targetos: Windows
-description: 
 prerelease: false
 req.construct-type: structure
 req.ddi-compliance: 
@@ -41,15 +41,22 @@ helpviewer_keywords:
 
 ## -description
 
+For a memory query, represents physical adapter index, and memory type (dedicated or shared), and process ID.
+
 ## -struct-fields
 
 ### -field physicalAdapterIndex
 
+A physical adapter index.
+
 ### -field memoryType
 
+A [DXCoreMemoryType](./ne-dxcore_interface-dxcorememorytype.md) struct indicating a memory type (dedicated or shared).
+
 ### -field processId
+
+A process ID.
 
 ## -remarks
 
 ## -see-also
-

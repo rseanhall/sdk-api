@@ -1,10 +1,10 @@
 ---
 UID: NE:dxcore_interface.DXCoreMemoryType
-tech.root: 
 title: DXCoreMemoryType
-ms.date: 
+description: Defines constants that specify memory type.
+ms.date: 09/30/2024
+tech.root: dxcore
 targetos: Windows
-description: 
 prerelease: false
 req.construct-type: enumeration
 req.ddi-compliance: 
@@ -37,13 +37,18 @@ helpviewer_keywords:
 
 ## -description
 
+Defines constants that specify memory type.
+
 ## -enum-fields
 
 ### -field Dedicated
 
+Specifies dedicated memory.
+
 ### -field Shared
+
+Specifies shared memory.
 
 ## -remarks
 
 ## -see-also
-

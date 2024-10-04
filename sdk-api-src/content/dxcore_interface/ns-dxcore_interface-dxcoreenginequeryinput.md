@@ -1,10 +1,10 @@
 ---
 UID: NS:dxcore_interface.DXCoreEngineQueryInput
-tech.root: 
 title: DXCoreEngineQueryInput
-ms.date: 
+description: For an engine query, represents physical adapter index, and/or engine ID, and/or process handle.
+ms.date: 10/03/2024
+tech.root: dxcore
 targetos: Windows
-description: 
 prerelease: false
 req.construct-type: structure
 req.ddi-compliance: 
@@ -41,13 +41,18 @@ helpviewer_keywords:
 
 ## -description
 
+For an engine query, represents physical adapter index, and/or engine ID, and/or process handle.
+
 ## -struct-fields
 
 ### -field adapterEngineIndex
 
+A [DXCoreAdapterEngineIndex](./ns-dxcore_interface-dxcoreadapterengineindex.md) struct containing the physical adapter index and the engine ID.
+
 ### -field processId
+
+A process ID.
 
 ## -remarks
 
 ## -see-also
-

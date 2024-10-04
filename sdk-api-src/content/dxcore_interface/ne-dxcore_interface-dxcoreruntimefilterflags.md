@@ -1,10 +1,10 @@
 ---
 UID: NE:dxcore_interface.DXCoreRuntimeFilterFlags
-tech.root: 
 title: DXCoreRuntimeFilterFlags
-ms.date: 
+description: Defines constants that specify runtime filter flags.
+ms.date: 09/30/2024
+tech.root: dxcore
 targetos: Windows
-description: 
 prerelease: false
 req.construct-type: enumeration
 req.ddi-compliance: 
@@ -37,15 +37,22 @@ helpviewer_keywords:
 
 ## -description
 
+Defines constants that specify runtime filter flags.
+
 ## -enum-fields
 
 ### -field None
 
+Specifies no filter.
+
 ### -field D3D11
 
+Specifies Direct3D 11.
+
 ### -field D3D12
+
+Specifies Direct3D 12.
 
 ## -remarks
 
 ## -see-also
-

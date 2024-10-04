@@ -1,10 +1,10 @@
 ---
 UID: NE:dxcore_interface.DXCoreWorkload
-tech.root: 
 title: DXCoreWorkload
-ms.date: 
+description: Defines constants that specify a workload type.
+ms.date: 09/30/2024
+tech.root: dxcore
 targetos: Windows
-description: 
 prerelease: false
 req.construct-type: enumeration
 req.ddi-compliance: 
@@ -37,17 +37,26 @@ helpviewer_keywords:
 
 ## -description
 
+Defines constants that specify a workload type.
+
 ## -enum-fields
 
 ### -field Graphics
 
+Specifies a graphics workload.
+
 ### -field Compute
+
+Specifies a compute workload.
 
 ### -field Media
 
+Specifies a media workload.
+
 ### -field MachineLearning
+
+Specifies a machine learning workload.
 
 ## -remarks
 
 ## -see-also
-

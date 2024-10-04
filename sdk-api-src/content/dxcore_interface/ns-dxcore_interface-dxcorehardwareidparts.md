@@ -1,10 +1,10 @@
 ---
 UID: NS:dxcore_interface.DXCoreHardwareIDParts
-tech.root: 
 title: DXCoreHardwareIDParts
-ms.date: 
+description: TBD
+ms.date: 10/04/2024
+tech.root: dxcore
 targetos: Windows
-description: 
 prerelease: false
 req.construct-type: structure
 req.ddi-compliance: 
@@ -41,19 +41,28 @@ helpviewer_keywords:
 
 ## -description
 
+TBD
+
 ## -struct-fields
 
 ### -field vendorID
 
+TBD
+
 ### -field deviceID
+
+TBD
 
 ### -field subSystemID
 
+TBD
+
 ### -field subVendorID
+
+TBD
 
 ### -field revisionID
 
 ## -remarks
 
 ## -see-also
-

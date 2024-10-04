@@ -1,10 +1,10 @@
 ---
 UID: NS:dxcore_interface.DXCoreEngineNamePropertyOutput
-tech.root: 
 title: DXCoreEngineNamePropertyOutput
-ms.date: 
-targetos: Windows
 description: 
+ms.date: 10/03/2024
+tech.root: dxcore
+targetos: Windows
 prerelease: false
 req.construct-type: structure
 req.ddi-compliance: 
@@ -41,11 +41,16 @@ helpviewer_keywords:
 
 ## -description
 
+Represents an engine name string length so that you can correctly allocate [DXCoreEngineNamePropertyInput::engineName](./ns-dxcore_interface-dxcoreenginenamepropertyinput.md).
+
 ## -struct-fields
 
 ### -field engineNameLength
+
+The engine name string length
 
 ## -remarks
 
 ## -see-also
 
+* [DXCoreEngineNamePropertyInput](./ns-dxcore_interface-dxcoreenginenamepropertyinput.md)

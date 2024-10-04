@@ -1,10 +1,10 @@
 ---
 UID: NS:dxcore_interface.DXCoreAdapterProcessSetQueryOutput
-tech.root: 
 title: DXCoreAdapterProcessSetQueryOutput
-ms.date: 
+description: Represents the number of processes (PIDs) running on the adapter.
+ms.date: 10/03/2024
+tech.root: dxcore
 targetos: Windows
-description: 
 prerelease: false
 req.construct-type: structure
 req.ddi-compliance: 
@@ -41,13 +41,20 @@ helpviewer_keywords:
 
 ## -description
 
+Represents the number of processes (PIDs) running on the adapter. Also see [DXCoreAdapterProcessSetQueryInput](./ns-dxcore_interface-dxcoreadapterprocesssetqueryinput.md).
+
 ## -struct-fields
 
 ### -field processesWritten
 
+The number of PIDs actually written into the pre-allocated array in [DXCoreAdapterProcessSetQueryInput::processIds](./ns-dxcore_interface-dxcoreadapterprocesssetqueryinput.md).
+
 ### -field processesTotal
+
+The total number of PIDs available to write.
 
 ## -remarks
 
 ## -see-also
 
+* [DXCoreAdapterProcessSetQueryInput](./ns-dxcore_interface-dxcoreadapterprocesssetqueryinput.md)

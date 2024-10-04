@@ -1,10 +1,10 @@
 ---
 UID: NS:dxcore_interface.DXCoreAdapterEngineIndex
-tech.root: 
 title: DXCoreAdapterEngineIndex
-ms.date: 
+description: Represents the physical adapter index and the engine index.
+ms.date: 09/30/2024
+tech.root: dxcore
 targetos: Windows
-description: 
 prerelease: false
 req.construct-type: structure
 req.ddi-compliance: 
@@ -41,13 +41,18 @@ helpviewer_keywords:
 
 ## -description
 
+Represents the physical adapter index and the engine ID.
+
 ## -struct-fields
 
 ### -field physicalAdapterIndex
 
+The physical adapter index.
+
 ### -field engineIndex
+
+The engine ID.
 
 ## -remarks
 
 ## -see-also
-

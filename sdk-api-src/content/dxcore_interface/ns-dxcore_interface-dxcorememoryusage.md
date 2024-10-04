@@ -1,10 +1,10 @@
 ---
 UID: NS:dxcore_interface.DXCoreMemoryUsage
-tech.root: 
 title: DXCoreMemoryUsage
-ms.date: 
+description: For a memory query, represents the returned values of committed memory and resident memory on the specified memory segments.
+ms.date: 10/04/2024
+tech.root: dxcore
 targetos: Windows
-description: 
 prerelease: false
 req.construct-type: structure
 req.ddi-compliance: 
@@ -41,13 +41,18 @@ helpviewer_keywords:
 
 ## -description
 
+For a memory query, represents the returned values of committed memory and resident memory on the specified memory segments.
+
 ## -struct-fields
 
 ### -field committed
 
+The committed memory.
+
 ### -field resident
+
+The resident memory.
 
 ## -remarks
 
 ## -see-also
-

@@ -1,10 +1,10 @@
 ---
 UID: NS:dxcore_interface.DXCoreEngineQueryOutput
-tech.root: 
 title: DXCoreEngineQueryOutput
-ms.date: 
+description: For an engine query, represents running time and/or whether or not the query succeeded.
+ms.date: 10/03/2024
+tech.root: dxcore
 targetos: Windows
-description: 
 prerelease: false
 req.construct-type: structure
 req.ddi-compliance: 
@@ -41,13 +41,18 @@ helpviewer_keywords:
 
 ## -description
 
+For an engine query, represents running time and/or whether or not the query succeeded.
+
 ## -struct-fields
 
 ### -field runningTime
 
+The engine running time.
+
 ### -field processQuerySucceeded
+
+A Boolean value indicating whether or not the query succeeded.
 
 ## -remarks
 
 ## -see-also
-

@@ -1,10 +1,10 @@
 ---
 UID: NS:dxcore_interface.DXCoreFrequencyQueryOutput
-tech.root: 
 title: DXCoreFrequencyQueryOutput
-ms.date: 
+description: Represents the results of a query about the clock frequency of an engine.
+ms.date: 10/04/2024
+tech.root: dxcore
 targetos: Windows
-description: 
 prerelease: false
 req.construct-type: structure
 req.ddi-compliance: 
@@ -41,15 +41,22 @@ helpviewer_keywords:
 
 ## -description
 
+Represents the results of a query about the clock frequency of an engine.
+
 ## -struct-fields
 
 ### -field frequency
 
+the clock frequency of an engine (in Hertz).
+
 ### -field maxFrequency
 
+the maximum frequency for an engine (in Hertz), without overclocking.
+
 ### -field maxOverclockedFrequency
+
+The maximum frequency for an engine (in Hertz), with overclocking.
 
 ## -remarks
 
 ## -see-also
-

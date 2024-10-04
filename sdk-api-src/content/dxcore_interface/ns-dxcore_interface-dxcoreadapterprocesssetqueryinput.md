@@ -1,10 +1,10 @@
 ---
 UID: NS:dxcore_interface.DXCoreAdapterProcessSetQueryInput
-tech.root: 
 title: DXCoreAdapterProcessSetQueryInput
-ms.date: 
+description: Represents an array of processes (PIDs) running on the adapter.
+ms.date: 10/02/2024
+tech.root: dxcore
 targetos: Windows
-description: 
 prerelease: false
 req.construct-type: structure
 req.ddi-compliance: 
@@ -41,13 +41,20 @@ helpviewer_keywords:
 
 ## -description
 
+Represents an array of processes (PIDs) running on the adapter. Also see [DXCoreAdapterProcessSetQueryOutput](./ns-dxcore_interface-dxcoreadapterprocesssetqueryoutput.md).
+
 ## -struct-fields
 
 ### -field arraySize
 
+The number of elements in *processIds*.
+
 ### -field processIds
+
+An array which, on return, contains the IDs of the processes running on the adapter.
 
 ## -remarks
 
 ## -see-also
 
+* [DXCoreAdapterProcessSetQueryOutput](./ns-dxcore_interface-dxcoreadapterprocesssetqueryoutput.md)

@@ -1,10 +1,10 @@
 ---
 UID: NS:dxcore_interface.DXCoreProcessMemoryQueryOutput
-tech.root: 
 title: DXCoreProcessMemoryQueryOutput
-ms.date: 
+description: For a process memory query, represents process memory usage and/or whether or not the query succeeded.
+ms.date: 10/04/2024
+tech.root: dxcore
 targetos: Windows
-description: 
 prerelease: false
 req.construct-type: structure
 req.ddi-compliance: 
@@ -41,13 +41,18 @@ helpviewer_keywords:
 
 ## -description
 
+For a process memory query, represents process memory usage and/or whether or not the query succeeded.
+
 ## -struct-fields
 
 ### -field memoryUsage
 
+Process memory usage.
+
 ### -field processQuerySucceeded
+
+A Boolean value indicating whether or not the query succeeded.
 
 ## -remarks
 
 ## -see-also
-
