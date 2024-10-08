@@ -89,7 +89,7 @@ OIDs are treated in the same manner as that used to convert XCN_CERT_X500_NAME_S
 
 <pre><code class="lang-syntax">
 &lt;CN&gt;cart.contoso.com&lt;/CN&gt;
-&lt;OU&gt;Terms of use at www.verisign.com/rpa (c)00&lt;/OU&gt;
+&lt;OU&gt;Terms of use at www.verisign.com (c)00&lt;/OU&gt;
 &lt;OU rDNAttribute="true"&gt;IT Operations&lt;/OU&gt;
 &lt;O&gt;Contoso.com&lt;/O&gt;
 &lt;L&gt;New York&lt;/L&gt;
