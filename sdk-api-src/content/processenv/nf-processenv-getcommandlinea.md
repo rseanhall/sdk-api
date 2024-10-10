@@ -68,7 +68,7 @@ The lifetime of the returned value is managed by the system, applications should
 
 Console processes can use the *argc* and *argv* arguments of the **main** or **wmain** functions by implementing those as the program entry point.
 
-GUI processes can use the *lpCmdLine* argument of the <a href="/windows/win32/api/winbase/nf-winbase-winmain">WinMain</a> or wWinMain functions by implementing those as the program entry point.
+GUI processes can use the *lpCmdLine* argument of the [WinMain or wWinMain functions](../winbase/nf-winbase-winmain.md) by implementing those as the program entry point.
 
 To convert the command line to an *argv* style array of strings, pass the result from GetCommandLineA to [CommandLineToArgvW](../shellapi/nf-shellapi-commandlinetoargvw.md).
 
