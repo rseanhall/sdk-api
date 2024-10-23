@@ -6,7 +6,7 @@ helpviewer_keywords: ["ListView_SetGroupState","ListView_SetGroupState macro [Wi
 old-location: controls\ListView_SetGroupState.htm
 tech.root: Controls
 ms.assetid: VS|Controls|~\controls\listview\macros\listview_setgroupstate.htm
-ms.date: 12/05/2018
+ms.date: 10/21/2024
 ms.keywords: ListView_SetGroupState, ListView_SetGroupState macro [Windows Controls], _shell_ListView_SetGroupState, _shell_ListView_SetGroupState_cpp, commctrl/ListView_SetGroupState, controls.ListView_SetGroupState, controls._shell_ListView_SetGroupState
 req.header: commctrl.h
 req.include-header: 
@@ -46,6 +46,23 @@ api_name:
 ---
 
 # ListView_SetGroupState macro
+
+## -syntax
+
+```cpp
+LRESULT ListView_SetGroupState(
+  [in] HWND hwnd,
+  [in] UINT dwGroupId,
+  [in] UINT dwMask,
+  [in] UINT dwState
+);
+```
+
+## -returns
+
+Type: **[LRESULT](/windows/desktop/winprog/windows-data-types)**
+
+Returns the ID of the group (<b>iGroupId</b>) if successful, or -1 otherwise.
 
 
 ## -description

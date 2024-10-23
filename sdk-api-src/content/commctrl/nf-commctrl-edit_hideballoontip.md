@@ -6,7 +6,7 @@ helpviewer_keywords: ["Edit_HideBalloonTip","Edit_HideBalloonTip macro [Windows 
 old-location: controls\Edit_HideBalloonTip.htm
 tech.root: Controls
 ms.assetid: VS|Controls|~\controls\editcontrols\editcontrolreference\editcontrolmacros\edit_hideballoontip.htm
-ms.date: 12/05/2018
+ms.date: 10/21/2024
 ms.keywords: Edit_HideBalloonTip, Edit_HideBalloonTip macro [Windows Controls], _win32_Edit_HideBalloonTip, _win32_Edit_HideBalloonTip_cpp, commctrl/Edit_HideBalloonTip, controls.Edit_HideBalloonTip, controls._win32_Edit_HideBalloonTip
 req.header: commctrl.h
 req.include-header: 
@@ -46,6 +46,20 @@ api_name:
 ---
 
 # Edit_HideBalloonTip macro
+
+## -syntax
+
+```cpp
+BOOL Edit_HideBalloonTip(
+   HWND hwnd
+);
+```
+
+## -returns
+
+Type: **[BOOL](/windows/desktop/winprog/windows-data-types)**
+
+If the macro succeeds, it returns <b>TRUE</b>. Otherwise it returns <b>FALSE</b>.
 
 
 ## -description
