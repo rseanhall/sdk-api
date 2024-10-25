@@ -6,7 +6,7 @@ helpviewer_keywords: ["CreateRecognizer","CreateRecognizer function [Tablet PC]"
 old-location: tablet\createrecognizer.htm
 tech.root: tablet
 ms.assetid: b4a5517e-d818-4d4d-a06f-3e0dcbcc52c6
-ms.date: 10/15/2024
+ms.date: 10/25/2024
 ms.keywords: CreateRecognizer, CreateRecognizer function [Tablet PC], b4a5517e-d818-4d4d-a06f-3e0dcbcc52c6, recapis/CreateRecognizer, tablet.createrecognizer
 req.header: recapis.h
 req.include-header: 
@@ -40,9 +40,11 @@ topic_type:
  - APIRef
  - kbSyntax
 api_type:
- - HeaderDef
+ - DllExport 
 api_location:
  - recapis.h
+ - inkobjcore.dll
+ - mshwgst.dll
 api_name:
  - CreateRecognizer
 ---
