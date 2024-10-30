@@ -4,7 +4,8 @@
     "setupapi.h",
     "cfg.h",
     "cfgmgr32.h",
-    "newdev.h"
+    "newdev.h",
+    "devquerydef.h"
   ],
   "displayName": "Device and Driver Installation Reference"
 }

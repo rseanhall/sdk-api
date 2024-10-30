@@ -17,6 +17,7 @@ To develop Device and Driver Installation Reference, you need these headers:
 
  * [cfg.h](../cfg/index.md)
  * [cfgmgr32.h](../cfgmgr32/index.md)
+ * [devquerydef.h](../devquerydef/index.md)
  * [newdev.h](../newdev/index.md)
 
 For programming guidance for this technology, see:
