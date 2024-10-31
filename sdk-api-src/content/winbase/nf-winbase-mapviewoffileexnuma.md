@@ -131,7 +131,7 @@ Using bitwise OR, you can combine the values above with these values.
 </td>
 <td width="60%">
 A copy-on-write view of the file is mapped. The file mapping object must have been created with 
-         <b>PAGE_READONLY</b>, <b>PAGE_READ_EXECUTE</b>, 
+         <b>PAGE_READONLY</b>, <b>PAGE_EXECUTE_READ</b>, 
          <b>PAGE_WRITECOPY</b>, <b>PAGE_EXECUTE_WRITECOPY</b>, 
          <b>PAGE_READWRITE</b>, or <b>PAGE_EXECUTE_READWRITE</b> protection.
 
