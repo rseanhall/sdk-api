@@ -1,9 +1,9 @@
 ---
-UID: NF:processenv.SetEnvironmentStringsW
-title: SetEnvironmentStringsW
-description: The SetEnvironmentStringsW (Unicode) function (processenv.h) sets the environment strings of the calling process for the current process.
+UID: NF:processenv.SetEnvironmentStringsA
+title: SetEnvironmentStringsA
+description: The SetEnvironmentStringsA function (processenv.h) sets the environment strings of the calling process for the current process.
 ms.date: 10/31/2024
-ms.keywords: SetEnvironmentStringsW
+ms.keywords: SetEnvironmentStringsA
 targetos: Windows
 req.assembly: 
 req.construct-type: function
@@ -25,8 +25,8 @@ req.type-library:
 req.umdf-ver: 
 req.unicode-ansi: 
 f1_keywords:
- - SetEnvironmentStringsW
- - processenv/SetEnvironmentStringsW
+ - SetEnvironmentStringsA
+ - processenv/SetEnvironmentStringsA
 dev_langs:
  - c++
 topic_type:
@@ -39,7 +39,7 @@ api_location:
  - kernelbase.dll
  - api-ms-win-downlevel-kernel32-l1-1-0.dll
 api_name:
- - SetEnvironmentStringsW
+ - SetEnvironmentStringsA
 ---
 
 ## -description
