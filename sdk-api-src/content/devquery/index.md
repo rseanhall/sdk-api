@@ -1,8 +1,8 @@
 ---
-UID: NA:devquerydef
+UID: NA:devquery
 tech.root: devinst
-title: devquerydef
-ms.date: 10/30/2024
+title: devquery
+ms.date: 10/31/2024
 targetos: Windows
 description: This header is used by Device and Driver Installation Reference.
 prerelease: false
@@ -10,7 +10,7 @@ req.assembly:
 req.construct-type: apiset
 req.ddi-compliance: 
 req.dll: 
-req.header: devquerydef.h
+req.header: devquery.h
 req.idl: 
 req.include-header: 
 req.irql: 
@@ -31,16 +31,16 @@ topic_type:
 api_type:
  - HeaderDef
 api_location:
- - devquerydef.h
+ - devquery.h
 api_name:
- - devquerydef
+ - devquery
 f1_keywords:
- - devquerydef
- - devquerydef/devquerydef
+ - devquery
+ - devquery/devquery
 dev_langs:
  - c++
 helpviewer_keywords:
- - devquerydef
+ - devquery
 ---
 
 ## -description
@@ -54,3 +54,4 @@ This header is used by Device and Driver Installation Reference. For more inform
 ## -see-also
 
 ## -examples
+

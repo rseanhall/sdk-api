@@ -1,6 +1,6 @@
 ---
 UID: NE:devquerydef._DEV_OBJECT_TYPE
-tech.root: 
+tech.root: devinst
 title: DEV_OBJECT_TYPE
 ms.date: 10/30/2024
 targetos: Windows

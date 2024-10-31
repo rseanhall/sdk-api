@@ -1,10 +1,10 @@
 ---
 UID: NS:devquerydef._DEV_OBJECT
-tech.root: 
+tech.root: devinst
 title: DEV_OBJECT
-ms.date: 
+ms.date: 10/31/2024
 targetos: Windows
-description: 
+description: Contains information that represents a device object.
 prerelease: false
 req.construct-type: structure
 req.ddi-compliance: 
@@ -47,15 +47,25 @@ helpviewer_keywords:
 
 ## -description
 
+Contains information that represents a device object.
+
 ## -struct-fields
 
 ### -field ObjectType
 
+A value from the [DEV_OBJECT_TYPE](ne-devquerydef-dev_object_type.md) enumeration that specifies the type of this device object.
+
 ### -field pszObjectId
+
+The string that is the unique identifier for this particular object among objects of the same type.
 
 ### -field cPropertyCount
 
+The count of [DEVPROPERTY](/windows-hardware/drivers/install/devproperty) structures pointed to by *pProperties*.
+
 ### -field pProperties
+
+A pointer to an array of 0 or more **DEVPROPERTY** structures.
 
 ## -remarks
 
