@@ -2,9 +2,9 @@
 UID: NS:devfiltertypes._DEVPROP_FILTER_EXPRESSION
 tech.root: devinst
 title: DEVPROP_FILTER_EXPRESSION
-ms.date: 
+ms.date: 11/04/2024
 targetos: Windows
-description: 
+description: Describes a filter expression used to query filter results.
 prerelease: false
 req.construct-type: structure
 req.ddi-compliance: 
@@ -47,13 +47,40 @@ helpviewer_keywords:
 
 ## -description
 
+Describes a filter expression used to query filter results.
+
 ## -struct-fields
 
 ### -field Operator
 
+A [DEVPROP_OPERATOR](ne-devfiltertypes-devprop_operator.md) value describing the operator for this filter expression element.
+
 ### -field Property
 
+The [DEVPROPERTY](/windows-hardware/drivers/install/devproperty) structure that should be associated with the filter operation described by the *Operator* member
+
 ## -remarks
+
+**DEVPROP_FILTER_EXPRESSION** structures can be combined in an array to create a complex filter expression for use in query creation, such as through the [DevCreateObjectQuery](../devquery/nf-devquery-devcreateobjectquery.md) function.
+
+The following example demonstrates the initialization of a **DEVPROP_FILTER_EXPRESSION**.
+
+```cpp
+ULONG targetValue = 5;
+DEVPROP_BOOLEAN devpropTrue = DEVPROP_TRUE;
+const DEVPROP_FILTER_EXPRESSION filter[] = {
+    {DEVPROP_OPERATOR_OR_OPEN, {0}},
+        {DEVPROP_OPERATOR_EQUALS, {{DEVPKEY_Property1, DEVPROP_STORE_SYSTEM, NULL}, DEVPROP_TYPE_UINT32, (ULONG)(sizeof(targetValue)), (PVOID)&targetValue}},
+        {DEVPROP_OPERATOR_EQUALS, {{DEVPKEY_Property2, DEVPROP_STORE_SYSTEM, NULL}, DEVPROP_TYPE_BOOLEAN, (ULONG)(sizeof(devpropTrue)), (PVOID)&devpropTrue}},
+    {DEVPROP_OPERATOR_OR_CLOSE, {0}}
+};
+
+```
+
+If the above filter expression was used in a query, the query’s result set would consist of all objects of the appropriate type that have a *DEVPKEY_Property1* property equal to 5 OR that have a *DEVPKEY_Property2* property equal to **DEVPROP_TRUE**. 
+
+If a filter expression does not contain any logical operators specifying how to combine different comparison clauses, then the filter expression assumes that a logical AND should be performed.
+
 
 ## -see-also
 
