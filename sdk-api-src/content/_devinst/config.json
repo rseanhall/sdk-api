@@ -6,7 +6,8 @@
     "cfgmgr32.h",
     "newdev.h",
     "devquerydef.h",
-    "devquery.h"
+    "devquery.h",
+    "devfiltertypes.h"
   ],
   "displayName": "Device and Driver Installation Reference"
 }
