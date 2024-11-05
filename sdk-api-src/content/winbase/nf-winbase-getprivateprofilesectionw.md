@@ -73,9 +73,6 @@ A pointer to a buffer that receives the key name and value pairs associated with
 
 The size of the buffer pointed to by the <i>lpReturnedString</i> parameter, in characters. 
 
-
-The maximum profile section size is 32,767 characters.
-
 ### -param lpFileName [in]
 
 The name of the initialization file. If this parameter does not contain a full path to the file, the system searches for the file in the Windows directory.
