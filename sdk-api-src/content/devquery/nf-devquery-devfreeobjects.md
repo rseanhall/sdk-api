@@ -1,10 +1,10 @@
 ---
-UID: NF:devquery.DevCloseObjectQuery
+UID: NF:devquery.DevFreeObjects
 tech.root: devinst
-title: DevCloseObjectQuery
-ms.date: 11/05/2024
+title: DevFreeObjects
+ms.date: 11/06/2024
 targetos: Windows
-description: Closes a device query handle.
+description: Frees DEV_OBJECT structures allocated by a call to DevGetObjects or DevGetObjectsEx.
 prerelease: false
 req.assembly: 
 req.construct-type: function
@@ -15,7 +15,7 @@ req.idl:
 req.include-header: 
 req.irql: 
 req.kmdf-ver: 
-req.lib: onecore.lib
+req.lib: Onecore.lib
 req.max-support: 
 req.namespace: 
 req.redist: 
@@ -32,25 +32,29 @@ api_type:
 api_location:
  - Cfgmgr32.dll
 api_name:
- - DevCloseObjectQuery
+ - DevFreeObjects
 f1_keywords:
- - DevCloseObjectQuery
- - devquery/DevCloseObjectQuery
+ - DevFreeObjects
+ - devquery/DevFreeObjects
 dev_langs:
  - c++
 helpviewer_keywords:
- - DevCloseObjectQuery
+ - DevFreeObjects
 ---
 
 ## -description
 
-Closes a device query handle.
+Frees [DEV_OBJECT](../devquerydef/ns-devquerydef-dev_object.md) structures allocated by a call to [DevGetObjects](nf-devquery-devgetobjects.md) or [DevGetObjectsEx](nf-devquery-devgetobjectsex.md).
 
 ## -parameters
 
-### -param hDevQuery [in]
+### -param cObjectCount [in]
 
-A query handle returned from one of the query creation APIs such as [DevCreateObjectQuery](nf-devquery-devcreateobjectquery.md).
+Supplies the number of objects pointed at by *pObjects*.
+
+### -param pObjects [in]
+
+An array of **DEV_OBJECT** structures to be freed.
 
 ## -remarks
 
