@@ -1,26 +1,26 @@
 ---
 UID: NF:devquery.DevFreeObjectProperties
-tech.root: 
+tech.root: devinst
 title: DevFreeObjectProperties
-ms.date: 
+ms.date: 11/07/2025
 targetos: Windows
-description: 
+description: Frees DEV_OBJECT structures allocated by calls to DevGetObjects or DevGetObjectsEx.
 prerelease: false
 req.assembly: 
 req.construct-type: function
 req.ddi-compliance: 
-req.dll: 
+req.dll: Cfgmgr32.dll
 req.header: devquery.h
 req.idl: 
 req.include-header: 
 req.irql: 
 req.kmdf-ver: 
-req.lib: 
+req.lib: Onecore.lib
 req.max-support: 
 req.namespace: 
 req.redist: 
-req.target-min-winverclnt: 
-req.target-min-winversvr: 
+req.target-min-winverclnt: Windows 10 version 1809
+req.target-min-winversvr: Windows Server 2019
 req.target-type: 
 req.type-library: 
 req.umdf-ver: 
@@ -28,9 +28,9 @@ req.unicode-ansi:
 topic_type:
  - apiref
 api_type:
- - HeaderDef
+ - DllExport
 api_location:
- - devquery.h
+ - Cfgmgr32.dll
 api_name:
  - DevFreeObjectProperties
 f1_keywords:
@@ -44,11 +44,17 @@ helpviewer_keywords:
 
 ## -description
 
+Frees [DEV_OBJECT](../devquerydef/ns-devquerydef-dev_object.md) structures allocated by calls to [DevGetObjects](nf-devquery-devgetobjects.md) or [DevGetObjectsEx](nf-devquery-devgetobjectsex.md).
+
 ## -parameters
 
-### -param cPropertyCount
+### -param cPropertyCount [in]
 
-### -param pProperties
+Supplies the number of elements pointed at by *pProperties*.
+
+### -param pProperties [in]
+
+An array of [DEVPROPERTY](/windows-hardware/drivers/install/devproperty) structures to be freed.
 
 ## -remarks
 
