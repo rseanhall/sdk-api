@@ -42,6 +42,17 @@ helpviewer_keywords:
  - DevFindProperty
 ---
 
+## -syntax
+
+```cpp
+const DEVPROPERTY* WINAPI DevFindProperty(
+    _In_ const DEVPROPKEY *pKey,
+    _In_ DEVPROPSTORE Store,
+    _In_ PCWSTR pszLocaleName,
+    _In_ ULONG cProperties,
+    _In_reads_opt_(cProperties) const DEVPROPERTY *pProperties);
+```
+
 ## -description
 
 Finds the [DEVPROPERTY](/windows-hardware/drivers/install/devproperty) that corresponds to a particular property within an array of **DEVPROPERTY** structures.
@@ -64,7 +75,7 @@ The locale name of the property to find. Typically, this will be NULL.
 
 The count of elements pointed at by *pProperties*.
 
-### -param pProperties [out]
+### -param pProperties [in]
 
 An array of **DEVPROPERTY** structures to search for the specified property in.
 

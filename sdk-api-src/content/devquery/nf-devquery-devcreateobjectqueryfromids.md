@@ -54,7 +54,7 @@ A value from the [DEV_OBJECT_TYPE](../devquerydef/ne-devquerydef-dev_object_type
 
 ### -param pszzObjectIds [in]
 
-A [REG_MULTI_SZ](/windows/win32/sysinfo/registry-value-types) list of object identifiers for objects the query should operate on.
+A multi-sz list of object identifiers for objects the query should operate on. For information about multi-sz strings, see [REG_MULTI_SZ](/windows/win32/sysinfo/registry-value-types).
 
 ### -param QueryFlags [in]
 
@@ -67,7 +67,7 @@ The number of [DEVPROPCOMPKEY](/windows-hardware/drivers/install/devpropcompkey)
 ### -param pRequestedProperties [in, optional]
 
 Optionally provides an array of **DEVPROPCOMPKEY** structures that specify the properties that should be retrieved for objects in the
-query’s result set when *pCallback* is called to notify the query of an addition of an object to its reset set.  
+query’s result set when *pCallback* is called to notify the query of an addition of an object to its result set.  
 If [DevQueryFlagUpdateResults](../devquerydef/ne-devquerydef-dev_query_flags.md) was specified in *QueryFlags*, the query will be notified
 if the value of any of these properties changes for any object in the query’s result set.
 
@@ -110,7 +110,7 @@ apply to this function.
 
 ## Example
 
-In the following example, the **PDEV_QUERY_RESULT_CALLBACK** method is implemented to print out status messages when the query state changes, when items have been added to, updated, or removed from the query result. Next, a simple query scenario is implemented where **DevCreateObjectQueryFromId** is called with a REG_MULTI_SZ list of object ID passed into the function in the  **InterfacePaths** argument.
+In the following example, the **PDEV_QUERY_RESULT_CALLBACK** method is implemented to print out status messages when the query state changes, when items have been added to, updated, or removed from the query result. Next, a simple query scenario is implemented where **DevCreateObjectQueryFromIds** is called with a multi-sz list of object IDs passed into the function in the  **InterfacePaths** argument.
 
 ```cpp
 void WINAPI

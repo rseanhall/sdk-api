@@ -53,9 +53,7 @@ No flags specified.
 
 ### -field DevQueryFlagUpdateResults
 
-By default, queries do not receive updates. However, when a query registers for updates and specifies the **DevQueryFlagUpdateResults** flag,
-its result-set will continue to be updated by callbacks as changes in the system occurs that add or remove objects or change objects
-so that they now match, or no longer match the filter expression.
+By default, queries do not receive updates. However, when a query registers for updates and specifies the **DevQueryFlagUpdateResults** flag, its result-set will continue to be updated by callbacks as changes in the system occurs that add or remove objects or change objects so that they now match, or no longer match the filter expression.
 
 ### -field DevQueryFlagAllProperties
 
@@ -63,11 +61,9 @@ Return all properties in all languages that exist for the object. See **DevQuery
 
 ### -field DevQueryFlagLocalize
 
-When specified, properties of type [DEVPROPTYPE_STRING_INDIRECT](/windows-hardware/drivers/install/devprop-type-string-indirect) are resolved to the calling thread's UI language. Multi-language properties are
-retrieved in the preferred language of the calling application.
+When specified, properties of type [DEVPROP_TYPE_STRING_INDIRECT](/windows-hardware/drivers/install/devprop-type-string-indirect) are resolved to the calling thread's UI language. Multi-language properties are retrieved in the preferred language of the calling application.
 
-If used in conjunction with **DevQueryFlagAllProperties**, values for all property keys for the object will be fetched in the preferred
-language of the calling application.
+If used in conjunction with **DevQueryFlagAllProperties**, values for all property keys for the object will be fetched in the preferred language of the calling application.
 
 ### -field DevQueryFlagAsyncClose
 
@@ -76,8 +72,7 @@ This flag modifies the behavior of the [DevCloseObjectQuery](../devquery/nf-devq
 
 When **DevQueryFlagAsyncClose** is not specified, **DevCloseObjectQuery** will block until an outstanding callback returns, and no further callbacks will occur once the **DevCloseObjectQuery** returns.
 
-In either case, a reference is held on the DLL where the callback function is implemented to ensure that it won't be
-unloaded while callbacks can still be invoked.
+In either case, a reference is held on the DLL where the callback function is implemented to ensure that it won't be unloaded while callbacks can still be invoked.
 
 ## -remarks
 

@@ -68,7 +68,7 @@ The number of [DEVPROPCOMPKEY](/windows-hardware/drivers/install/devpropcompkey)
 ### -param pRequestedProperties [in, optional]
 
 Optionally provides an array of **DEVPROPCOMPKEY** structures that specify the properties that should be retrieved for objects in the
-query’s result set when *pCallback* is called to notify the query of an addition of an object to its reset set.  
+query’s result set when *pCallback* is called to notify the query of an addition of an object to its result set.  
 If [DevQueryFlagUpdateResults](../devquerydef/ne-devquerydef-dev_query_flags.md) was specified in *QueryFlags*, the query will be notified
 if the value of any of these properties changes for any object in the query’s result set.
 
@@ -115,96 +115,7 @@ S_OK is returned if a query was successfully created; otherwise, an appropriate 
 When a client wants to retrieve data about a specific object given its identity, use this function rather than [DevCreateObjectQuery](nf-devquery-devcreateobjectquery.md) with a filter. This function is more efficient.
 
 For more information, see the remarks section of [DevCreateObjectQuery](nf-devquery-devcreateobjectquery.md), which also
-apply to this function.
-
-## Examples
-
-In the following example, the **PDEV_QUERY_RESULT_CALLBACK** method is implemented to print out status messages when the query state changes, when items have been added to, updated, or removed from the query result. Next, a simple query scenario is implemented where **DevCreateObjectQueryFromId** is called with the object ID specified by the variable **InterfacePath**.
-
-```cpp
-void WINAPI
-Example1Callback(
-    HDEVQUERY hDevQuery,
-    PVOID pContext,
-    const DEV_QUERY_RESULT_ACTION_DATA *pActionData
-    )
-{
-    UNREFERENCED_PARAMETER(hDevQuery);
-    UNREFERENCED_PARAMETER(pContext);
-
-    switch (pActionData->Action)
-    {
-    case DevQueryResultStateChange:
-        if (pActionData->Data.State == DevQueryStateEnumCompleted)
-        {
-            wprintf(L"Enumeration of current system state complete.\n");
-        }
-        else if (pActionData->Data.State == DevQueryStateAborted)
-        {
-            wprintf(L"Query has aborted. No further results will be received.\n");
-            // Communicate back to the creator of the query that it has aborted
-            // so it can handle that appropriately, such as by recreating the
-            // query
-        }
-        break;
-
-    case DevQueryResultAdd:
-        wprintf(L"Object '%ws' has been added to the result set.\n",
-                pActionData->Data.DeviceObject.pszObjectId);
-        break;
-
-    case DevQueryResultUpdate:
-        wprintf(L"Object '%ws' was updated.\n",
-                pActionData->Data.DeviceObject.pszObjectId);
-        break;
-
-    case DevQueryResultRemove:
-        wprintf(L"Object '%ws' has been removed from the result set.\n",
-                pActionData->Data.DeviceObject.pszObjectId);
-        break;
-    }
-}
-
-void
-Example1(PCWSTR InterfacePath)
-{
-    DEVPROPCOMPKEY RequestedProperties[] =
-    {
-        { DEVPKEY_DeviceInterface_Enabled, DEVPROP_STORE_SYSTEM, NULL },
-        { DEVPKEY_DeviceInterface_FriendlyName, DEVPROP_STORE_SYSTEM, NULL }
-    };
-
-    HDEVQUERY hDevQuery = NULL;
-    HRESULT hr = DevCreateObjectQueryFromId(DevObjectTypeDeviceInterface,
-                                            InterfacePath,
-                                            DevQueryFlagUpdateResults,
-                                            RTL_NUMBER_OF(RequestedProperties),
-                                            RequestedProperties,
-                                            0,
-                                            NULL,
-                                            Example1Callback,
-                                            NULL,
-                                            &hDevQuery);
-
-    if (FAILED(hr))
-    {
-        wprintf(L"Failed to create query. hr = 0x%08x\n", hr);
-        goto exit;
-    }
-
-    // do other work while the query monitors system state in the background
-
-  exit:
-
-    if (hDevQuery != NULL)
-    {
-        DevCloseObjectQuery(hDevQuery);
-    }
-
-    return;
-}
-
-```
+apply to this function. For an example of creating a device query to retrieve properties based on the specified query parameters and object ID, see [DevCreateObjectQueryFromId](nf-devquery-devcreateobjectqueryfromid.md).
 
 ## -see-also
 

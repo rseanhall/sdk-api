@@ -63,7 +63,7 @@ The number of [DEVPROPCOMPKEY](/windows-hardware/drivers/install/devpropcompkey)
 ### -param pRequestedProperties [in, optional]
 
 Optionally provides an array of **DEVPROPCOMPKEY** structures that specify the properties that should be retrieved for objects in the
-query’s result set when *pCallback* is called to notify the query of an addition of an object to its reset set.  
+query’s result set when *pCallback* is called to notify the query of an addition of an object to its result set.  
 If [DevQueryFlagUpdateResults](../devquerydef/ne-devquerydef-dev_query_flags.md) was specified in *QueryFlags*, the query will be notified
 if the value of any of these properties changes for any object in the query’s result set.
 
@@ -104,7 +104,7 @@ S_OK is returned if the function successfully evaluated the search criteria and 
 
 This function is an efficient way to synchronously enumerate objects while retrieving their properties. The array of objects that are returned must be freed using **DevFreeObjects**. If a requested property does not exist for an object that meets the filter criteria, then the **DEVPROPERTY** entry in the **DEV_OBJECT** for that property will have a type of [DEVPROP_TYPE_EMPTY](/windows-hardware/drivers/install/devprop-type-empty). 
 
-Before using this function, consider how much data may be returned in the array and how long the call can block. It may be better to use the [DevCreateObjectQuery](nf-devquery-devcreateobjectquery.md) function, which allows the data to be consumed piecemeal and asynchronously.
+Before using this function, consider how much data may be returned in the array and how long the call can block. It may be better to use the [DevCreateObjectQueryEx](nf-devquery-devcreateobjectqueryex.md) function, which allows the data to be consumed piecemeal and asynchronously.
 
 The following example demonstrates the usage of **DevGetObjectsEx** to retrieve the set of **DEV_OBJECT** that matches a set of **DEVPROP_FILTER_EXPRESSION** structures.
 

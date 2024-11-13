@@ -63,7 +63,7 @@ The number of [DEVPROPCOMPKEY](/windows-hardware/drivers/install/devpropcompkey)
 ### -param pRequestedProperties [in, optional]
 
 Optionally provides an array of **DEVPROPCOMPKEY** structures that specify the properties that should be retrieved for objects in the
-query’s result set when *pCallback* is called to notify the query of an addition of an object to its reset set.  
+query’s result set when *pCallback* is called to notify the query of an addition of an object to its result set.  
 If [DevQueryFlagUpdateResults](../devquerydef/ne-devquerydef-dev_query_flags.md) was specified in *QueryFlags*, the query will be notified
 if the value of any of these properties changes for any object in the query’s result set.
 

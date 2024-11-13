@@ -102,12 +102,6 @@ This function is an efficient way to synchronously retrieve a set of properties 
 The following example demonstrates calling **DevGetObjectPropertiesEx** to retrieve a set of requested properties and then calling [DevFindProperty](nf-devquery-devfindproperty.md) to find a particular property within an array of **DEVPROPERTY** structures.
 
 ```cpp
-
-```
-
-## -see-also
-
-```cpp
 void
 Example1(PCWSTR DeviceInstancePath)
 {
@@ -205,3 +199,5 @@ Example1(PCWSTR DeviceInstancePath)
     return;
 }
 ```
+
+## -see-also

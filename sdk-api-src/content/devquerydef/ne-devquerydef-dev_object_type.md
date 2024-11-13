@@ -53,7 +53,7 @@ Not a valid object type.
 
 ### -field DevObjectTypeDeviceInterface
 
-The object represents a device interface. These are exposed by device drivers to enable an app to talk to the device, typically using device IOCTLS (input output controls). For more information, see [Using a device interface](/windows-hardware/drivers/install/using-a-device-interface).
+The object represents a device interface. These are exposed by device drivers to enable an app to talk to the device, typically using device IOCTLs (input output controls). For more information on device interfaces, see [Using a device interface](/windows-hardware/drivers/install/using-a-device-interface). For more information on IOCTLs, see [Introduction to I/O Control Codes](/windows-hardware/drivers/kernel/introduction-to-i-o-control-codes)
 
 ### -field DevObjectTypeDeviceContainer
 

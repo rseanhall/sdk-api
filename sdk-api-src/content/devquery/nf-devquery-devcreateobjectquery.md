@@ -63,7 +63,7 @@ The number of [DEVPROPCOMPKEY](/windows-hardware/drivers/install/devpropcompkey)
 ### -param pRequestedProperties [in]
 
 Optionally provides an array of **DEVPROPCOMPKEY** structures that specify the properties that should be retrieved for objects in the
-query’s result set when *pCallback* is called to notify the query of an addition of an object to its reset set.  
+query’s result set when *pCallback* is called to notify the query of an addition of an object to its result set.  
 If [DevQueryFlagUpdateResults](../devquerydef/ne-devquerydef-dev_query_flags.md) was specified in *QueryFlags*, the query will be notified
 if the value of any of these properties changes for any object in the query’s result set.
 
@@ -117,7 +117,7 @@ A query may be aborted. This happens when an internal error happens that makes i
 
 In the following example, the **PDEV_QUERY_RESULT_CALLBACK** method is implemented to print out status messages when the query state changes, when items have
 been added to, updated, or removed from the query result. Next, a simple query scenario is implemented where **DevCreateObjectQuery** is called with
-a **DEVPROPCOMPKEY** array and a **DEVPROP_FILTER_EXPRESSION** to query for a **DEVPKEY_Device_ClassGuid** with a value of **GUID_DEVCLASS_NET**.
+a **DEVPROPCOMPKEY** array and a **DEVPROP_FILTER_EXPRESSION** to query for **DevObjectTypeDevice** objects with a **DEVPKEY_Device_ClassGuid** property with a value of **GUID_DEVCLASS_NET**.
 
 ```cpp
 void WINAPI
