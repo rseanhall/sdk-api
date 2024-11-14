@@ -4,7 +4,7 @@ tech.root: devinst
 title: DevFreeObjectProperties
 ms.date: 11/07/2025
 targetos: Windows
-description: Frees DEV_PROPERTY structures allocated by calls to DevGetObjects or DevGetObjectsEx.
+description: Frees DEVPROPERTY structures allocated by calls to DevGetObjectProperties or DevGetObjectPropertiesEx.
 prerelease: false
 req.assembly: 
 req.construct-type: function
@@ -44,7 +44,7 @@ helpviewer_keywords:
 
 ## -description
 
-Frees [DEV_PROPERTY](/windows-hardware/drivers/install/devproperty) structures allocated by calls to [DevGetObjects](nf-devquery-devgetobjects.md) or [DevGetObjectsEx](nf-devquery-devgetobjectsex.md).
+Frees [DEVPROPERTY](/windows-hardware/drivers/install/devproperty) structures allocated by calls to [DevGetObjectProperties](nf-devquery-devgetobjectproperties.md) or [DevGetObjectPropertiesEx](nf-devquery-devgetobjectpropertiesex.md).
 
 ## -parameters
 
