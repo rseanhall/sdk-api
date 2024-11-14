@@ -4,7 +4,7 @@ tech.root: devinst
 title: DevCreateObjectQueryFromIdEx
 ms.date: 11/05/2024
 targetos: Windows
-description: Creates a device query to retrieve properties and extended properties based on the specified query parameters and object ID.
+description: Creates a device query to retrieve properties based on the specified query parameters, extended properties, and object ID.
 prerelease: false
 req.assembly: 
 req.construct-type: function
@@ -44,7 +44,7 @@ helpviewer_keywords:
 
 ## -description
 
-Creates a device query to retrieve properties and extended properties based on the specified query parameters and object ID.
+Creates a device query to retrieve properties based on the specified query parameters, extended properties, and object ID.
 
 ## -parameters
 

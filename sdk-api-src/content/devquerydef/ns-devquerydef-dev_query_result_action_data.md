@@ -45,6 +45,18 @@ helpviewer_keywords:
  - _DEV_QUERY_RESULT_ACTION_DATA
 ---
 
+## -syntax
+
+```cpp
+typedef struct _DEV_QUERY_RESULT_ACTION_DATA {
+  DEV_QUERY_RESULT_ACTION          Action;
+  union _DEV_QUERY_RESULT_UPDATE_PAYLOAD {
+    DEV_QUERY_STATE State;
+    DEV_OBJECT      DeviceObject;
+  } Data;
+} DEV_QUERY_RESULT_ACTION_DATA, *PDEV_QUERY_RESULT_ACTION_DATA;
+```
+
 ## -description
 
 Provides information to the [PDEV_QUERY_RESULT_CALLBACK](../devquery/nc-devquery-pdev_query_result_callback.md) callback function.
