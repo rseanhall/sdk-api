@@ -4,7 +4,7 @@ tech.root: devinst
 title: DevGetObjectPropertiesEx
 ms.date: 11/06/2024
 targetos: Windows
-description: Synchronously retrieve a set of properties for a specified object based on the specified extended properties.
+description: Synchronously retrieve a set of properties for a specified object optionally based on the specified extended parameters.
 prerelease: false
 req.assembly: 
 req.construct-type: function
@@ -44,7 +44,7 @@ helpviewer_keywords:
 
 ## -description
 
-Synchronously retrieve a set of properties and extended properties for a specified object.
+Synchronously retrieve a set of properties for a specified object optionally based on the specified extended parameters.
 
 ## -parameters
 

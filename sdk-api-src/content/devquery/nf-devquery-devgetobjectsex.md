@@ -4,7 +4,7 @@ tech.root: devinst
 title: DevGetObjectsEx
 ms.date: 11/06/2024
 targetos: Windows
-description: Synchronously retrieves a set of DEV_OBJECT structures based on the supplied requested properties, extended properties, and filter criteria.
+description: Synchronously retrieves a set of DEV_OBJECT structures based on the supplied requested properties, extended parameters, and filter criteria.
 prerelease: false
 req.assembly: 
 req.construct-type: function
@@ -44,7 +44,7 @@ helpviewer_keywords:
 
 ## -description
 
-Synchronously retrieves a set of [DEV_OBJECT](../devquerydef/ns-devquerydef-dev_object.md) structures based on the supplied requested properties, extended properties, and filter criteria.
+Synchronously retrieves a set of [DEV_OBJECT](../devquerydef/ns-devquerydef-dev_object.md) structures based on the supplied requested properties, extended parameters, and filter criteria.
 
 ## -parameters
 
