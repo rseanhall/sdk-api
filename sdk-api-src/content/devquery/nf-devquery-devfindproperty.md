@@ -46,11 +46,11 @@ helpviewer_keywords:
 
 ```cpp
 const DEVPROPERTY* WINAPI DevFindProperty(
-    _In_ const DEVPROPKEY *pKey,
-    _In_ DEVPROPSTORE Store,
-    _In_ PCWSTR pszLocaleName,
-    _In_ ULONG cProperties,
-    _In_reads_opt_(cProperties) const DEVPROPERTY *pProperties);
+    [in] const DEVPROPKEY *pKey,
+    [in] DEVPROPSTORE Store,
+    [in] PCWSTR pszLocaleName,
+    [in] ULONG cProperties,
+    [in] const DEVPROPERTY *pProperties);
 ```
 
 ## -description
