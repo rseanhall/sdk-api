@@ -169,7 +169,7 @@ If the dwCreationFlags parameter has a value of 0:
 
 ### -param lpEnvironment [in, optional]
 
-A pointer to an environment block for the new process. If this parameter is <b>NULL</b>, the new process uses the environment of the calling process. 
+A pointer to an <a href="/windows/win32/procthread/environment-variables">environment block</a> for the new process. If this parameter is <b>NULL</b>, the new process uses the environment of the calling process. 
 
 
 
