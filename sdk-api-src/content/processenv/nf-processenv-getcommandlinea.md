@@ -87,7 +87,7 @@ For most code pages this conversion is lossy and the converted command line can 
 To avoid this problem, use the GetCommandLineW function to receive the Unicode command line, or use an application manifest (on Windows Version 1903 or later) to [set UTF-8 as the process code page](/windows/apps/design/globalizing/use-utf8-code-page).
 
 > [!NOTE]
-> The processenv.h header defines GetCommandLine as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The processenv.h header defines GetCommandLine as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 
