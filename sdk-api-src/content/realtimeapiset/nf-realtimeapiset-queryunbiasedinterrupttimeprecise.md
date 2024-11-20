@@ -22,7 +22,7 @@ req.max-support:
 req.namespace: 
 req.assembly: 
 req.type-library: 
-req.lib: Mincore.lib
+req.lib: mincore.lib
 req.dll: Kernel32.dll
 req.irql: 
 targetos: Windows
