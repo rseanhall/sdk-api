@@ -67,7 +67,7 @@ The handle must have the THREAD_QUERY_INFORMATION or THREAD_QUERY_LIMITED_INFORM
 
 ### -param GroupAffinity [out]
 
-A pointer to a GROUP_AFFINITY structure to receive the group affinity of the thread.
+A pointer to a <a href="/windows/desktop/api/winnt/ns-winnt-group_affinity">GROUP_AFFINITY</a> structure to receive the group affinity of the thread.
 
 ## -returns
 
