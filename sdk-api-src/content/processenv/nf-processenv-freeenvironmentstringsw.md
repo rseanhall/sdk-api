@@ -68,7 +68,7 @@ A pointer to a block of environment strings. The pointer to the block must be ob
 
 If the function succeeds, the return value is nonzero.
 
-If the function fails, the return value is zero To get extended error information, call [GetLastError](../errhandlingapi/nf-errhandlingapi-getlasterror.md).
+If the function fails, the return value is zero. To get extended error information, call [GetLastError](../errhandlingapi/nf-errhandlingapi-getlasterror.md).
 
 ## -remarks
 
