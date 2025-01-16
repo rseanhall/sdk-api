@@ -52,7 +52,7 @@ api_name:
 
 ## -description
 
-Retrieves or sets a list of performance counters and thresholds to monitor. 
+Retrieves or sets a list of performance counters and thresholds to monitor as BSTR (e.g. `L"\Memory\Committed Bytes>549755813888"`). 
 
 This property is read/write.
 
