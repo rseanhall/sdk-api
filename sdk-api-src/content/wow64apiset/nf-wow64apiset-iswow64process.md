@@ -70,7 +70,7 @@ A handle to the process. The handle must have the PROCESS_QUERY_INFORMATION or P
 
 ### -param Wow64Process [out]
 
-A pointer to a value that is set to TRUE if the process is running under WOW64 on an Intel64 or x64 processor. If the process is running under 32-bit Windows, the value is set to FALSE. If the process is a 32-bit application running under 64-bit Windows 10 on ARM, the value is set to FALSE. If the process is a 64-bit application running under 64-bit Windows, the value is also set to FALSE.
+A pointer to a value that is set to TRUE if the process is running under WOW64 on an Intel64, x64 or ARM64 processor. If the process is running under 32-bit Windows, the value is set to FALSE. If the process is a 32-bit application running under 64-bit Windows 10 on ARM, the value is set to FALSE. If the process is a 64-bit application running under 64-bit Windows, the value is also set to FALSE.
 
 ## -returns
 
