@@ -11,8 +11,8 @@ ms.keywords: IsDebuggerPresent, IsDebuggerPresent function, _win32_isdebuggerpre
 req.header: debugapi.h
 req.include-header: Windows.h
 req.target-type: Windows
-req.target-min-winverclnt: Windows XP [desktop apps \| UWP apps]
-req.target-min-winversvr: Windows Server 2003 [desktop apps \| UWP apps]
+req.target-min-winverclnt: Windows NT Workstation 4.0 [desktop apps \| UWP apps]
+req.target-min-winversvr: Windows NT Server 4.0 [desktop apps \| UWP apps]
 req.kmdf-ver: 
 req.umdf-ver: 
 req.ddi-compliance: 
