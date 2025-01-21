@@ -73,9 +73,6 @@ This function allows an application to determine whether or not it is being debu
 
 To determine whether a remote process is being debugged, use the <a href="/windows/desktop/api/debugapi/nf-debugapi-checkremotedebuggerpresent">CheckRemoteDebuggerPresent</a> function.
 
-To compile an application that uses this function, define the _WIN32_WINNT macro as 0x0400 or later. For more information, see 
-<a href="/windows/desktop/WinProg/using-the-windows-headers">Using the Windows Headers</a>.
-
 ## -see-also
 
 <a href="/windows/desktop/api/debugapi/nf-debugapi-checkremotedebuggerpresent">CheckRemoteDebuggerPresent</a>
