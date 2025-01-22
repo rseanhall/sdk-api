@@ -272,10 +272,9 @@ For more information, see the Remarks section.
 <td width="60%">
 The file is being opened and an opportunistic lock (oplock) on the file is being requested as a single atomic operation. The file system checks for oplocks before it performs the create operation, and will fail the create with a last error code of <b>ERROR_CANNOT_BREAK_OPLOCK</b> if the result would be to break an existing oplock.
 
-If you use this flag  and your call to the <a href="/windows/desktop/api/fileapi/nf-fileapi-createfile2">CreateFile2</a> function successfully returns, the first operation you should perform on the file handle is to request an oplock by calling the <a href="/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol">DeviceIOControl</a> function and then pass in <a href="/windows/desktop/api/winioctl/ni-winioctl-fsctl_request_oplock">FSCTL_REQUEST_OPLOCK</a> or one of the other <a href="/windows/desktop/FileIO/opportunistic-lock-operations">Opportunistic Lock Operations</a>.  If you perform other file system operations with the file handle before requesting an oplock, a deadlock might occur.<div class="alert"><b>Note</b>  You can safely call the <a href="/windows/desktop/api/handleapi/nf-handleapi-closehandle">CloseHandle</a> function on the file handle without first requesting an oplock.</div>
-<div> </div>
-
-
+If you use this flag  and your call to the <a href="/windows/desktop/api/fileapi/nf-fileapi-createfile2">CreateFile2</a> function successfully returns, the next operation you should perform on the file is to request an oplock by calling the <a href="/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol">DeviceIoControl</a> function on the new file handle, passing in <a href="/windows/desktop/api/winioctl/ni-winioctl-fsctl_request_oplock">FSCTL_REQUEST_OPLOCK</a> or one of the other <a href="/windows/desktop/FileIO/opportunistic-lock-operations">Opportunistic Lock Operations</a>.  If you perform other file system operations on the file before requesting an oplock, a deadlock may occur. A deadlock is especially likely if you
+call a file system API that takes the name of the file rather than a handle, such as **GetFileAttributes**.
+<div class="alert"><b>Note</b>  You can safely call the <a href="/windows/desktop/api/handleapi/nf-handleapi-closehandle">CloseHandle</a> function on the file handle without first requesting an oplock.</div>
 </td>
 </tr>
 <tr>
