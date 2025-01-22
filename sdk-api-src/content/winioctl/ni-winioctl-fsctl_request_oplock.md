@@ -57,11 +57,11 @@ To perform this operation, call the [**DeviceIoControl**](../ioapiset/nf-ioapise
 BOOL DeviceIoControl(
   (HANDLE) hDevice,                 // handle to file
   FSCTL_REQUEST_OPLOCK,             // dwIoControlCode
-  (LPVOID) lpInBuffer,              // input buffer
+  (LPVOID) lpInBuffer,              // pointer to REQUEST_OPLOCK_INPUT_BUFFER
   (DWORD) nInBufferSize,            // size of input buffer
-  (LPVOID) lpOutBuffer,             // output buffer
+  (LPVOID) lpOutBuffer,             // pointer to REQUEST_OPLOCK_OUTPUT_BUFFER
   (DWORD) nOutBufferSize,           // size of output buffer
-  (LPDWORD) lpBytesReturned,        // number of bytes returned
+  NULL,                             // number of bytes returned
   (LPOVERLAPPED) lpOverlapped       // OVERLAPPED structure
 );
 ```
@@ -82,15 +82,13 @@ BOOL DeviceIoControl(
 
 ### -status-block
 
-Irp->IoStatus.Status is set to STATUS_SUCCESS if the request is successful.
-
-Otherwise, Status to the appropriate error condition as a NTSTATUS code. 
-
-For more information, see [NTSTATUS Values](/windows-hardware/drivers/kernel/ntstatus-values).
-
 ## -remarks
 
 This operation is used only by client applications requesting an opportunistic lock (oplock) from a local server. Client applications requesting opportunistic locks from remote servers must not request them directly—the network redirector transparently requests opportunistic locks for the application. An attempt to use this operation to request opportunistic locks from remote servers will result in the request being denied.
+
+If the **DeviceIoControl** operation returns the error code **ERROR_IO_PENDING**, the oplock request has been granted. If it returns any other error code, the oplock has not been granted. If the error code is a warning value such as ERROR_CANNOT_GRANT_REQUESTED_OPLOCK, extended information may be available in the [REQUEST_OPLOCK_OUTPUT_BUFFER](ns-winioctl-request_oplock_output_buffer.md) structure.
+
+When a granted oplock breaks, the event object in the [OVERLAPPED](../minwinbase/ns-minwinbase-overlapped.md) structure will be signaled, and information will be returned in the [REQUEST_OPLOCK_OUTPUT_BUFFER](ns-winioctl-request_oplock_output_buffer.md) structure.
 
 The **FSCTL_REQUEST_OPLOCK** control code provides more efficient functionality than the following related control codes: [FSCTL_REQUEST_OPLOCK_LEVEL_1](ni-winioctl-fsctl_request_oplock_level_1.md), [FSCTL_REQUEST_OPLOCK_LEVEL_2](ni-winioctl-fsctl_request_oplock_level_2.md), [FSCTL_REQUEST_FILTER_OPLOCK](ni-winioctl-fsctl_request_filter_oplock.md), and [FSCTL_REQUEST_BATCH_OPLOCK](ni-winioctl-fsctl_request_batch_oplock.md). Requesting different oplock levels can be performed repeatedly on the same handle without closing and reopening the handle when using **FSCTL_REQUEST_OPLOCK**; the other control codes require that the handle be closed and then reopened with [CreateFile](../fileapi/nf-fileapi-createfilea.md) to make such a change. This is accomplished by manipulating the **RequestedOplockLevel** member of the [REQUEST_OPLOCK_INPUT_BUFFER](ns-winioctl-request_oplock_input_buffer.md) structure when re-issuing the **FSCTL_REQUEST_OPLOCK** control code.
 
