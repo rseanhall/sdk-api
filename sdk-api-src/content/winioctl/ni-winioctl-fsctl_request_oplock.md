@@ -6,7 +6,7 @@ helpviewer_keywords: ["FSCTL_REQUEST_OPLOCK","FSCTL_REQUEST_OPLOCK control","FSC
 old-location: fs\fsctl_request_oplock.htm
 tech.root: fs
 ms.assetid: 9df94089-137a-4540-9f46-119408b362ba
-ms.date: 12/05/2018
+ms.date: 01/23/2025
 ms.keywords: FSCTL_REQUEST_OPLOCK, FSCTL_REQUEST_OPLOCK control, FSCTL_REQUEST_OPLOCK control code [Files], fs.fsctl_request_oplock, winioctl/FSCTL_REQUEST_OPLOCK
 req.header: winioctl.h
 req.include-header: Windows.h
@@ -84,11 +84,11 @@ BOOL DeviceIoControl(
 
 ## -remarks
 
-This operation is used only by client applications requesting an opportunistic lock (oplock) from a local server. Client applications requesting opportunistic locks from remote servers must not request them directly—the network redirector transparently requests opportunistic locks for the application. An attempt to use this operation to request opportunistic locks from remote servers will result in the request being denied.
+This operation is used by client applications to request an opportunistic lock (oplock) from a local server. Client applications must not request opportunistic locks from remote servers directly—the network redirector transparently requests opportunistic locks for the application. Using this operation to request opportunistic locks from remote servers will result in the request being denied.
 
 If the **DeviceIoControl** operation returns the error code **ERROR_IO_PENDING**, the oplock request has been granted. If it returns any other error code, the oplock has not been granted. If the error code is a warning value such as ERROR_CANNOT_GRANT_REQUESTED_OPLOCK, extended information may be available in the [REQUEST_OPLOCK_OUTPUT_BUFFER](ns-winioctl-request_oplock_output_buffer.md) structure.
 
-When a granted oplock breaks, the event object in the [**OVERLAPPED**](../minwinbase/ns-minwinbase-overlapped.md) structure will be signaled, and information will be returned in the [REQUEST_OPLOCK_OUTPUT_BUFFER](ns-winioctl-request_oplock_output_buffer.md) structure. The **Internal** member of the **OVERLAPPED** structure will be set to an NTSTATUS value that provides extended information about how the oplock broke:
+When a granted oplock breaks, the event object in the [**OVERLAPPED**](../minwinbase/ns-minwinbase-overlapped.md) structure will be signaled, and information will be returned in the [REQUEST_OPLOCK_OUTPUT_BUFFER](ns-winioctl-request_oplock_output_buffer.md) structure. The **Internal** member of the **OVERLAPPED** structure will be set to an NTSTATUS value that provides extended information about how the oplock broke.
 
 OVERLAPPED.Internal value | Meaning |
 --------------------------|---------|
