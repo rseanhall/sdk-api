@@ -274,7 +274,7 @@ The file is being opened and an opportunistic lock (oplock) on the file is being
 
 If you use this flag  and your call to the <a href="/windows/desktop/api/fileapi/nf-fileapi-createfile2">CreateFile2</a> function returns successfully, you should request an oplock on the file by calling <a href="/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol">DeviceIoControl</a> on the new file handle with <a href="/windows/desktop/api/winioctl/ni-winioctl-fsctl_request_oplock">FSCTL_REQUEST_OPLOCK</a> or one of the other <a href="/windows/desktop/FileIO/opportunistic-lock-operations">Opportunistic Lock Operations</a>.  If you perform other file system operations on the file before requesting an oplock, a deadlock may occur. A deadlock is especially likely if you call a file system API that takes the name of the file rather than a handle, such as **GetFileAttributes**.
 
-<b>Note</b> You can safely call the <a href="/windows/desktop/api/handleapi/nf-handleapi-closehandle">CloseHandle</a> function on the file handle without first requesting an oplock.
+<b>Note:</b> You can safely call the <a href="/windows/desktop/api/handleapi/nf-handleapi-closehandle">CloseHandle</a> function on the file handle without first requesting an oplock.
 </td>
 </tr>
 <tr>
