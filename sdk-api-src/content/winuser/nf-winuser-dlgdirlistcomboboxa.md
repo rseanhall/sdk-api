@@ -66,13 +66,13 @@ A handle to the dialog box that contains the combo box.
 
 Type: <b><a href="/windows/desktop/WinProg/windows-data-types">LPTSTR</a></b>
 
-A pointer to a buffer containing a null-terminated string that specifies an absolute path, relative path, or file name. An absolute path can begin with a drive letter (for example, d:\) or a UNC name (for example, &#92;&#92;<i>machinename</i>&#92;<i>sharename</i>). 
+A pointer to a buffer containing a null-terminated string that specifies an absolute path, relative path, or file name. An absolute path can begin with a drive letter (for example, d:\\) or a UNC name (for example, &#92;&#92;<i>machinename</i>&#92;<i>sharename</i>). 
         
                     
 
 The function splits the string into a directory and a file name. The function searches the directory for names that match the file name. If the string does not specify a directory, the function searches the current directory. 
 
-If the string includes a file name, the file name must contain at least one wildcard character (? or *). If the string does not include a file name, the function behaves as if you had specified the asterisk wildcard character (*) as the file name. All names in the specified directory that match the file name and have the attributes specified by the <i>uFiletype</i> parameter are added to the list displayed in the combo box.
+If the string includes a file name, the file name must contain at least one wildcard character (? or \*). If the string does not include a file name, the function behaves as if you had specified the asterisk wildcard character (\*) as the file name. All names in the specified directory that match the file name and have the attributes specified by the <i>uFiletype</i> parameter are added to the list displayed in the combo box.
 
 ### -param nIDComboBox [in]
 
