@@ -6,7 +6,7 @@ helpviewer_keywords: ["*LPCREATEFILE2_EXTENDED_PARAMETERS","*PCREATEFILE2_EXTEND
 old-location: fs\createfile2_extended_parameters.htm
 tech.root: fs
 ms.assetid: efe68dfc-f13d-47de-9443-30404977e26f
-ms.date: 12/05/2018
+ms.date: 01/23/2025
 ms.keywords: '*LPCREATEFILE2_EXTENDED_PARAMETERS, *PCREATEFILE2_EXTENDED_PARAMETERS, CREATEFILE2_EXTENDED_PARAMETERS, CREATEFILE2_EXTENDED_PARAMETERS structure [Files], FILE_ATTRIBUTE_ARCHIVE, FILE_ATTRIBUTE_ENCRYPTED, FILE_ATTRIBUTE_HIDDEN, FILE_ATTRIBUTE_INTEGRITY_STREAM, FILE_ATTRIBUTE_NORMAL, FILE_ATTRIBUTE_OFFLINE, FILE_ATTRIBUTE_READONLY, FILE_ATTRIBUTE_SYSTEM, FILE_ATTRIBUTE_TEMPORARY, FILE_FLAG_BACKUP_SEMANTICS, FILE_FLAG_DELETE_ON_CLOSE, FILE_FLAG_NO_BUFFERING, FILE_FLAG_OPEN_NO_RECALL, FILE_FLAG_OPEN_REPARSE_POINT, FILE_FLAG_OPEN_REQUIRING_OPLOCK, FILE_FLAG_OVERLAPPED, FILE_FLAG_POSIX_SEMANTICS, FILE_FLAG_RANDOM_ACCESS, FILE_FLAG_SEQUENTIAL_SCAN, FILE_FLAG_SESSION_AWARE, FILE_FLAG_WRITE_THROUGH, LPCREATEFILE2_EXTENDED_PARAMETERS, LPCREATEFILE2_EXTENDED_PARAMETERS structure pointer [Files], PCREATEFILE2_EXTENDED_PARAMETERS, PCREATEFILE2_EXTENDED_PARAMETERS structure pointer [Files], SECURITY_ANONYMOUS, SECURITY_CONTEXT_TRACKING, SECURITY_DELEGATION, SECURITY_EFFECTIVE_ONLY, SECURITY_IDENTIFICATION, SECURITY_IMPERSONATION, fileapi/CREATEFILE2_EXTENDED_PARAMETERS, fileapi/LPCREATEFILE2_EXTENDED_PARAMETERS, fileapi/PCREATEFILE2_EXTENDED_PARAMETERS, fs.createfile2_extended_parameters'
 req.header: fileapi.h
 req.include-header: Windows.h
@@ -272,8 +272,9 @@ For more information, see the Remarks section.
 <td width="60%">
 The file is being opened and an opportunistic lock (oplock) on the file is being requested as a single atomic operation. The file system checks for oplocks before it performs the create operation, and will fail the create with a last error code of <b>ERROR_CANNOT_BREAK_OPLOCK</b> if the result would be to break an existing oplock.
 
-If you use this flag  and your call to the <a href="/windows/desktop/api/fileapi/nf-fileapi-createfile2">CreateFile2</a> function successfully returns, the next operation you should perform on the file is to request an oplock by calling the <a href="/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol">DeviceIoControl</a> function on the new file handle, passing in <a href="/windows/desktop/api/winioctl/ni-winioctl-fsctl_request_oplock">FSCTL_REQUEST_OPLOCK</a> or one of the other <a href="/windows/desktop/FileIO/opportunistic-lock-operations">Opportunistic Lock Operations</a>.  If you perform other file system operations on the file before requesting an oplock, a deadlock may occur. A deadlock is especially likely if you call a file system API that takes the name of the file rather than a handle, such as **GetFileAttributes**.
-<div class="alert"><b>Note</b>  You can safely call the <a href="/windows/desktop/api/handleapi/nf-handleapi-closehandle">CloseHandle</a> function on the file handle without first requesting an oplock.</div>
+If you use this flag  and your call to the <a href="/windows/desktop/api/fileapi/nf-fileapi-createfile2">CreateFile2</a> function returns successfully, you should request an oplock on the file by calling <a href="/windows/desktop/api/ioapiset/nf-ioapiset-deviceiocontrol">DeviceIoControl</a> on the new file handle with <a href="/windows/desktop/api/winioctl/ni-winioctl-fsctl_request_oplock">FSCTL_REQUEST_OPLOCK</a> or one of the other <a href="/windows/desktop/FileIO/opportunistic-lock-operations">Opportunistic Lock Operations</a>.  If you perform other file system operations on the file before requesting an oplock, a deadlock may occur. A deadlock is especially likely if you call a file system API that takes the name of the file rather than a handle, such as **GetFileAttributes**.
+
+<b>Note</b> You can safely call the <a href="/windows/desktop/api/handleapi/nf-handleapi-closehandle">CloseHandle</a> function on the file handle without first requesting an oplock.
 </td>
 </tr>
 <tr>
