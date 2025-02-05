@@ -51,7 +51,7 @@ api_name:
 
 ## -description
 
-\[The usage of CodecAPI feature with DirectShow (DShow), [DirectShow](/windows/win32/directshow/directshow), is a legacy feature. DirectShow usage has been superseded by [MediaPlayer](/uwp/api/Windows.Media.Playback.MediaPlayer), [IMFMediaEngine](/windows/win32/api/mfmediaengine/nn-mfmediaengine-imfmediaengine), and [Audio/Video Capture in Media Foundation](/windows/win32/medfound/audio-video-capture-in-media-foundation). Those features have been optimized for Windows 10 and Windows 11. Microsoft strongly recommends that new code use **MediaPlayer**, **IMFMediaEngine** and **Audio/Video Capture in Media Foundation** instead of **DirectShow**, when possible. Microsoft suggests that existing code that uses the legacy APIs be rewritten to use the new APIs if possible.\]
+\[The usage of the CodecAPI feature with [DirectShow](/windows/win32/directshow/directshow) is no longer recommended. DirectShow usage has been superseded by [MediaPlayer](/uwp/api/Windows.Media.Playback.MediaPlayer), [IMFMediaEngine](/windows/win32/api/mfmediaengine/nn-mfmediaengine-imfmediaengine), and [Audio/Video Capture in Media Foundation](/windows/win32/medfound/audio-video-capture-in-media-foundation). Those features have been optimized for Windows 11 and Windows 10. Instead of **DirectShow**, Microsoft strongly recommends when possible that new code use **MediaPlayer**, **IMFMediaEngine**, and **Audio/Video Capture in Media Foundation**. Microsoft suggests that existing code that uses the legacy APIs be rewritten to use the new APIs if possible.\]
 
 The <b>ICodecAPI</b> interface sets and retrieves settings on an encoder or decoder filter.
 
@@ -111,5 +111,5 @@ where {...} is a property GUID that the application can map into its user interf
 
 ## -see-also
 
-[D3D12 video encoding](https://learn.microsoft.com/en-us/windows-hardware/drivers/display/video-encoding-d3d12)
-[Announcing new DirectX 12 feature – Video Encoding!](https://devblogs.microsoft.com/directx/announcing-new-directx-12-feature-video-encoding/)
+* [D3D12 video encoding](https://learn.microsoft.com/en-us/windows-hardware/drivers/display/video-encoding-d3d12)
+* [Announcing new DirectX 12 feature – Video Encoding!](https://devblogs.microsoft.com/directx/announcing-new-directx-12-feature-video-encoding/)
