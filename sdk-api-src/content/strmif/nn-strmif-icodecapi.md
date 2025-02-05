@@ -111,8 +111,5 @@ where {...} is a property GUID that the application can map into its user interf
 
 ## -see-also
 
-<a href="/windows/desktop/DirectShow/decoder-settings-for-windows-media-center-edition">Decoder Settings for Windows Media Center Edition</a>
-
-
-
-<a href="/windows/desktop/DirectShow/encoder-api">Encoder API</a>
+[D3D12 video encoding](https://learn.microsoft.com/en-us/windows-hardware/drivers/display/video-encoding-d3d12)
+[Announcing new DirectX 12 feature – Video Encoding!](https://devblogs.microsoft.com/directx/announcing-new-directx-12-feature-video-encoding/)
