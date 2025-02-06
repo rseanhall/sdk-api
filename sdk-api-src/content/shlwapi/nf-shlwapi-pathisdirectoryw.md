@@ -1,8 +1,8 @@
 ---
 UID: NF:shlwapi.PathIsDirectoryW
 title: PathIsDirectoryW function (shlwapi.h)
-description: Verifies that a path is a valid directory.
-helpviewer_keywords: ["PathIsDirectory","PathIsDirectory function [Windows Shell]","PathIsDirectoryA","PathIsDirectoryW","_win32_PathIsDirectory","shell.PathIsDirectory","shlwapi/PathIsDirectory","shlwapi/PathIsDirectoryA","shlwapi/PathIsDirectoryW"]
+description: Verifies that a path is a valid directory. (Unicode)
+helpviewer_keywords: ["PathIsDirectory", "PathIsDirectory function [Windows Shell]", "PathIsDirectoryW", "_win32_PathIsDirectory", "shell.PathIsDirectory", "shlwapi/PathIsDirectory", "shlwapi/PathIsDirectoryW"]
 old-location: shell\PathIsDirectory.htm
 tech.root: shell
 ms.assetid: 9af3e3da-6b3a-4e81-ba50-ff7aeeb73c44
@@ -75,5 +75,5 @@ Returns (BOOL)FILE_ATTRIBUTE_DIRECTORY if the path is a valid directory; otherwi
 ## -remarks
 
 > [!NOTE]
-> The shlwapi.h header defines PathIsDirectory as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The shlwapi.h header defines PathIsDirectory as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 

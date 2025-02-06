@@ -1,12 +1,12 @@
 ---
 UID: NF:dbghelp.FindExecutableImageExW
 title: FindExecutableImageExW function (dbghelp.h)
-description: Locates the specified executable file.
+description: The FindExecutableImageExW (Unicode) function locates the specified executable file.
 helpviewer_keywords: ["FindExecutableImageEx","FindExecutableImageEx function","FindExecutableImageExW","_win32_findexecutableimageex","base.findexecutableimageex","dbghelp/FindExecutableImageEx","dbghelp/FindExecutableImageExW"]
 old-location: base\findexecutableimageex.htm
 tech.root: Debug
 ms.assetid: 7571e168-2e91-4c97-9139-8225d28cc399
-ms.date: 12/05/2018
+ms.date: 08/04/2022
 ms.keywords: FindExecutableImageEx, FindExecutableImageEx function, FindExecutableImageExW, _win32_findexecutableimageex, base.findexecutableimageex, dbghelp/FindExecutableImageEx, dbghelp/FindExecutableImageExW
 req.header: dbghelp.h
 req.include-header: 
@@ -104,7 +104,7 @@ To call the Unicode version of this function, define DBGHELP_TRANSLATE_TCHAR.
 
 
 > [!NOTE]
-> The dbghelp.h header defines FindExecutableImageEx as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The dbghelp.h header defines FindExecutableImageEx as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

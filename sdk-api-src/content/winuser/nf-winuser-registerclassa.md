@@ -1,8 +1,8 @@
 ---
 UID: NF:winuser.RegisterClassA
 title: RegisterClassA function (winuser.h)
-description: Registers a window class for subsequent use in calls to the CreateWindow or CreateWindowEx function.
-helpviewer_keywords: ["RegisterClass","RegisterClass function [Windows and Messages]","RegisterClassA","RegisterClassW","_win32_RegisterClass","_win32_registerclass_cpp","winmsg.registerclass","winui._win32_registerclass","winuser/RegisterClass","winuser/RegisterClassA","winuser/RegisterClassW"]
+description: Registers a window class for subsequent use in calls to the CreateWindow or CreateWindowEx function. (RegisterClassA)
+helpviewer_keywords: ["RegisterClassA", "winuser/RegisterClassA"]
 old-location: winmsg\registerclass.htm
 tech.root: winmsg
 ms.assetid: VS|winui|~\winui\windowsuserinterface\windowing\windowclasses\windowclassreference\windowclassfunctions\registerclass.htm
@@ -101,7 +101,7 @@ For an example, see <a href="/windows/desktop/winmsg/using-window-procedures">As
 
 
 > [!NOTE]
-> The winuser.h header defines RegisterClass as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The winuser.h header defines RegisterClass as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 
@@ -157,4 +157,4 @@ For an example, see <a href="/windows/desktop/winmsg/using-window-procedures">As
 
 
 
-<a href="/previous-versions/windows/desktop/legacy/ms633573(v=vs.85)">WindowProc</a>
+<a href="/windows/win32/api/winuser/nc-winuser-wndproc">WindowProc</a>

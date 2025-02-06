@@ -1,7 +1,7 @@
 ---
-UID: NS:rpcdce.__unnamed_struct_6
+UID: NS:rpcdce.RPC_INTERFACE_TEMPLATEA
 title: RPC_INTERFACE_TEMPLATEA (rpcdce.h)
-description: Defines an RPC interface group server interface.
+description: Defines an RPC interface group server interface. (RPC_INTERFACE_TEMPLATEA)
 helpviewer_keywords: ["*PRPC_INTERFACE_TEMPLATEA","PRPC_INTERFACE_TEMPLATE","PRPC_INTERFACE_TEMPLATE structure pointer [RPC]","RPC_INTERFACE_TEMPLATE","RPC_INTERFACE_TEMPLATE structure [RPC]","RPC_INTERFACE_TEMPLATEA","RPC_INTERFACE_TEMPLATEW","rpc.rpc_interface_template","rpcdce/PRPC_INTERFACE_TEMPLATE","rpcdce/RPC_INTERFACE_TEMPLATE","rpcdce/RPC_INTERFACE_TEMPLATEA","rpcdce/RPC_INTERFACE_TEMPLATEW"]
 old-location: rpc\rpc_interface_template.htm
 tech.root: Rpc
@@ -138,7 +138,7 @@ In some cases, the RPC run time may call the security-callback function more tha
 
 
 > [!NOTE]
-> The rpcdce.h header defines RPC_INTERFACE_TEMPLATE as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The rpcdce.h header defines RPC_INTERFACE_TEMPLATE as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 
@@ -163,3 +163,4 @@ In some cases, the RPC run time may call the security-callback function more tha
 
 
 <a href="/windows/desktop/api/rpcdce/nf-rpcdce-rpcserverinterfacegroupdeactivate">RpcServerInterfaceGroupDeactivate</a>
+

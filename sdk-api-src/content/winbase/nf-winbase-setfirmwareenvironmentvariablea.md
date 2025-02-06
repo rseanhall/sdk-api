@@ -1,8 +1,8 @@
 ---
 UID: NF:winbase.SetFirmwareEnvironmentVariableA
 title: SetFirmwareEnvironmentVariableA function (winbase.h)
-description: Sets the value of the specified firmware environment variable.
-helpviewer_keywords: ["SetFirmwareEnvironmentVariable","SetFirmwareEnvironmentVariable function","SetFirmwareEnvironmentVariableA","SetFirmwareEnvironmentVariableW","base.setfirmwareenvironmentvariable","winbase/SetFirmwareEnvironmentVariable","winbase/SetFirmwareEnvironmentVariableA","winbase/SetFirmwareEnvironmentVariableW"]
+description: Sets the value of the specified firmware environment variable. (ANSI)
+helpviewer_keywords: ["SetFirmwareEnvironmentVariableA", "winbase/SetFirmwareEnvironmentVariableA"]
 old-location: base\setfirmwareenvironmentvariable.htm
 tech.root: winprog
 ms.assetid: 42117632-61aa-4f83-abe1-c08f40cf3f0a
@@ -101,7 +101,7 @@ Firmware variables are not supported on a legacy BIOS-based system. The <b>SetFi
 
 
 > [!NOTE]
-> The winbase.h header defines SetFirmwareEnvironmentVariable as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The winbase.h header defines SetFirmwareEnvironmentVariable as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

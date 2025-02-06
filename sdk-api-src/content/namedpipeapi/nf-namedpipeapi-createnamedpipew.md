@@ -2,9 +2,9 @@
 UID: NF:namedpipeapi.CreateNamedPipeW
 tech.root: ipc 
 title: CreateNamedPipeW
-ms.date: 04/20/2021
-targetos: Windows
-description: Creates an instance of a named pipe and returns a handle for subsequent pipe operations. 
+description: The CreateNamedPipeW (Unicode) function (winbase.h) creates an instance of a named pipe and returns a handle for subsequent pipe operations.
+ms.date: 08/05/2022
+targetos: Windows 
 req.assembly: 
 req.construct-type: function
 req.ddi-compliance: 
@@ -373,7 +373,7 @@ A value of zero will result in a default time-out of 50 milliseconds.
 ### -param lpSecurityAttributes [in, optional]
 
 A pointer to a 
-<a href="/previous-versions/windows/desktop/legacy/aa379560(v=vs.85)">SECURITY_ATTRIBUTES</a> structure that specifies a security descriptor for the new named pipe and determines whether child processes can inherit the returned handle. If <i>lpSecurityAttributes</i> is <b>NULL</b>, the named pipe gets a default security descriptor and the handle cannot be inherited. The ACLs in the default security descriptor for a named pipe grant full control to the LocalSystem account, administrators, and the creator owner. They also grant read access to members of the Everyone group and the anonymous account.
+<a href="/windows/win32/api/wtypesbase/ns-wtypesbase-security_attributes">SECURITY_ATTRIBUTES</a> structure that specifies a security descriptor for the new named pipe and determines whether child processes can inherit the returned handle. If <i>lpSecurityAttributes</i> is <b>NULL</b>, the named pipe gets a default security descriptor and the handle cannot be inherited. The ACLs in the default security descriptor for a named pipe grant full control to the LocalSystem account, administrators, and the creator owner. They also grant read access to members of the Everyone group and the anonymous account.
 
 ## -returns
 
@@ -399,7 +399,7 @@ Whenever a pipe write operation occurs, the system first tries to charge the mem
 
 To free resources used by a named pipe, the application should always close handles when they are no longer needed, which is accomplished either by calling the <a href="/windows/desktop/api/handleapi/nf-handleapi-closehandle">CloseHandle</a> function or when the process associated with the instance handles ends. Note that an instance of a named pipe may have more than one handle associated with it. An instance of a named pipe is always deleted when the last handle to the instance of the named pipe is closed.
 
-<b>Windows 10, version 1709:  </b>Pipes are only supported within an app-container; ie, from one UWP process to another UWP process that's part of the same app. Also, named pipes must use the syntax "\\.\pipe\LOCAL\" for the pipe name.
+<b>Windows 10, version 1709:  </b>Pipes are only supported within an app-container; ie, from one UWP process to another UWP process that's part of the same app. Also, named pipes must use the syntax `\\.\pipe\LOCAL\` for the pipe name.
 
 ### Examples
 
@@ -415,7 +415,7 @@ For an example, see <a href="/windows/desktop/ipc/multithreaded-pipe-server">Mul
 <a href="/windows/desktop/ipc/pipes">Pipes Overview</a>  
 <a href="/windows/desktop/api/fileapi/nf-fileapi-readfile">ReadFile</a>  
 <a href="/windows/desktop/api/fileapi/nf-fileapi-readfileex">ReadFileEx</a>  
-<a href="/previous-versions/windows/desktop/legacy/aa379560(v=vs.85)">SECURITY_ATTRIBUTES</a>  
+<a href="/windows/win32/api/wtypesbase/ns-wtypesbase-security_attributes">SECURITY_ATTRIBUTES</a>  
 <a href="/windows/desktop/api/namedpipeapi/nf-namedpipeapi-transactnamedpipe">TransactNamedPipe</a>  
 <a href="/windows/desktop/api/namedpipeapi/nf-namedpipeapi-waitnamedpipew">WaitNamedPipe</a>  
 <a href="/windows/desktop/api/fileapi/nf-fileapi-writefile">WriteFile</a>  

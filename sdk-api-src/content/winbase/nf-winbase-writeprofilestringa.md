@@ -1,8 +1,8 @@
 ---
 UID: NF:winbase.WriteProfileStringA
 title: WriteProfileStringA function (winbase.h)
-description: Copies a string into the specified section of the Win.ini file.
-helpviewer_keywords: ["WriteProfileString","WriteProfileString function","WriteProfileStringA","WriteProfileStringW","_win32_writeprofilestring","base.writeprofilestring","winbase/WriteProfileString","winbase/WriteProfileStringA","winbase/WriteProfileStringW"]
+description: Copies a string into the specified section of the Win.ini file. (ANSI)
+helpviewer_keywords: ["WriteProfileStringA", "winbase/WriteProfileStringA"]
 old-location: base\writeprofilestring.htm
 tech.root: winprog
 ms.assetid: d3fb74bb-7ce9-4669-8f00-02ac8a95ddd5
@@ -117,7 +117,7 @@ When looking at values in the registry that specify other registry locations, th
 
 
 > [!NOTE]
-> The winbase.h header defines WriteProfileString as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The winbase.h header defines WriteProfileString as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

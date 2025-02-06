@@ -1,7 +1,7 @@
 ---
 UID: NS:accctrl._OBJECTS_AND_NAME_W
 title: OBJECTS_AND_NAME_W (accctrl.h)
-description: Contains a string that identifies a trustee by name and additional strings that identify the object types of an object-specific access control entry (ACE).
+description: Contains a string that identifies a trustee by name and additional strings that identify the object types of an object-specific access control entry (ACE). (Unicode)
 helpviewer_keywords: ["*POBJECTS_AND_NAME_W","ACE_INHERITED_OBJECT_TYPE_PRESENT","ACE_OBJECT_TYPE_PRESENT","OBJECTS_AND_NAME","OBJECTS_AND_NAME structure [Security]","OBJECTS_AND_NAME_","OBJECTS_AND_NAME_A","OBJECTS_AND_NAME_W","POBJECTS_AND_NAME","POBJECTS_AND_NAME structure pointer [Security]","_win32_objects_and_name_str","accctrl/OBJECTS_AND_NAME","accctrl/OBJECTS_AND_NAME_A","accctrl/OBJECTS_AND_NAME_W","accctrl/POBJECTS_AND_NAME","security.objects_and_name"]
 old-location: security\objects_and_name.htm
 tech.root: security
@@ -133,7 +133,7 @@ The <b>ptstrName</b> member of a <a href="/windows/desktop/api/accctrl/ns-accctr
 
 
 > [!NOTE]
-> The accctrl.h header defines OBJECTS_AND_NAME_ as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The accctrl.h header defines OBJECTS_AND_NAME_ as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

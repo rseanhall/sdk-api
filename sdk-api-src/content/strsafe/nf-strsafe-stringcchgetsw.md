@@ -1,8 +1,8 @@
 ---
 UID: NF:strsafe.StringCchGetsW
 title: StringCchGetsW function (strsafe.h)
-description: Gets one line of text from stdin, up to and including the newline character ('\n').
-helpviewer_keywords: ["StringCchGets","StringCchGets function [Menus and Other Resources]","StringCchGetsA","StringCchGetsW","_shell_StringCchGets","_shell_stringcchgets_cpp","menurc.stringcchgets","strsafe/StringCchGets","strsafe/StringCchGetsA","strsafe/StringCchGetsW","winui._shell_stringcchgets"]
+description: Gets one line of text from stdin, up to and including the newline character ('\n'). (StringCchGetsW)
+helpviewer_keywords: ["StringCchGets", "StringCchGets function [Menus and Other Resources]", "StringCchGetsW", "_shell_StringCchGets", "_shell_stringcchgets_cpp", "menurc.stringcchgets", "strsafe/StringCchGets", "strsafe/StringCchGetsW", "winui._shell_stringcchgets"]
 old-location: menurc\stringcchgets.htm
 tech.root: menurc
 ms.assetid: VS|winui|~\winui\windowsuserinterface\resources\strings\stringreference\stringfunctions\stringcchgets.htm
@@ -169,7 +169,7 @@ The value of <i>pszDest</i> should not be <b>NULL</b>. See <a href="/windows/des
 
 
 > [!NOTE]
-> The strsafe.h header defines StringCchGets as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The strsafe.h header defines StringCchGets as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

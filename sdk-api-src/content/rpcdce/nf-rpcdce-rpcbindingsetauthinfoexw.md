@@ -1,8 +1,8 @@
 ---
 UID: NF:rpcdce.RpcBindingSetAuthInfoExW
 title: RpcBindingSetAuthInfoExW function (rpcdce.h)
-description: The RpcBindingSetAuthInfoEx function sets a binding handle's authentication, authorization, and security quality-of-service information.
-helpviewer_keywords: ["RpcBindingSetAuthInfoEx","RpcBindingSetAuthInfoEx function [RPC]","RpcBindingSetAuthInfoExA","RpcBindingSetAuthInfoExW","_rpc_rpcbindingsetauthinfoex","rpc.rpcbindingsetauthinfoex","rpcdce/RpcBindingSetAuthInfoEx","rpcdce/RpcBindingSetAuthInfoExA","rpcdce/RpcBindingSetAuthInfoExW"]
+description: The RpcBindingSetAuthInfoEx function sets a binding handle's authentication, authorization, and security quality-of-service information. (Unicode)
+helpviewer_keywords: ["RpcBindingSetAuthInfoEx", "RpcBindingSetAuthInfoEx function [RPC]", "RpcBindingSetAuthInfoExW", "_rpc_rpcbindingsetauthinfoex", "rpc.rpcbindingsetauthinfoex", "rpcdce/RpcBindingSetAuthInfoEx", "rpcdce/RpcBindingSetAuthInfoExW"]
 old-location: rpc\rpcbindingsetauthinfoex.htm
 tech.root: Rpc
 ms.assetid: 2438816c-995e-4398-999d-48a3538eec18
@@ -194,7 +194,7 @@ Due to the varying requirements of different versions of Microsoft RPC, Microsof
 
 
 > [!NOTE]
-> The rpcdce.h header defines RpcBindingSetAuthInfoEx as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The rpcdce.h header defines RpcBindingSetAuthInfoEx as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

@@ -1,7 +1,7 @@
 ---
 UID: NF:d3d12.ID3D12Device.GetResourceTiling
 title: ID3D12Device::GetResourceTiling (d3d12.h)
-description: Gets info about how a tiled resource is broken into tiles.
+description: Gets info about how a tiled resource is broken into tiles. (ID3D12Device.GetResourceTiling)
 helpviewer_keywords: ["GetResourceTiling","GetResourceTiling method","GetResourceTiling method","ID3D12Device interface","ID3D12Device interface","GetResourceTiling method","ID3D12Device.GetResourceTiling","ID3D12Device::GetResourceTiling","d3d12/ID3D12Device::GetResourceTiling","direct3d12.id3d12device_getresourcetiling"]
 old-location: direct3d12\id3d12device_getresourcetiling.htm
 tech.root: direct3d12
@@ -98,7 +98,7 @@ Specifies a <a href="/windows/desktop/api/d3d12/ns-d3d12-d3d12_subresource_tilin
 
 ## -remarks
 
-To estimate the total resource size of textures needed when calculating heap sizes and calling <a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createplacedresource">CreatePlacedResource</a>, use <a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-getresourceallocationinfo">GetResourceAllocationInfo</a> instead of <b>GetResourceTiling</b>.
+To estimate the total resource size of textures needed when calculating heap sizes and calling <a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-createplacedresource">CreatePlacedResource</a>, use <a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12device-getresourceallocationinfo(uint_uint_constd3d12_resource_desc)">GetResourceAllocationInfo</a> instead of <b>GetResourceTiling</b>.
           <b>GetResourceTiling</b> cannot be used for this.
         
 

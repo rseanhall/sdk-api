@@ -1,8 +1,8 @@
 ---
 UID: NF:msi.MsiEnumComponentQualifiersW
 title: MsiEnumComponentQualifiersW function (msi.h)
-description: The MsiEnumComponentQualifiers function enumerates the advertised qualifiers for the given component. This function retrieves one qualifier each time it is called.
-helpviewer_keywords: ["MsiEnumComponentQualifiers","MsiEnumComponentQualifiers function","MsiEnumComponentQualifiersA","MsiEnumComponentQualifiersW","_msi_msienumcomponentqualifiers","msi/MsiEnumComponentQualifiers","msi/MsiEnumComponentQualifiersA","msi/MsiEnumComponentQualifiersW","setup.msienumcomponentqualifiers"]
+description: The MsiEnumComponentQualifiers function enumerates the advertised qualifiers for the given component. This function retrieves one qualifier each time it is called. (Unicode)
+helpviewer_keywords: ["MsiEnumComponentQualifiers", "MsiEnumComponentQualifiers function", "MsiEnumComponentQualifiersW", "_msi_msienumcomponentqualifiers", "msi/MsiEnumComponentQualifiers", "msi/MsiEnumComponentQualifiersW", "setup.msienumcomponentqualifiers"]
 old-location: setup\msienumcomponentqualifiers.htm
 tech.root: setup
 ms.assetid: f499cca3-ef24-4419-92b8-7794b3a6816b
@@ -187,7 +187,7 @@ When making multiple calls to
 
 
 > [!NOTE]
-> The msi.h header defines MsiEnumComponentQualifiers as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The msi.h header defines MsiEnumComponentQualifiers as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

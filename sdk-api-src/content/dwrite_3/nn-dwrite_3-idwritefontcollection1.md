@@ -1,7 +1,7 @@
 ---
 UID: NN:dwrite_3.IDWriteFontCollection1
 title: IDWriteFontCollection1 (dwrite_3.h)
-description: An object that encapsulates a set of fonts, such as the set of fonts installed on the system, or the set of fonts in a particular directory.
+description: An object that encapsulates a set of fonts, such as the set of fonts installed on the system, or the set of fonts in a particular directory. (IDWriteFontCollection1)
 helpviewer_keywords: ["IDWriteFontCollection1","IDWriteFontCollection1 interface [Direct Write]","IDWriteFontCollection1 interface [Direct Write]","described","directwrite.idwritefontcollection1","dwrite_3/IDWriteFontCollection1"]
 old-location: directwrite\idwritefontcollection1.htm
 tech.root: DirectWrite
@@ -11,8 +11,8 @@ ms.keywords: IDWriteFontCollection1, IDWriteFontCollection1 interface [Direct Wr
 req.header: dwrite_3.h
 req.include-header: 
 req.target-type: Windows
-req.target-min-winverclnt: Windows 7, Windows Vista with SP2 and Platform Update for Windows Vista [desktop apps \| UWP apps]
-req.target-min-winversvr: Windows Server 2008 R2, Windows Server 2008 with SP2 and Platform Update for Windows Server 2008 [desktop apps \| UWP apps]
+req.target-min-winverclnt: Windows 10 [desktop apps only]
+req.target-min-winversvr: Windows Server 2016 [desktop apps only]
 req.kmdf-ver: 
 req.umdf-ver: 
 req.ddi-compliance: 

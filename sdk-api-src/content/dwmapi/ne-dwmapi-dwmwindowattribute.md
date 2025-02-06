@@ -6,7 +6,7 @@ helpviewer_keywords: ["DWMWA_ALLOW_NCPAINT","DWMWA_CAPTION_BUTTON_BOUNDS","DWMWA
 old-location: dwm\dwmwindowattribute.htm
 tech.root: dwm
 ms.assetid: VS|winui|~\winui\desktopwindowmanager\reference\enums\dwmwindowattribute.htm
-ms.date: 05/30/2019
+ms.date: 05/13/2022
 ms.keywords: DWMWA_ALLOW_NCPAINT, DWMWA_CAPTION_BUTTON_BOUNDS, DWMWA_CLOAK, DWMWA_CLOAKED, DWMWA_DISALLOW_PEEK, DWMWA_EXCLUDED_FROM_PEEK, DWMWA_EXTENDED_FRAME_BOUNDS, DWMWA_FLIP3D_POLICY, DWMWA_FORCE_ICONIC_REPRESENTATION, DWMWA_FREEZE_REPRESENTATION, DWMWA_HAS_ICONIC_BITMAP, DWMWA_LAST, DWMWA_NCRENDERING_ENABLED, DWMWA_NCRENDERING_POLICY, DWMWA_NONCLIENT_RTL_LAYOUT, DWMWA_TRANSITIONS_FORCEDISABLED, DWMWINDOWATTRIBUTE, DWMWINDOWATTRIBUTE enumeration [Desktop Window Manager], _udwm_dwmwindowattribute, _udwm_dwmwindowattribute_cpp, dwm.dwmwindowattribute, dwmapi/DWMWA_ALLOW_NCPAINT, dwmapi/DWMWA_CAPTION_BUTTON_BOUNDS, dwmapi/DWMWA_CLOAK, dwmapi/DWMWA_CLOAKED, dwmapi/DWMWA_DISALLOW_PEEK, dwmapi/DWMWA_EXCLUDED_FROM_PEEK, dwmapi/DWMWA_EXTENDED_FRAME_BOUNDS, dwmapi/DWMWA_FLIP3D_POLICY, dwmapi/DWMWA_FORCE_ICONIC_REPRESENTATION, dwmapi/DWMWA_FREEZE_REPRESENTATION, dwmapi/DWMWA_HAS_ICONIC_BITMAP, dwmapi/DWMWA_LAST, dwmapi/DWMWA_NCRENDERING_ENABLED, dwmapi/DWMWA_NCRENDERING_POLICY, dwmapi/DWMWA_NONCLIENT_RTL_LAYOUT, dwmapi/DWMWA_TRANSITIONS_FORCEDISABLED, dwmapi/DWMWINDOWATTRIBUTE, winui._udwm_dwmwindowattribute
 req.header: dwmapi.h
 req.include-header: 
@@ -43,6 +43,7 @@ api_location:
  - Dwmapi.h
 api_name:
  - DWMWINDOWATTRIBUTE
+prerelease: false
 ---
 
 ## -description
@@ -52,6 +53,16 @@ Options used by the [DwmGetWindowAttribute](/windows/desktop/api/dwmapi/nf-dwmap
 ## -enum-fields
 
 ### -field DWMWA_NCRENDERING_ENABLED
+
+> [!IMPORTANT]
+> The value of **DWMWA_NCRENDERING_ENABLED** is 1.
+
+```cpp
+typedef enum DWMWINDOWATTRIBUTE {
+  DWMWA_NCRENDERING_ENABLED = 1,
+  DWMWA_NCRENDERING_POLICY,
+  ...
+```
 
 Use with <a href="/windows/desktop/api/dwmapi/nf-dwmapi-dwmgetwindowattribute">DwmGetWindowAttribute</a>. Discovers whether non-client rendering is enabled. The retrieved value is of type <b>BOOL</b>. <b>TRUE</b> if non-client rendering is enabled; otherwise, <b>FALSE</b>.
 
@@ -117,11 +128,11 @@ Use with <a href="/windows/desktop/api/dwmapi/nf-dwmapi-dwmsetwindowattribute">D
 
 Use with <a href="/windows/desktop/api/dwmapi/nf-dwmapi-dwmgetwindowattribute">DwmGetWindowAttribute</a>. If the window is cloaked, provides one of the following values explaining why.
 
-<b>DWM_CLOAKED_APP</b> (value 0x0000001). The window was cloaked by its owner application.
+<b>DWM_CLOAKED_APP</b> (value 0x00000001). The window was cloaked by its owner application.
 
-<b>DWM_CLOAKED_SHELL</b> (value 0x0000002). The window was cloaked by the Shell.
+<b>DWM_CLOAKED_SHELL</b> (value 0x00000002). The window was cloaked by the Shell.
 
-<b>DWM_CLOAKED_INHERITED</b> (value 0x0000004). The cloak value was inherited from its owner window.
+<b>DWM_CLOAKED_INHERITED</b> (value 0x00000004). The cloak value was inherited from its owner window.
 
 <b>Windows 7 and earlier: </b>This value is not supported.
 
@@ -151,19 +162,27 @@ This value is supported starting with Windows 11 Build 22000.
 
 ### -field DWMWA_BORDER_COLOR
 
-Use with [DwmSetWindowAttribute](/windows/win32/api/dwmapi/nf-dwmapi-dwmsetwindowattribute). Specifies the color of the window border. The <i>pvAttribute</i> parameter points to a value of type [COLORREF](./gdi/colorref.md). The app is responsible for changing the border color according to state changes, such as a change in window activation. 
+Use with [DwmSetWindowAttribute](/windows/win32/api/dwmapi/nf-dwmapi-dwmsetwindowattribute). Specifies the color of the window border. The <i>pvAttribute</i> parameter points to a value of type [COLORREF](/windows/win32/gdi/colorref). The app is responsible for changing the border color according to state changes, such as a change in window activation. 
+
+Specifying **DWMWA_COLOR_NONE** (value 0xFFFFFFFE) for the color will suppress the drawing of the window border.  This makes it possible to have a rounded window with no border.
+
+Specifying **DWMWA_COLOR_DEFAULT** (value 0xFFFFFFFF) for the color will reset the window back to using the system's default behavior for the border color.
 
 This value is supported starting with Windows 11 Build 22000.
 
 ### -field DWMWA_CAPTION_COLOR
 
-Use with [DwmSetWindowAttribute](/windows/win32/api/dwmapi/nf-dwmapi-dwmsetwindowattribute). Specifies the color of the caption. The <i>pvAttribute</i> parameter points to a value of type [COLORREF](./gdi/colorref.md). 
+Use with [DwmSetWindowAttribute](/windows/win32/api/dwmapi/nf-dwmapi-dwmsetwindowattribute). Specifies the color of the caption. The <i>pvAttribute</i> parameter points to a value of type [COLORREF](/windows/win32/gdi/colorref). 
+
+Specifying **DWMWA_COLOR_DEFAULT** (value 0xFFFFFFFF) for the color will reset the window back to using the system's default behavior for the caption color.
 
 This value is supported starting with Windows 11 Build 22000.
 
 ### -field DWMWA_TEXT_COLOR
 
-Use with [DwmSetWindowAttribute](/windows/win32/api/dwmapi/nf-dwmapi-dwmsetwindowattribute). Specifies the color of the caption text. The <i>pvAttribute</i> parameter points to a value of type [COLORREF](./gdi/colorref.md). 
+Use with [DwmSetWindowAttribute](/windows/win32/api/dwmapi/nf-dwmapi-dwmsetwindowattribute). Specifies the color of the caption text. The <i>pvAttribute</i> parameter points to a value of type [COLORREF](/windows/win32/gdi/colorref). 
+
+Specifying **DWMWA_COLOR_DEFAULT** (value 0xFFFFFFFF) for the color will reset the window back to using the system's default behavior for the caption text color.
 
 This value is supported starting with Windows 11 Build 22000.
 
@@ -172,6 +191,12 @@ This value is supported starting with Windows 11 Build 22000.
 Use with [DwmGetWindowAttribute](/windows/win32/api/dwmapi/nf-dwmapi-dwmgetwindowattribute). Retrieves the width of the outer border that the DWM would draw around this window. The value can vary depending on the DPI of the window. The <i>pvAttribute</i> parameter points to a value of type **UINT**. 
 
 This value is supported starting with Windows 11 Build 22000.
+
+### -field DWMWA_SYSTEMBACKDROP_TYPE
+
+Use with [DwmGetWindowAttribute](/windows/win32/api/dwmapi/nf-dwmapi-dwmgetwindowattribute) or [DwmSetWindowAttribute](/windows/win32/api/dwmapi/nf-dwmapi-dwmsetwindowattribute). Retrieves or specifies the system-drawn backdrop material of a window, including behind the non-client area. The *pvAttribute* parameter points to a value of type [DWM_SYSTEMBACKDROP_TYPE](ne-dwmapi-dwm_systembackdrop_type.md). 
+
+This value is supported starting with Windows 11 Build 22621.
 
 ### -field DWMWA_LAST
 

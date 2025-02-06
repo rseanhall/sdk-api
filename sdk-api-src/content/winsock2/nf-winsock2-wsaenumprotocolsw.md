@@ -1,8 +1,8 @@
 ---
 UID: NF:winsock2.WSAEnumProtocolsW
 title: WSAEnumProtocolsW function (winsock2.h)
-description: The WSAEnumProtocols function retrieves information about available transport protocols.
-helpviewer_keywords: ["WSAEnumProtocols","WSAEnumProtocols function [Winsock]","WSAEnumProtocolsA","WSAEnumProtocolsW","_win32_wsaenumprotocols_2","winsock.wsaenumprotocols_2","winsock2/WSAEnumProtocols","winsock2/WSAEnumProtocolsA","winsock2/WSAEnumProtocolsW"]
+description: The WSAEnumProtocols function retrieves information about available transport protocols. (Unicode)
+helpviewer_keywords: ["WSAEnumProtocols", "WSAEnumProtocols function [Winsock]", "WSAEnumProtocolsW", "_win32_wsaenumprotocols_2", "winsock.wsaenumprotocols_2", "winsock2/WSAEnumProtocols", "winsock2/WSAEnumProtocolsW"]
 old-location: winsock\wsaenumprotocols_2.htm
 tech.root: WinSock
 ms.assetid: 928b6937-41a3-4268-a3bc-14c9e04870e4
@@ -357,7 +357,7 @@ int wmain()
 
 
 > [!NOTE]
-> The winsock2.h header defines WSAEnumProtocols as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The winsock2.h header defines WSAEnumProtocols as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

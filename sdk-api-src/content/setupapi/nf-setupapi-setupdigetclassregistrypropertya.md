@@ -1,12 +1,12 @@
 ---
 UID: NF:setupapi.SetupDiGetClassRegistryPropertyA
 title: SetupDiGetClassRegistryPropertyA function (setupapi.h)
-description: The SetupDiGetClassRegistryProperty function retrieves a property for a specified device setup class from the registry.
-helpviewer_keywords: ["SetupDiGetClassRegistryProperty","SetupDiGetClassRegistryProperty function [Device and Driver Installation]","SetupDiGetClassRegistryPropertyA","SetupDiGetClassRegistryPropertyW","devinst.setupdigetclassregistryproperty","di-rtns_98a6c47a-6fb5-4752-9f0e-23ad00f4e5f2.xml","setupapi/SetupDiGetClassRegistryProperty"]
+description: The SetupDiGetClassRegistryProperty function retrieves a property for a specified device setup class from the registry. (ANSI)
+helpviewer_keywords: ["SetupDiGetClassRegistryPropertyA", "di-rtns_98a6c47a-6fb5-4752-9f0e-23ad00f4e5f2.xml"]
 old-location: devinst\setupdigetclassregistryproperty.htm
 tech.root: devinst
 ms.assetid: 79a600af-15c1-4afc-a2cd-568b97d979dc
-ms.date: 12/05/2018
+ms.date: 01/30/2023
 ms.keywords: SetupDiGetClassRegistryProperty, SetupDiGetClassRegistryProperty function [Device and Driver Installation], SetupDiGetClassRegistryPropertyA, SetupDiGetClassRegistryPropertyW, devinst.setupdigetclassregistryproperty, di-rtns_98a6c47a-6fb5-4752-9f0e-23ad00f4e5f2.xml, setupapi/SetupDiGetClassRegistryProperty
 req.header: setupapi.h
 req.include-header: Setupapi.h
@@ -38,7 +38,7 @@ topic_type:
  - APIRef
  - kbSyntax
 api_type:
- - LibDef
+ - DllExport
 api_location:
  - Setupapi.lib
  - Setupapi.dll
@@ -127,6 +127,9 @@ A pointer to a variable of type DWORD that receives the required size, in bytes,
 
 A pointer to a NULL-terminated string that contains the name of a remote system from which to retrieve the specified device class property. This parameter is optional and can be <b>NULL</b>. If this parameter is <b>NULL</b>, the property is retrieved from the local system.
 
+> [!CAUTION]
+> Using this function to access remote machines is not supported beginning with Windows 8 and Windows Server 2012, as this functionality has been removed.
+
 ### -param Reserved
 
 Reserved, must be <b>NULL</b>.
@@ -150,4 +153,4 @@ The function returns <b>TRUE</b> if it is successful. Otherwise, it returns <b>F
 ## -remarks
 
 > [!NOTE]
-> The setupapi.h header defines SetupDiGetClassRegistryProperty as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The setupapi.h header defines SetupDiGetClassRegistryProperty as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).

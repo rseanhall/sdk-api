@@ -1,8 +1,8 @@
 ---
 UID: NF:winnetwk.WNetGetResourceParentA
 title: WNetGetResourceParentA function (winnetwk.h)
-description: The WNetGetResourceParent function returns the parent of a network resource in the network browse hierarchy. Browsing begins at the location of the specified network resource.
-helpviewer_keywords: ["WNetGetResourceParent","WNetGetResourceParent function [Windows Networking (WNet)]","WNetGetResourceParentA","WNetGetResourceParentW","_win32_wnetgetresourceparent","dwType","lpProvider","lpRemoteName","winnetwk/WNetGetResourceParent","winnetwk/WNetGetResourceParentA","winnetwk/WNetGetResourceParentW","wnet.wnetgetresourceparent"]
+description: The WNetGetResourceParent function returns the parent of a network resource in the network browse hierarchy. Browsing begins at the location of the specified network resource. (ANSI)
+helpviewer_keywords: ["WNetGetResourceParentA", "dwType", "lpProvider", "lpRemoteName", "winnetwk/WNetGetResourceParentA"]
 old-location: wnet\wnetgetresourceparent.htm
 tech.root: WNet
 ms.assetid: 6ad5e2c0-d557-43cc-8ccf-a21160e262f8
@@ -230,7 +230,7 @@ An example of an inappropriate use of
 
 
 > [!NOTE]
-> The winnetwk.h header defines WNetGetResourceParent as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The winnetwk.h header defines WNetGetResourceParent as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

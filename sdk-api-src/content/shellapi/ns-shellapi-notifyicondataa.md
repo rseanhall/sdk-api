@@ -1,7 +1,7 @@
 ---
 UID: NS:shellapi._NOTIFYICONDATAA
 title: NOTIFYICONDATAA (shellapi.h)
-description: Contains information that the system needs to display notifications in the notification area. Used by Shell_NotifyIcon.
+description: Contains information that the system needs to display notifications in the notification area. Used by Shell_NotifyIcon. (ANSI)
 helpviewer_keywords: ["*PNOTIFYICONDATAA","0","NIF_GUID","NIF_ICON","NIF_INFO","NIF_MESSAGE","NIF_REALTIME","NIF_SHOWTIP","NIF_STATE","NIF_TIP","NIIF_ERROR","NIIF_ICON_MASK","NIIF_INFO","NIIF_LARGE_ICON","NIIF_NONE","NIIF_NOSOUND","NIIF_RESPECT_QUIET_TIME","NIIF_USER","NIIF_WARNING","NIS_HIDDEN","NIS_SHAREDICON","NOTIFYICONDATA","NOTIFYICONDATA structure [Windows Shell]","NOTIFYICONDATAA","NOTIFYICON_VERSION","NOTIFYICON_VERSION_4","PNOTIFYICONDATA","PNOTIFYICONDATA structure pointer [Windows Shell]","_win32_NOTIFYICONDATA","shell.NOTIFYICONDATA","shellapi/NOTIFYICONDATA","shellapi/PNOTIFYICONDATA"]
 old-location: shell\NOTIFYICONDATA.htm
 tech.root: shell
@@ -496,7 +496,7 @@ This also occurs in the case of a side-by-side installation. When dealing with a
 
 
 > [!NOTE]
-> The shellapi.h header defines NOTIFYICONDATA as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The shellapi.h header defines NOTIFYICONDATA as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

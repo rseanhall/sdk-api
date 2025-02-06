@@ -1,8 +1,8 @@
 ---
 UID: NF:wincred.CredUnmarshalCredentialW
 title: CredUnmarshalCredentialW function (wincred.h)
-description: The CredUnmarshalCredential function transforms a marshaled credential back into its original form.
-helpviewer_keywords: ["CredUnmarshalCredential","CredUnmarshalCredential function [Security]","CredUnmarshalCredentialA","CredUnmarshalCredentialW","_cred_credunmarshalcredential","security.credunmarshalcredential","wincred/CredUnmarshalCredential","wincred/CredUnmarshalCredentialA","wincred/CredUnmarshalCredentialW"]
+description: The CredUnmarshalCredential function transforms a marshaled credential back into its original form. (Unicode)
+helpviewer_keywords: ["CredUnmarshalCredential", "CredUnmarshalCredential function [Security]", "CredUnmarshalCredentialW", "_cred_credunmarshalcredential", "security.credunmarshalcredential", "wincred/CredUnmarshalCredential", "wincred/CredUnmarshalCredentialW"]
 old-location: security\credunmarshalcredential.htm
 tech.root: security
 ms.assetid: 65757235-d92c-479f-8e2b-1f8d8564792b
@@ -111,4 +111,4 @@ ERROR_INVALID_PARAMETER
 ## -remarks
 
 > [!NOTE]
-> The wincred.h header defines CredUnmarshalCredential as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The wincred.h header defines CredUnmarshalCredential as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).

@@ -1,7 +1,8 @@
 ---
 UID: NS:commdlg.tagCHOOSECOLORW~r1
 title: CHOOSECOLORW
-ms.date: 01/30/2019
+description: The CHOOSECOLORW (Unicode) structure r1 (commdlg.h) contains information the ChooseColor function uses to initialize the Color dialog box.
+ms.date: 08/16/2022
 ms.keywords: tagCHOOSECOLORW, CHOOSECOLORW
 targetos: Windows
 req.construct-type: structure
@@ -37,6 +38,7 @@ api_location:
 api_name:
  - tagCHOOSECOLORW
  - CHOOSECOLORW
+h1-override: CHOOSECOLORW structure (Rich Edit 2.0)
 ---
 
 # CHOOSECOLORW structure

@@ -1,10 +1,7 @@
 ---
 UID: NS:evntrace._EVENT_TRACE_LOGFILEA
 title: EVENT_TRACE_LOGFILEA (evntrace.h)
-description:
-  The EVENT_TRACE_LOGFILE structure stores information about a trace data
-  source. It is used by trace consumers when calling OpenTrace and when
-  receiving trace data via the user-defined BufferCallback.
+description: The EVENT_TRACE_LOGFILEA (ANSI) structure (evntrace.h) stores information about a trace data source.
 helpviewer_keywords:
   [
     "*PEVENT_TRACE_LOGFILEA",
@@ -30,7 +27,7 @@ helpviewer_keywords:
 old-location: etw\event_trace_logfile.htm
 tech.root: ETW
 ms.assetid: 179451e9-7e3c-4d3a-bcc6-3ad9d382229a
-ms.date: 12/05/2018
+ms.date: 08/04/2022
 ms.keywords:
   "*PEVENT_TRACE_LOGFILEA, EVENT_TRACE_LOGFILE, EVENT_TRACE_LOGFILE structure
   [ETW], EVENT_TRACE_LOGFILEA, EVENT_TRACE_LOGFILEW, PEVENT_TRACE_LOGFILE,
@@ -118,7 +115,7 @@ When calling **OpenTrace**, the user consuming the events must have permissions
 to read the file.
 
 > [!Note]
-The filename provided to OpenTrace via the _LogFileName_ field must be
+> The filename provided to OpenTrace via the _LogFileName_ field must be
 > the full file name, including any suffixes. Some trace file creation APIs can
 > silently add a suffix to the user-specified filename. For example, if the
 > controller logged events to a private session (the controller set the

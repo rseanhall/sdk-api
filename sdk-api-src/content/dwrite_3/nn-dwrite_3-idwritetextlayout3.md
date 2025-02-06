@@ -1,7 +1,7 @@
 ---
 UID: NN:dwrite_3.IDWriteTextLayout3
 title: IDWriteTextLayout3 (dwrite_3.h)
-description: Represents a block of text after it has been fully analyzed and formatted.
+description: Represents a block of text after it has been fully analyzed and formatted. (IDWriteTextLayout3)
 helpviewer_keywords: ["IDWriteTextLayout3","IDWriteTextLayout3 interface [Direct Write]","IDWriteTextLayout3 interface [Direct Write]","described","directwrite.idwritetextlayout3","dwrite_3/IDWriteTextLayout3"]
 old-location: directwrite\idwritetextlayout3.htm
 tech.root: DirectWrite
@@ -11,8 +11,8 @@ ms.keywords: IDWriteTextLayout3, IDWriteTextLayout3 interface [Direct Write], ID
 req.header: dwrite_3.h
 req.include-header: 
 req.target-type: Windows
-req.target-min-winverclnt: Windows 8.1 [desktop apps \| UWP apps]
-req.target-min-winversvr: Windows Server 2012 R2 [desktop apps \| UWP apps]
+req.target-min-winverclnt: Windows 10 [desktop apps only]
+req.target-min-winversvr: Windows Server 2016 [desktop apps only]
 req.kmdf-ver: 
 req.umdf-ver: 
 req.ddi-compliance: 
@@ -54,9 +54,9 @@ Represents a block of text after it has been fully analyzed and formatted.
 
 ## -inheritance
 
-The <b>IDWriteTextLayout3</b> interface inherits from <a href="/windows/win32/DirectWrite/idwritetextlayout2">IDWriteTextLayout2</a>. <b>IDWriteTextLayout3</b> also has these types of members:
+The <b>IDWriteTextLayout3</b> interface inherits from <a href="/windows/win32/api/dwrite_2/nn-dwrite_2-idwritetextlayout2">IDWriteTextLayout2</a>. <b>IDWriteTextLayout3</b> also has these types of members:
 
 ## -see-also
 
-<a href="/windows/win32/DirectWrite/idwritetextlayout2">IDWriteTextLayout2</a>
+<a href="/windows/win32/api/dwrite_2/nn-dwrite_2-idwritetextlayout2">IDWriteTextLayout2</a>
 

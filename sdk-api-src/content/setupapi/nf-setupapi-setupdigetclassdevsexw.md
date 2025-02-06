@@ -1,12 +1,12 @@
 ---
 UID: NF:setupapi.SetupDiGetClassDevsExW
 title: SetupDiGetClassDevsExW function (setupapi.h)
-description: The SetupDiGetClassDevsEx function returns a handle to a device information set that contains requested device information elements for a local or a remote computer.
-helpviewer_keywords: ["SetupDiGetClassDevsEx","SetupDiGetClassDevsEx function [Device and Driver Installation]","SetupDiGetClassDevsExA","SetupDiGetClassDevsExW","devinst.setupdigetclassdevsex","di-rtns_61e59e92-0451-4398-88af-0a14347aa74e.xml","setupapi/SetupDiGetClassDevsEx"]
+description: The SetupDiGetClassDevsEx function returns a handle to a device information set that contains requested device information elements for a local or a remote computer. (Unicode)
+helpviewer_keywords: ["SetupDiGetClassDevsEx", "SetupDiGetClassDevsEx function [Device and Driver Installation]", "SetupDiGetClassDevsExW", "devinst.setupdigetclassdevsex", "di-rtns_61e59e92-0451-4398-88af-0a14347aa74e.xml", "setupapi/SetupDiGetClassDevsEx"]
 old-location: devinst\setupdigetclassdevsex.htm
 tech.root: devinst
 ms.assetid: 9f13ffe1-1a60-4d9a-942d-63312ca9bc5b
-ms.date: 12/05/2018
+ms.date: 01/30/2023
 ms.keywords: SetupDiGetClassDevsEx, SetupDiGetClassDevsEx function [Device and Driver Installation], SetupDiGetClassDevsExA, SetupDiGetClassDevsExW, devinst.setupdigetclassdevsex, di-rtns_61e59e92-0451-4398-88af-0a14347aa74e.xml, setupapi/SetupDiGetClassDevsEx
 req.header: setupapi.h
 req.include-header: Setupapi.h
@@ -124,7 +124,10 @@ The handle to an existing <a href="/windows-hardware/drivers/install/device-info
 
 ### -param MachineName [in, optional]
 
-A pointer to a constant string that contains the name of a remote computer on which the devices reside. A value of <b>NULL</b> for <i>MachineName</i> specifies that the device is installed on the local computer.
+A pointer to a constant string that contains the name of a remote computer on which the devices reside. A value of <b>NULL</b> for <i>MachineName</i> specifies that the device is installed on the local computer. Remote computer is not supported beginning with Windows 8 and Windows Server 2012.
+
+> [!CAUTION]
+> Using this function to access remote machines is not supported beginning with Windows 8 and Windows Server 2012, as this functionality has been removed.
 
 ### -param Reserved
 
@@ -260,7 +263,7 @@ In an operation of this type, <b>SetupDiGetClassDevsEx</b> returns a device if t
 
 
 > [!NOTE]
-> The setupapi.h header defines SetupDiGetClassDevsEx as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The setupapi.h header defines SetupDiGetClassDevsEx as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

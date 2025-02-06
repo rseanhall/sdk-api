@@ -1,7 +1,7 @@
 ---
-UID: NS:windns.__unnamed_struct_17
+UID: NS:windns.DNS_SIG_DATAA
 title: DNS_SIG_DATAA (windns.h)
-description: Structure represents a DNS Security Extensions (DNSSEC) cryptographic signature (SIG) resource record (RR) as specified in RFC 4034.
+description: Structure represents a DNS Security Extensions (DNSSEC) cryptographic signature (SIG) resource record (RR) as specified in RFC 4034. (ANSI)
 helpviewer_keywords: ["*PDNS_RRSIG_DATA","*PDNS_RRSIG_DATAA","*PDNS_SIG_DATA","*PDNS_SIG_DATAA","1","2","3","4","5","DNS_RRSIG_DATA","DNS_RRSIG_DATA structure [DNS]","DNS_RRSIG_DATAA","DNS_SIG_DATA","DNS_SIG_DATAA","PDNS_RRSIG_DATA","PDNS_RRSIG_DATA structure pointer [DNS]","dns.dns_rrsig_data","windns/DNS_RRSIG_DATA","windns/PDNS_RRSIG_DATA"]
 old-location: dns\dns_rrsig_data.htm
 tech.root: DNS
@@ -172,7 +172,7 @@ The
 
 
 > [!NOTE]
-> The windns.h header defines DNS_SIG_DATA as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The windns.h header defines DNS_SIG_DATA as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 
@@ -181,3 +181,4 @@ The
 
 
 <a href="/windows/win32/api/windns/ns-windns-dns_recorda">DNS_RECORD</a>
+

@@ -1,7 +1,7 @@
 ---
 UID: NF:dwrite_3.IDWriteFontFace5.HasVariations
 title: IDWriteFontFace5::HasVariations
-description: Determines whether this font face's resource supports any variable axes.
+description: Determines whether this font face's resource supports any variable axes. (IDWriteFontFace5::HasVariations)
 helpviewer_keywords: ["IDWriteFontFace5 interface [Direct Write]","HasVariations method","IDWriteFontFace5.HasVariations","IDWriteFontFace5::HasVariations","HasVariations","HasVariations method [Direct Write]","HasVariations method [Direct Write]","IDWriteFontFace5 interface","directwrite.idwritefontface5_hasvariations","dwrite_3/IDWriteFontFace5::HasVariations"]
 tech.root: DirectWrite
 ms.date: 09/10/2019
@@ -10,8 +10,8 @@ req.construct-type: function
 req.header: dwrite_3.h
 req.include-header: 
 req.target-type: Windows
-req.target-min-winverclnt: Windows 10 Build 20348
-req.target-min-winversvr: Windows 10 Build 20348
+req.target-min-winverclnt: Windows 10 Build 16299
+req.target-min-winversvr: Windows 10 Build 16299
 req.kmdf-ver: 
 req.umdf-ver: 
 req.ddi-compliance: 

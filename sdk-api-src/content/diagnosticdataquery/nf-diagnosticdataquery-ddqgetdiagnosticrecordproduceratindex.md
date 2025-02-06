@@ -7,7 +7,7 @@ description: Fetches the description of a producer at the specified index in the
 ms.localizationpriority: low
 tech.root: security
 targetos: Windows
-ms.prod: windows
+ms.service: windows
 req.assembly: 
 req.construct-type: function
 req.ddi-compliance: 
@@ -57,7 +57,7 @@ The index of the producer to fetch.
 
 ### -param producerDescription
 
-Type: **[DIAGNOSTIC_DATA_EVENT_PRODUCER_DESCRIPTION\*](/windows/win32/api/diagnosticdataquery/ns-diagnosticdataquerytypes-diagnostic_data_event_producer_description)**
+Type: **[DIAGNOSTIC_DATA_EVENT_PRODUCER_DESCRIPTION\*](/windows/win32/api/diagnosticdataquerytypes/ns-diagnosticdataquerytypes-diagnostic_data_event_producer_description)**
 This output parameter is the pointer to the resource that describes the fetched producer.
 
 ## -returns

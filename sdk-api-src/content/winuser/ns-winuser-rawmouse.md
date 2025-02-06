@@ -126,7 +126,7 @@ The motion in the Y direction. This is signed relative motion or absolute motion
 
 Type: **ULONG**
 
-The device-specific additional information for the event.
+Additional device-specific information for the event. See [Distinguishing Pen Input from Mouse and Touch](/windows/win32/tablet/system-events-and-mouse-messages#distinguishing-pen-input-from-mouse-and-touch) for more info.
 
 ## -remarks
 
@@ -139,24 +139,55 @@ If **MOUSE_MOVE_ABSOLUTE** value is specified, **lLastX** and **lLastY** contain
 If **MOUSE_VIRTUAL_DESKTOP** is specified in addition to **MOUSE_MOVE_ABSOLUTE**, the coordinates map to the entire virtual desktop.
 
 ```cpp
-if ((rawMouse.usFlags & MOUSE_MOVE_ABSOLUTE) == MOUSE_MOVE_ABSOLUTE)
+case WM_INPUT:
 {
-    bool isVirtualDesktop = (rawMouse.usFlags & MOUSE_VIRTUAL_DESKTOP) == MOUSE_VIRTUAL_DESKTOP;
+    UINT dwSize = sizeof(RAWINPUT);
+    static BYTE lpb[sizeof(RAWINPUT)];
 
-    int width = GetSystemMetrics(isVirtualDesktop ? SM_CXVIRTUALSCREEN : SM_CXSCREEN);
-    int height = GetSystemMetrics(isVirtualDesktop ? SM_CYVIRTUALSCREEN : SM_CYSCREEN);
+    GetRawInputData((HRAWINPUT)lParam, RID_INPUT, lpb, &dwSize, sizeof(RAWINPUTHEADER));
 
-    int absoluteX = int((rawMouse.lLastX / 65535.0f) * width);
-    int absoluteY = int((rawMouse.lLastY / 65535.0f) * height);
-}
-else if (rawMouse.lLastX != 0 || rawMouse.lLastY != 0)
-{
-    int relativeX = rawMouse.lLastX;
-    int relativeY = rawMouse.lLastY;
+    RAWINPUT* raw = (RAWINPUT*)lpb;
+
+    if (raw->header.dwType == RIM_TYPEMOUSE)
+    {
+        RAWMOUSE& mouse = raw->data.mouse;
+
+        if (mouse.usFlags & MOUSE_MOVE_ABSOLUTE)
+        {
+            RECT rect;
+            if (mouse.usFlags & MOUSE_VIRTUAL_DESKTOP)
+            {
+                rect.left = GetSystemMetrics(SM_XVIRTUALSCREEN);
+                rect.top = GetSystemMetrics(SM_YVIRTUALSCREEN);
+                rect.right = GetSystemMetrics(SM_CXVIRTUALSCREEN);
+                rect.bottom = GetSystemMetrics(SM_CYVIRTUALSCREEN);
+            }
+            else
+            {
+                rect.left = 0;
+                rect.top = 0;
+                rect.right = GetSystemMetrics(SM_CXSCREEN);
+                rect.bottom = GetSystemMetrics(SM_CYSCREEN);
+            }
+
+            int absoluteX = MulDiv(mouse.lLastX, rect.right, USHRT_MAX) + rect.left;
+            int absoluteY = MulDiv(mouse.lLastY, rect.bottom, USHRT_MAX) + rect.top;
+            ...
+        }
+        else if (mouse.lLastX != 0 || mouse.lLastY != 0)
+        {
+            int relativeX = mouse.lLastX;
+            int relativeY = mouse.lLastY;
+            ...
+        }
+        ...
+    }
+
+    return 0;
 }
 ```
 
-In contrast to legacy [WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove) window messages Raw Input mouse events is not subject to the effects of the mouse speed set in the Control Panel's **Mouse Properties** sheet. See [About Mouse Input](/windows/win32/inputdev/about-mouse-input) for details.
+In contrast to legacy [WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove) window messages Raw Input mouse events is not subject to the effects of the mouse speed set in the Control Panel's **Mouse Properties** sheet. See [Mouse Input Overview](/windows/win32/inputdev/about-mouse-input) for details.
 
 If mouse wheel is moved, indicated by **RI_MOUSE_WHEEL** or **RI_MOUSE_HWHEEL** in **usButtonFlags**, then **usButtonData** contains a signed **short** value that specifies the distance the wheel is rotated.
 
@@ -169,33 +200,27 @@ The application could also retrieve the current lines-to-scroll and characters-t
 Here is example of such wheel handling code:
 
 ```cpp
-if ((rawMouse.usButtonFlags & RI_MOUSE_WHEEL) == RI_MOUSE_WHEEL ||
-    (rawMouse.usButtonFlags & RI_MOUSE_HWHEEL) == RI_MOUSE_HWHEEL)
+RAWMOUSE& mouse = raw->data.mouse;
+
+if ((mouse.usButtonFlags & RI_MOUSE_WHEEL) || (mouse.usButtonFlags & RI_MOUSE_HWHEEL))
 {
-    static const unsigned long defaultScrollLinesPerWheelDelta = 3;
-    static const unsigned long defaultScrollCharsPerWheelDelta = 1;
+    short wheelDelta = (short)mouse.usButtonData;
+    float scrollDelta = (float)wheelDelta / WHEEL_DELTA;
 
-    float wheelDelta = (float)(short)rawMouse.usButtonData;
-    float numTicks = wheelDelta / WHEEL_DELTA;
-
-    bool isHorizontalScroll = (rawMouse.usButtonFlags & RI_MOUSE_HWHEEL) == RI_MOUSE_HWHEEL;
-    bool isScrollByPage = false;
-    float scrollDelta = numTicks;
-
-    if (isHorizontalScroll)
+    if (mouse.usButtonFlags & RI_MOUSE_HWHEEL) // Horizontal
     {
-        unsigned long scrollChars = defaultScrollCharsPerWheelDelta;
+        unsigned long scrollChars = 1; // 1 is the default
         SystemParametersInfo(SPI_GETWHEELSCROLLCHARS, 0, &scrollChars, 0);
         scrollDelta *= scrollChars;
+        ...
     }
-    else
+    else // Vertical
     {
-        unsigned long scrollLines = defaultScrollLinesPerWheelDelta;
+        unsigned long scrollLines = 3; // 3 is the default
         SystemParametersInfo(SPI_GETWHEELSCROLLLINES, 0, &scrollLines, 0);
-        if (scrollLines == WHEEL_PAGESCROLL)
-            isScrollByPage = true;
-        else
+        if (scrollLines != WHEEL_PAGESCROLL)
             scrollDelta *= scrollLines;
+        ...
     }
 }
 ```
@@ -218,7 +243,7 @@ if ((rawMouse.usButtonFlags & RI_MOUSE_WHEEL) == RI_MOUSE_WHEEL ||
 
 [MOUSE_INPUT_DATA structure](../ntddmou/ns-ntddmou-mouse_input_data.md)
 
-[About Mouse Input (legacy)](/windows/win32/inputdev/about-mouse-input)
+[Mouse Input Overview (legacy)](/windows/win32/inputdev/about-mouse-input)
 
 [Mouse Input Notifications (legacy)](/windows/win32/inputdev/mouse-input-notifications)
 

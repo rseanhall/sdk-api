@@ -119,10 +119,10 @@ An application can determine if a key event is handled by the keystroke manager 
 
 if(msg.message == WM_KEYUP)
 {
-    if( pKeyboardMgr-&gt;TestKeyUp(msg.wParam, msg.lParam, &amp;fEaten) == S_OK 
-        &amp;&amp; fEaten 
-        &amp;&amp; pKeyboardMgr-&gt;KeyUp(msg.wParam, msg.lParam, &amp;fEaten) == S_OK 
-        &amp;&amp; fEaten)
+    if( pKeyboardMgr->TestKeyUp(msg.wParam, msg.lParam, &fEaten) == S_OK 
+        && fEaten 
+        && pKeyboardMgr->KeyUp(msg.wParam, msg.lParam, &fEaten) == S_OK 
+        && fEaten)
     {
         The key was handled by the keystroke manager or a text service. Do not pass the key to the application.
         continue;
@@ -139,20 +139,9 @@ If the keystroke manager does not handle the key event, it passes the key event 
 
 ## -see-also
 
-<a href="/windows/desktop/api/msctf/nf-msctf-itfkeyeventsink-ontestkeyup">ITfKeyEventSink::OnTestKeyUp</a>
-
-
-
-<a href="/windows/desktop/api/msctf/nn-msctf-itfkeystrokemgr">ITfKeystrokeMgr</a>
-
-
-
-<a href="/windows/desktop/api/msctf/nf-msctf-itfkeystrokemgr-keyup">ITfKeystrokeMgr::KeyUp</a>
-
-
-
-<a href="/windows/desktop/api/msctf/nf-msctf-itfkeystrokemgr-testkeydown">ITfKeystrokeMgr::TestKeyDown</a>
-
-
-
-<a href="/windows/desktop/inputdev/wm-keyup">WM_KEYUP</a>
+- <a href="/windows/desktop/api/msctf/nf-msctf-itfkeyeventsink-ontestkeyup">ITfKeyEventSink::OnTestKeyUp</a>
+- <a href="/windows/desktop/api/msctf/nn-msctf-itfkeystrokemgr">ITfKeystrokeMgr</a>
+- <a href="/windows/desktop/api/msctf/nf-msctf-itfkeystrokemgr-keyup">ITfKeystrokeMgr::KeyUp</a>
+- <a href="/windows/desktop/api/msctf/nf-msctf-itfkeystrokemgr-testkeydown">ITfKeystrokeMgr::TestKeyDown</a>
+- <a href="/windows/desktop/inputdev/wm-keyup">WM_KEYUP</a>
+- <a href="/windows/desktop/inputdev/keyboard-input">Keyboard Input</a>

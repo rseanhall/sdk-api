@@ -1,8 +1,8 @@
 ---
 UID: NF:windns.DnsReplaceRecordSetA
 title: DnsReplaceRecordSetA function (windns.h)
-description: Replaces an existing resource record (RR) set.
-helpviewer_keywords: ["DnsReplaceRecordSet","DnsReplaceRecordSet function [DNS]","DnsReplaceRecordSetA","DnsReplaceRecordSetUTF8","DnsReplaceRecordSetW","_dns_dnsreplacerecordset","dns.dnsreplacerecordset","windns/DnsReplaceRecordSet","windns/DnsReplaceRecordSetA","windns/DnsReplaceRecordSetUTF8","windns/DnsReplaceRecordSetW"]
+description: Replaces an existing resource record (RR) set. (DnsReplaceRecordSetA)
+helpviewer_keywords: ["DnsReplaceRecordSetA", "windns/DnsReplaceRecordSetA"]
 old-location: dns\dnsreplacerecordset.htm
 tech.root: DNS
 ms.assetid: 7b99f440-72fa-4cf4-9267-98f436e99a50
@@ -104,4 +104,4 @@ Returns success confirmation upon successful completion. Otherwise, returns the 
 ## -remarks
 
 > [!NOTE]
-> The windns.h header defines DnsReplaceRecordSet as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The windns.h header defines DnsReplaceRecordSet as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).

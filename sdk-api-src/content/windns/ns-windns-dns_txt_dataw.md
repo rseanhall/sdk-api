@@ -1,7 +1,7 @@
 ---
-UID: NS:windns.__unnamed_struct_11
+UID: NS:windns.DNS_TXT_DATAW
 title: DNS_TXT_DATAW (windns.h)
-description: The DNS_TXT_DATA structure represents a DNS text (TXT) record as specified in section 3.3.14 of RFC 1035.
+description: The DNS_TXT_DATA structure represents a DNS text (TXT) record as specified in section 3.3.14 of RFC 1035. (Unicode)
 helpviewer_keywords: ["*PDNS_TXT_DATA","*PDNS_TXT_DATAW","DNS_TXT_DATA","DNS_TXT_DATA structure [DNS]","DNS_TXT_DATAW","PDNS_TXT_DATA","PDNS_TXT_DATA structure pointer [DNS]","_dns_dns_txt_data","dns.dns_txt_data","windns/DNS_TXT_DATA","windns/PDNS_TXT_DATA"]
 old-location: dns\dns_txt_data.htm
 tech.root: DNS
@@ -80,7 +80,7 @@ The
 
 
 > [!NOTE]
-> The windns.h header defines DNS_TXT_DATA as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The windns.h header defines DNS_TXT_DATA as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

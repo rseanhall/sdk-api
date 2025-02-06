@@ -1,8 +1,8 @@
 ---
 UID: NF:aclapi.BuildTrusteeWithNameW
 title: BuildTrusteeWithNameW function (aclapi.h)
-description: Initializes a TRUSTEE structure. The caller specifies the trustee name. The function sets other members of the structure to default values.
-helpviewer_keywords: ["BuildTrusteeWithName","BuildTrusteeWithName function [Security]","BuildTrusteeWithNameA","BuildTrusteeWithNameW","MultipleTrusteeOperation","TrusteeForm","TrusteeType","_win32_buildtrusteewithname","aclapi/BuildTrusteeWithName","aclapi/BuildTrusteeWithNameA","aclapi/BuildTrusteeWithNameW","pMultipleTrustee","security.buildtrusteewithname"]
+description: Initializes a TRUSTEE structure. The caller specifies the trustee name. The function sets other members of the structure to default values. (Unicode)
+helpviewer_keywords: ["BuildTrusteeWithName", "BuildTrusteeWithName function [Security]", "BuildTrusteeWithNameW", "MultipleTrusteeOperation", "TrusteeForm", "TrusteeType", "_win32_buildtrusteewithname", "aclapi/BuildTrusteeWithName", "aclapi/BuildTrusteeWithNameW", "pMultipleTrustee", "security.buildtrusteewithname"]
 old-location: security\buildtrusteewithname.htm
 tech.root: security
 ms.assetid: a66c23ac-8211-40fd-bfe8-ef9089bf3745
@@ -146,4 +146,4 @@ TRUSTEE_IS_UNKNOWN
 ## -remarks
 
 > [!NOTE]
-> The aclapi.h header defines BuildTrusteeWithName as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The aclapi.h header defines BuildTrusteeWithName as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).

@@ -1,8 +1,8 @@
 ---
 UID: NF:wincred.CredUnprotectW
 title: CredUnprotectW function (wincred.h)
-description: Decrypts credentials that were previously encrypted by using the CredProtect function.
-helpviewer_keywords: ["CredUnprotect","CredUnprotect function [Security]","CredUnprotectA","CredUnprotectW","security.credunprotect","wincred/CredUnprotect","wincred/CredUnprotectA","wincred/CredUnprotectW"]
+description: Decrypts credentials that were previously encrypted by using the CredProtect function. (Unicode)
+helpviewer_keywords: ["CredUnprotect", "CredUnprotect function [Security]", "CredUnprotectW", "security.credunprotect", "wincred/CredUnprotect", "wincred/CredUnprotectW"]
 old-location: security\credunprotect.htm
 tech.root: security
 ms.assetid: 7a22fb2b-edfc-45f2-b2d2-729f3761584d
@@ -120,4 +120,4 @@ The <i>pszCredentials</i> buffer was of insufficient size.
 ## -remarks
 
 > [!NOTE]
-> The wincred.h header defines CredUnprotect as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The wincred.h header defines CredUnprotect as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).

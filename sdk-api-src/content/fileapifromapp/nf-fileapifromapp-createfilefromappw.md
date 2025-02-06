@@ -43,7 +43,7 @@ dev_langs:
 
 ## -description
 
-Creates or opens a file or I/O device. The behavior of this function is identical to [**CreateFile**](../winbase/nf-winbase-copyfilea.md), except that this function adheres to the Universal Windows Platform app security model.
+Creates or opens a file or I/O device. The behavior of this function is identical to [**CreateFile**](../fileapi/nf-fileapi-createfilew.md), except that this function adheres to the Universal Windows Platform app security model.
 
 
 ## -parameters
@@ -127,7 +127,7 @@ You cannot request an access mode that conflicts with the sharing mode that is s
 
 ### -param lpSecurityAttributes
 
-A pointer to a [**SECURITY\_ATTRIBUTES**](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/aa379560(v=vs.85)) structure that contains two separate but related data members: an optional security descriptor, and a Boolean value that determines whether the returned handle can be inherited by child processes.
+A pointer to a [**SECURITY\_ATTRIBUTES**](https://docs.microsoft.com/windows/win32/api/wtypesbase/ns-wtypesbase-security_attributes) structure that contains two separate but related data members: an optional security descriptor, and a Boolean value that determines whether the returned handle can be inherited by child processes.
     
 This parameter can be **NULL**.
 
@@ -167,7 +167,7 @@ This parameter must be one of the following values, which cannot be combined:
 <strong>CREATE_ALWAYS</strong>
 2</td>
 <td><p>Creates a new file, always.</p>
-<p>If the specified file exists and is writable, the function overwrites the file, the function succeeds, and last-error code is set to <strong>ERROR_ALREADY_EXISTS</strong> (183).</p>
+<p>If the specified file exists and is writable, the function truncates the file, the function succeeds, and last-error code is set to <strong>ERROR_ALREADY_EXISTS</strong> (183).</p>
 <p>If the specified file does not exist and is a valid path, a new file is created, the function succeeds, and the last-error code is set to zero.</p>
 <p>For more information, see the Remarks section of this topic.</p></td>
 </tr>

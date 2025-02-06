@@ -4,7 +4,7 @@ title: GetStartupInfoW function (processthreadsapi.h)
 description: Retrieves the contents of the STARTUPINFO structure that was specified when the calling process was created.
 helpviewer_keywords: ["GetStartupInfo","GetStartupInfo function","GetStartupInfoA","GetStartupInfoW","_win32_getstartupinfo","base.getstartupinfo","processthreadsapi/GetStartupInfo","processthreadsapi/GetStartupInfoA","processthreadsapi/GetStartupInfoW"]
 old-location: base\getstartupinfo.htm
-tech.root: backup
+tech.root: processthreadsapi
 ms.assetid: 191ea201-dc86-4cde-a0cd-be8d2360b22e
 ms.date: 12/05/2018
 ms.keywords: GetStartupInfo, GetStartupInfo function, GetStartupInfoA, GetStartupInfoW, _win32_getstartupinfo, base.getstartupinfo, processthreadsapi/GetStartupInfo, processthreadsapi/GetStartupInfoA, processthreadsapi/GetStartupInfoW
@@ -64,33 +64,25 @@ api_name:
 
 # GetStartupInfoW function
 
-
 ## -description
 
 Retrieves the contents of the 
-<a href="/windows/desktop/api/processthreadsapi/ns-processthreadsapi-startupinfoa">STARTUPINFO</a> structure that was specified when the calling process was created.
+<a href="/windows/desktop/api/processthreadsapi/ns-processthreadsapi-startupinfow">STARTUPINFO</a> structure that was specified when the calling process was created.
 
 ## -parameters
 
 ### -param lpStartupInfo [out]
 
 A pointer to a 
-<a href="/windows/desktop/api/processthreadsapi/ns-processthreadsapi-startupinfoa">STARTUPINFO</a> structure that receives the startup information.
-
-## -returns
-
-This function does not return a value.
-
-If an error occurs, the ANSI version of this function (<b>GetStartupInfoA</b>) can raise an exception. The Unicode version (<b>GetStartupInfoW</b>) does not fail.
+<a href="/windows/desktop/api/processthreadsapi/ns-processthreadsapi-startupinfow">STARTUPINFO</a> structure that receives the startup information.
 
 ## -remarks
 
-The 
-<a href="/windows/desktop/api/processthreadsapi/ns-processthreadsapi-startupinfoa">STARTUPINFO</a> structure was specified by the process that created the calling process. It can be used to specify properties associated with the main window of the calling process.
+The <a href="/windows/desktop/api/processthreadsapi/ns-processthreadsapi-startupinfow">STARTUPINFO</a> structure was specified by the process that created the calling process. It can be used to specify properties associated with the main window of the calling process.
 
 ## -see-also
 
-<a href="/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa">CreateProcess</a>
+<a href="/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessw">CreateProcess</a>
 
 
 
@@ -102,4 +94,4 @@ The
 
 
 
-<a href="/windows/desktop/api/processthreadsapi/ns-processthreadsapi-startupinfoa">STARTUPINFO</a>
+<a href="/windows/desktop/api/processthreadsapi/ns-processthreadsapi-startupinfow">STARTUPINFO</a>

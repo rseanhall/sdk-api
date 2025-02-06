@@ -1,7 +1,7 @@
 ---
 UID: NN:sharewindowcommandsourceinterop.IShareWindowCommandEventArgsInterop
 title: IShareWindowCommandEventArgsInterop
-description: Gets the [ShareWindowCommandSource](/uwp/api/windows.ui.shell.sharewindowcommandsource) object corresponding to a window identifier (a window handle).
+description: Gets the [ShareWindowCommandSource](/uwp/api/windows.ui.shell.sharewindowcommandsource) object corresponding to a window identifier (a window handle). (IShareWindowCommandEventArgsInterop)
 tech.root: winrt
 prerelease: false
 ms.date: 06/09/2021
@@ -37,6 +37,9 @@ f1_keywords:
 ## -description
 
 A native interoperation interface that allows getting a window identifier (a window handle) from a Windows Runtime [Windows::UI::Shell::ShareWindowCommandEventArgs](/uwp/api/windows.ui.shell.sharewindowcommandeventargs) object. This interface is available in C++ only.
+
+> [!IMPORTANT]
+> The **IShareWindowCommandEventArgsInterop** API is part of a Limited Access Feature (see [LimitedAccessFeatures class](/uwp/api/windows.applicationmodel.limitedaccessfeatures)). For more information or to request an unlock token, contact [Microsoft Support](https://aka.ms/LAFAccessRequests).
 
 ## -remarks
 

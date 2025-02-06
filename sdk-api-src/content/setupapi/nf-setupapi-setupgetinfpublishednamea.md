@@ -1,8 +1,8 @@
 ---
 UID: NF:setupapi.SetupGetInfPublishedNameA
 title: SetupGetInfPublishedNameA function (setupapi.h)
-description: The SetupGetInfPublishedName function retrieves the fully qualified file name (directory path and file name) of an INF file in the system INF file directory that corresponds to a specified INF file in the driver store or a specified INF file in the system INF file directory.
-helpviewer_keywords: ["SetupGetInfPublishedName","SetupGetInfPublishedName function [Device and Driver Installation]","SetupGetInfPublishedNameA","SetupGetInfPublishedNameW","devinst.setupgetinfpublishedname","setup-ref_c380d9fc-bc1c-4302-ba2b-b0bb7fde8d87.xml","setupapi/SetupGetInfPublishedName"]
+description: The SetupGetInfPublishedName function retrieves the fully qualified file name (directory path and file name) of an INF file in the system INF file directory that corresponds to a specified INF file in the driver store or a specified INF file in the system INF file directory. (ANSI)
+helpviewer_keywords: ["SetupGetInfPublishedNameA", "setup-ref_c380d9fc-bc1c-4302-ba2b-b0bb7fde8d87.xml"]
 old-location: devinst\setupgetinfpublishedname.htm
 tech.root: devinst
 ms.assetid: 0379f8f4-9761-4216-b4d5-5752b6dc33a5
@@ -93,7 +93,7 @@ Call the <a href="/windows/desktop/api/setupapi/nf-setupapi-setupgetinfdriversto
 
 
 > [!NOTE]
-> The setupapi.h header defines SetupGetInfPublishedName as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The setupapi.h header defines SetupGetInfPublishedName as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

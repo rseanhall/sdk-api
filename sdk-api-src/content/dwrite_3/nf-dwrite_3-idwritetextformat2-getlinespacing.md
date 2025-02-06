@@ -1,7 +1,7 @@
 ---
 UID: NF:dwrite_3.IDWriteTextFormat2.GetLineSpacing
 title: IDWriteTextFormat2::GetLineSpacing (dwrite_3.h)
-description: Gets the line spacing adjustment set for a multiline text paragraph.
+description: Gets the line spacing adjustment set for a multiline text paragraph. (IDWriteTextFormat2.GetLineSpacing)
 helpviewer_keywords: ["GetLineSpacing","GetLineSpacing method [Direct Write]","GetLineSpacing method [Direct Write]","IDWriteTextFormat2 interface","IDWriteTextFormat2 interface [Direct Write]","GetLineSpacing method","IDWriteTextFormat2.GetLineSpacing","IDWriteTextFormat2::GetLineSpacing","directwrite.idwritetextformat2_getlinespacing","dwrite_3/IDWriteTextFormat2::GetLineSpacing"]
 old-location: directwrite\idwritetextformat2_getlinespacing.htm
 tech.root: DirectWrite
@@ -11,8 +11,8 @@ ms.keywords: GetLineSpacing, GetLineSpacing method [Direct Write], GetLineSpacin
 req.header: dwrite_3.h
 req.include-header: 
 req.target-type: Windows
-req.target-min-winverclnt: Windows 7, Windows Vista with SP2 and Platform Update for Windows Vista [desktop apps \| UWP apps]
-req.target-min-winversvr: Windows Server 2008 R2, Windows Server 2008 with SP2 and Platform Update for Windows Server 2008 [desktop apps \| UWP apps]
+req.target-min-winverclnt: Windows 10 [desktop apps only]
+req.target-min-winversvr: Windows Server 2016 [desktop apps only]
 req.kmdf-ver: 
 req.umdf-ver: 
 req.ddi-compliance: 
@@ -68,5 +68,5 @@ If this method succeeds, it returns <b>S_OK</b>. Otherwise, it returns an <b>HRE
 
 ## -see-also
 
-<a href="/windows/win32/DirectWrite/idwritetextformat2">IDWriteTextFormat2</a>
+<a href="/windows/win32/api/dwrite_3/nn-dwrite_3-idwritetextformat2">IDWriteTextFormat2</a>
 

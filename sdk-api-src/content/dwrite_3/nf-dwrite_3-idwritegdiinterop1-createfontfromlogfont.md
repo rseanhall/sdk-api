@@ -1,7 +1,7 @@
 ---
 UID: NF:dwrite_3.IDWriteGdiInterop1.CreateFontFromLOGFONT
 title: IDWriteGdiInterop1::CreateFontFromLOGFONT (dwrite_3.h)
-description: Creates a font object that matches the properties specified by the LOGFONT structure.
+description: Creates a font object that matches the properties specified by the LOGFONT structure. (IDWriteGdiInterop1.CreateFontFromLOGFONT)
 helpviewer_keywords: ["CreateFontFromLOGFONT","CreateFontFromLOGFONT method [Direct Write]","CreateFontFromLOGFONT method [Direct Write]","IDWriteGdiInterop1 interface","IDWriteGdiInterop1 interface [Direct Write]","CreateFontFromLOGFONT method","IDWriteGdiInterop1.CreateFontFromLOGFONT","IDWriteGdiInterop1::CreateFontFromLOGFONT","directwrite.idwritegdiinterop1_createfontfromlogfont","dwrite_3/IDWriteGdiInterop1::CreateFontFromLOGFONT"]
 old-location: directwrite\idwritegdiinterop1_createfontfromlogfont.htm
 tech.root: DirectWrite
@@ -11,8 +11,8 @@ ms.keywords: CreateFontFromLOGFONT, CreateFontFromLOGFONT method [Direct Write],
 req.header: dwrite_3.h
 req.include-header: 
 req.target-type: Windows
-req.target-min-winverclnt: 
-req.target-min-winversvr: 
+req.target-min-winverclnt: Windows 10 [desktop apps \| UWP apps]
+req.target-min-winversvr: Windows Server 2016 [desktop apps \| UWP apps]
 req.kmdf-ver: 
 req.umdf-ver: 
 req.ddi-compliance: 

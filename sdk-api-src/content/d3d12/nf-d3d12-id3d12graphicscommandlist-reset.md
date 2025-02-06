@@ -1,7 +1,7 @@
 ---
 UID: NF:d3d12.ID3D12GraphicsCommandList.Reset
 title: ID3D12GraphicsCommandList::Reset (d3d12.h)
-description: Resets a command list back to its initial state as if a new command list was just created.
+description: Resets a command list back to its initial state as if a new command list was just created. (ID3D12GraphicsCommandList.Reset)
 helpviewer_keywords: ["ID3D12GraphicsCommandList interface","Reset method","ID3D12GraphicsCommandList.Reset","ID3D12GraphicsCommandList::Reset","Reset","Reset method","Reset method","ID3D12GraphicsCommandList interface","d3d12/ID3D12GraphicsCommandList::Reset","direct3d12.id3d12graphicscommandlist_reset"]
 old-location: direct3d12\id3d12graphicscommandlist_reset.htm
 tech.root: direct3d12
@@ -87,12 +87,12 @@ See <a href="/windows/desktop/direct3d12/d3d12-graphics-reference-returnvalues">
 
 ## -remarks
 
-By using <b>Reset</b>, you can re-use command list tracking structures without any allocations. Unlike <a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12commandallocator-reset">ID3D12CommandAllocator::Reset</a>, you can call <b>Reset</b> while the command list is still being executed. A typical pattern is to submit a command list and then immediately reset it to reuse the allocated memory for another command list. 
+By using <b>Reset</b>, you can re-use command list tracking structures without any allocations. Unlike <a href="/windows/desktop/api/d3d12/nf-d3d12-id3d12commandallocator-reset">ID3D12CommandAllocator::Reset</a>, you can call <b>Reset</b> while the command list is still being executed.
 
 You can use <b>Reset</b> for both direct command lists and bundles.
       
 
-The command allocator that <b>Reset</b> takes as input can be associated with no more than one recording command list at a time.  The allocator type, direct command list or bundle, must match the type of command list that is being created.
+The command allocator passed to <b>Reset</b> cannot be associated with any other currently-recording command list.  The allocator type, direct command list or bundle, must match the type of command list that is being created.
       
 
 If a bundle doesn't specify a resource heap, it can't make changes to which descriptor tables are bound. Either way, bundles can't change the resource heap within the bundle. If a heap is specified for a bundle, the heap must match the calling 'parent' command list’s heap.

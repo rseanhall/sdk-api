@@ -1,8 +1,8 @@
 ---
 UID: NF:ras.RasSetEntryDialParamsW
 title: RasSetEntryDialParamsW function (ras.h)
-description: The RasSetEntryDialParams function changes the connection information saved by the last successful call to the RasDial or RasSetEntryDialParams function for a specified phone-book entry.
-helpviewer_keywords: ["RasSetEntryDialParams","RasSetEntryDialParams function [RAS]","RasSetEntryDialParamsA","RasSetEntryDialParamsW","_ras_rassetentrydialparams","dwCallbackId","dwSize","dwSubEntry","ras/RasSetEntryDialParams","ras/RasSetEntryDialParamsA","ras/RasSetEntryDialParamsW","rras.rassetentrydialparams","szCallbackNumber","szDomain","szEntryName","szPassword","szPhoneNumber","szUserName"]
+description: The RasSetEntryDialParams function changes the connection information saved by the last successful call to the RasDial or RasSetEntryDialParams function for a specified phone-book entry. (Unicode)
+helpviewer_keywords: ["RasSetEntryDialParams", "RasSetEntryDialParams function [RAS]", "RasSetEntryDialParamsW", "_ras_rassetentrydialparams", "dwCallbackId", "dwSize", "dwSubEntry", "ras/RasSetEntryDialParams", "ras/RasSetEntryDialParamsW", "rras.rassetentrydialparams", "szCallbackNumber", "szDomain", "szEntryName", "szPassword", "szPhoneNumber", "szUserName"]
 old-location: rras\rassetentrydialparams.htm
 tech.root: RRAS
 ms.assetid: e1acd68e-796e-49a2-8c7d-c0fd1a9764ef
@@ -254,7 +254,7 @@ To create a new phone-book entry, use the
 
 
 > [!NOTE]
-> The ras.h header defines RasSetEntryDialParams as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The ras.h header defines RasSetEntryDialParams as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

@@ -1,8 +1,8 @@
 ---
 UID: NF:setupapi.SetupGetLineTextW
 title: SetupGetLineTextW function (setupapi.h)
-description: The SetupGetLineText function returns the contents of a line in an INF file in a compact form.
-helpviewer_keywords: ["SetupGetLineText","SetupGetLineText function [Setup API]","SetupGetLineTextA","SetupGetLineTextW","_setupapi_setupgetlinetext","setup.setupgetlinetext","setupapi/SetupGetLineText","setupapi/SetupGetLineTextA","setupapi/SetupGetLineTextW"]
+description: The SetupGetLineText function returns the contents of a line in an INF file in a compact form. (Unicode)
+helpviewer_keywords: ["SetupGetLineText", "SetupGetLineText function [Setup API]", "SetupGetLineTextW", "_setupapi_setupgetlinetext", "setup.setupgetlinetext", "setupapi/SetupGetLineText", "setupapi/SetupGetLineTextW"]
 old-location: setup\setupgetlinetext.htm
 tech.root: setup
 ms.assetid: ab689e03-5f4f-4f06-bd44-a927e1ab702d
@@ -124,7 +124,7 @@ HKLM,,PointerClass0,1,01,02,03
 
 
 > [!NOTE]
-> The setupapi.h header defines SetupGetLineText as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The setupapi.h header defines SetupGetLineText as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

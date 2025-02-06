@@ -1,8 +1,8 @@
 ---
 UID: NF:setupapi.SetupGetFileCompressionInfoW
 title: SetupGetFileCompressionInfoW function (setupapi.h)
-description: The SetupGetFileCompressionInfo function examines a physical file to determine if it is compressed and gets its full path, size, and the size of the uncompressed target file.
-helpviewer_keywords: ["SetupGetFileCompressionInfo","SetupGetFileCompressionInfo function [Setup API]","SetupGetFileCompressionInfoA","SetupGetFileCompressionInfoW","_setupapi_setupgetfilecompressioninfo","setup.setupgetfilecompressioninfo","setupapi/SetupGetFileCompressionInfo","setupapi/SetupGetFileCompressionInfoA","setupapi/SetupGetFileCompressionInfoW"]
+description: The SetupGetFileCompressionInfo function examines a physical file to determine if it is compressed and gets its full path, size, and the size of the uncompressed target file. (Unicode)
+helpviewer_keywords: ["SetupGetFileCompressionInfo", "SetupGetFileCompressionInfo function [Setup API]", "SetupGetFileCompressionInfoW", "_setupapi_setupgetfilecompressioninfo", "setup.setupgetfilecompressioninfo", "setupapi/SetupGetFileCompressionInfo", "setupapi/SetupGetFileCompressionInfoW"]
 old-location: setup\setupgetfilecompressioninfo.htm
 tech.root: setup
 ms.assetid: 68bcfbb3-f0ba-412b-9ed2-e2139099fcf2
@@ -155,7 +155,7 @@ typedef VOID (WINAPI* MYFREEFUNC)(LPVOID lpBuff);
    other code here to prepare file queue
    ...
    PTSTR lpActualSourceFileName;
-   SetupGetFileCompressionInfo(...,&amp;lpActualSourceFileName,...,...,...);
+   SetupGetFileCompressionInfo(...,&lpActualSourceFileName,...,...,...);
    ...
    MyFree(lpActualSourceFileName); 
 ```
@@ -165,7 +165,7 @@ typedef VOID (WINAPI* MYFREEFUNC)(LPVOID lpBuff);
 
 
 > [!NOTE]
-> The setupapi.h header defines SetupGetFileCompressionInfo as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The setupapi.h header defines SetupGetFileCompressionInfo as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

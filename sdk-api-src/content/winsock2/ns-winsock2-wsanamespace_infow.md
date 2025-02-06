@@ -1,7 +1,7 @@
 ---
 UID: NS:winsock2._WSANAMESPACE_INFOW
 title: WSANAMESPACE_INFOW (winsock2.h)
-description: Contains all registration information for a namespace provider.
+description: Contains all registration information for a namespace provider. (WSANAMESPACE_INFOW)
 helpviewer_keywords: ["*LPWSANAMESPACE_INFOW","*PWSANAMESPACE_INFOW","NS_BTH","NS_DNS","NS_EMAIL","NS_NLA","NS_NTDS","NS_PNRPCLOUD","NS_PNRPNAME","PWSANAMESPACE_INFO","PWSANAMESPACE_INFO structure pointer [Winsock]","WSANAMESPACE_INFO","WSANAMESPACE_INFO structure [Winsock]","WSANAMESPACE_INFOA","WSANAMESPACE_INFOW","_win32_wsanamespace_info_2","winsock.wsanamespace_info_2","winsock2/PWSANAMESPACE_INFO","winsock2/WSANAMESPACE_INFO","winsock2/WSANAMESPACE_INFOA","winsock2/WSANAMESPACE_INFOW"]
 old-location: winsock\wsanamespace_info_2.htm
 tech.root: WinSock
@@ -199,7 +199,7 @@ On Windows Vista and later, <a href="/windows/desktop/api/winsock2/ns-winsock2-
 
 
 > [!NOTE]
-> The winsock2.h header defines WSANAMESPACE_INFO as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The winsock2.h header defines WSANAMESPACE_INFO as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

@@ -1,7 +1,7 @@
 ---
 UID: NF:uiautomationcore.IScrollProvider.Scroll
 title: IScrollProvider::Scroll (uiautomationcore.h)
-description: Scrolls the visible region of the content area horizontally and vertically.
+description: Scrolls the visible region of the content area horizontally and vertically. (IScrollProvider.Scroll)
 helpviewer_keywords: ["IScrollProvider interface [Windows Accessibility]","Scroll method","IScrollProvider.Scroll","IScrollProvider::Scroll","Scroll","Scroll method [Windows Accessibility]","Scroll method [Windows Accessibility]","IScrollProvider interface","uiauto.uiauto_IScrollProvider_Scroll","uiauto_IScrollProvider_Scroll","uiautomationcore/IScrollProvider::Scroll","winauto.uiauto_IScrollProvider_Scroll"]
 old-location: winauto\uiauto_IScrollProvider_Scroll.htm
 tech.root: WinAuto
@@ -54,13 +54,13 @@ Scrolls the visible region of the content area horizontally and vertically.
 
 ## -parameters
 
-### -param unnamedParam1 [in]
+### -param horizontalAmount [in]
 
 Type: <b><a href="/windows/desktop/api/uiautomationcore/ne-uiautomationcore-scrollamount">ScrollAmount</a></b>
 
 The horizontal scrolling increment that is specific to the control.
 
-### -param unnamedParam2 [in]
+### -param verticalAmount [in]
 
 Type: <b><a href="/windows/desktop/api/uiautomationcore/ne-uiautomationcore-scrollamount">ScrollAmount</a></b>
 

@@ -1,7 +1,7 @@
 ---
-UID: NS:windns.__unnamed_struct_21
+UID: NS:windns.DNS_NSEC_DATAA
 title: DNS_NSEC_DATAA (windns.h)
-description: Represents an NSEC resource record (RR) as specified in section 4 of RFC 4034.
+description: Represents an NSEC resource record (RR) as specified in section 4 of RFC 4034. (ANSI)
 helpviewer_keywords: ["*PDNS_NSEC_DATA","*PDNS_NSEC_DATAA","DNS_NSEC_DATA","DNS_NSEC_DATA structure [DNS]","DNS_NSEC_DATAA","PDNS_NSEC_DATA","PDNS_NSEC_DATA structure pointer [DNS]","dns.dns_nsec_data","windns/DNS_NSEC_DATA","windns/PDNS_NSEC_DATA"]
 old-location: dns\dns_nsec_data.htm
 tech.root: DNS
@@ -87,7 +87,7 @@ The
 
 
 > [!NOTE]
-> The windns.h header defines DNS_NSEC_DATA as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The windns.h header defines DNS_NSEC_DATA as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 
@@ -96,3 +96,4 @@ The
 
 
 <a href="/windows/win32/api/windns/ns-windns-dns_recorda">DNS_RECORD</a>
+

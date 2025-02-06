@@ -1,7 +1,7 @@
 ---
 UID: NN:dwrite_3.IDWriteTextFormat2
 title: IDWriteTextFormat2 (dwrite_3.h)
-description: Describes the font and paragraph properties used to format text, and it describes locale information.
+description: Describes the font and paragraph properties used to format text, and it describes locale information. (IDWriteTextFormat2)
 helpviewer_keywords: ["IDWriteTextFormat2","IDWriteTextFormat2 interface [Direct Write]","IDWriteTextFormat2 interface [Direct Write]","described","directwrite.idwritetextformat2","dwrite_3/IDWriteTextFormat2"]
 old-location: directwrite\idwritetextformat2.htm
 tech.root: DirectWrite
@@ -11,8 +11,8 @@ ms.keywords: IDWriteTextFormat2, IDWriteTextFormat2 interface [Direct Write], ID
 req.header: dwrite_3.h
 req.include-header: 
 req.target-type: Windows
-req.target-min-winverclnt: Windows 8.1 [desktop apps \| UWP apps]
-req.target-min-winversvr: Windows Server 2012 R2 [desktop apps \| UWP apps]
+req.target-min-winverclnt: Windows 10 [desktop apps only]
+req.target-min-winversvr: Windows Server 2016 [desktop apps only]
 req.kmdf-ver: 
 req.umdf-ver: 
 req.ddi-compliance: 
@@ -54,9 +54,9 @@ Describes the font and paragraph properties used to format text, and it describe
 
 ## -inheritance
 
-The <b>IDWriteTextFormat2</b> interface inherits from <a href="/windows/win32/DirectWrite/idwritetextformat1">IDWriteTextFormat1</a>. <b>IDWriteTextFormat2</b> also has these types of members:
+The <b>IDWriteTextFormat2</b> interface inherits from <a href="/windows/win32/api/dwrite_2/nn-dwrite_2-idwritetextformat1">IDWriteTextFormat1</a>. <b>IDWriteTextFormat2</b> also has these types of members:
 
 ## -see-also
 
-<a href="/windows/win32/DirectWrite/idwritetextformat1">IDWriteTextFormat1</a>
+<a href="/windows/win32/api/dwrite_2/nn-dwrite_2-idwritetextformat1">IDWriteTextFormat1</a>
 

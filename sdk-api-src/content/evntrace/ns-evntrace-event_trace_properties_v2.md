@@ -116,7 +116,8 @@ tracing session. You use this structure with APIs such as
 [ControlTrace](/windows/win32/api/evntrace/nf-evntrace-controltracea) when
 defining, updating, or querying the properties of a session.
 
-> [!Note] This is a version-2 structure, extended from the
+> [!Note]
+> This is a version-2 structure, extended from the
 > [EVENT_TRACE_PROPERTIES](/windows/win32/api/evntrace/ns-evntrace-event_trace_properties)
 > structure. This structure is supported starting with **Windows 10 version
 > 1703**. When used with earlier versions of Windows, the additional fields
@@ -193,7 +194,7 @@ minimize memory usage by setting **MinimumBuffers** to 0 or to a small minimum
 (e.g. 4 or 8), allowing ETW to adjust the value upwards based on the number of
 processors. ETW will reserve the (adjusted) minimum number of buffers when the
 trace is started. If the buffers are filled more quickly than they can be
-processed, ETW will allocate addition buffers, up the the number specified by
+processed, ETW will allocate addition buffers, up to the number specified by
 **MaximumBuffers**.
 
 For buffering-mode (circular in-memory) traces, users should set the
@@ -499,6 +500,8 @@ configuration events on Windows Server 2003 or later.
 
 ### -field DUMMYUNIONNAME
 
+Not used.
+
 ### -field DUMMYUNIONNAME.AgeLimit
 
 Not used.
@@ -596,19 +599,22 @@ should make sure your session names are unique.
 
 ### -field DUMMYUNIONNAME2
 
+Not used.
+
 ### -field DUMMYUNIONNAME2.DUMMYSTRUCTNAME
+
+Not used.
 
 ### -field DUMMYUNIONNAME2.DUMMYSTRUCTNAME.VersionNumber
 
 The version of the structure. This should be set to "2".
 
 > [!Note]
-> This field and all subsequent fields will only be recognized if the
-> Wnode.Flags field includes the `WNODE_FLAG_VERSIONED_PROPERTIES` flag and the
-> underlying ETW runtime recognizes the new structure version (**Windows 10
-> version 1703** and later).
+> This field and all subsequent fields will only be recognized if the Wnode.Flags field includes the `WNODE_FLAG_VERSIONED_PROPERTIES` flag and the underlying ETW runtime recognizes the new structure version (**Windows 10 version 1703** and later).
 
 ### -field DUMMYUNIONNAME2.V2Control
+
+Not used.
 
 ### -field FilterDescCount
 
@@ -633,13 +639,31 @@ This should be NULL unless configuring a system-wide private logger.
 
 ### -field DUMMYUNIONNAME3
 
+Not used.
+
 ### -field DUMMYUNIONNAME3.DUMMYSTRUCTNAME
+
+Not used.
 
 ### -field DUMMYUNIONNAME3.DUMMYSTRUCTNAME.Wow
 
+Not used.
+
 ### -field DUMMYUNIONNAME3.DUMMYSTRUCTNAME.QpcDeltaTracking
 
+Not used.
+
 ### -field DUMMYUNIONNAME3.V2Options
+
+Not used.
+
+### -field DUMMYUNIONNAME3.LargeMdlPages
+
+Not used.
+
+### -field DUMMYUNIONNAME3.ExcludeKernelStack
+
+Not used.
 
 ## -remarks
 

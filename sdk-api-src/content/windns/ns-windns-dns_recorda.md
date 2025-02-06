@@ -1,7 +1,7 @@
 ---
 UID: NS:windns._DnsRecordA
 title: DNS_RECORDA (windns.h)
-description: Stores a DNS resource record (RR).
+description: Stores a DNS resource record (RR). (ANSI)
 helpviewer_keywords: ["*PDNS_RECORD","*PDNS_RECORDA","DNS_RECORD","DNS_RECORD structure [DNS]","DNS_RECORDA","PDNS_RECORD","PDNS_RECORD structure pointer [DNS]","_DnsRecordA","_DnsRecordW","_dns_dns_record","dns.dns_record","windns/DNS_RECORD","windns/PDNS_RECORD"]
 old-location: dns\dns_record.htm
 tech.root: DNS
@@ -70,7 +70,7 @@ A pointer to a string that represents the domain name of the record set. This mu
 
 ### -field wType
 
-A value that represents the RR <a href="/windows/desktop/DNS/dns-constants">DNS Record Type</a>. <b>wType</b> determines the format of <b>Data</b>. For example, if the value of <b>wType</b> is <b>DNS_TYPE_A</b>, the data type of <b>Data</b> is <a href="/windows/win32/api/windns/ns-windns-dns_a_data">DNS_A_DATA</a>.
+A value that represents the RR <a href="/windows/desktop/DNS/dns-constants">DNS Record Type</a>. <b>wType</b> determines the format of <b>Data</b>. For example, if the value of <b>wType</b> is <b>DNS_TYPE_A</b>, the data type of <b>Data</b> is <a href="/windows/win32/api/windns/nf-windns-dnsquery_a">DNS_A_DATA</a>.
 
 ### -field wDataLength
 
@@ -130,7 +130,7 @@ The RR data type is <a href="/windows/win32/api/windns/ns-windns-dns_soa_dataw">
 
 #### PTR, Ptr, NS, Ns, CNAME, Cname, DNAME, Dname, MB, Mb, MD, Md, MF, Mf, MG, Mg, MR, Mr
 
-The RR data type is <a href="/windows/win32/api/windns/ns-windns-dns_ptr_dataw">DNS_PTR_DATA</a>. The value of <b>wType</b> is <b>DNS_TYPE_PTR</b>.
+The RR data type is <a href="/windows/win32/api/windns/nf-windns-dnsquery_w">DNS_PTR_DATA</a>. The value of <b>wType</b> is <b>DNS_TYPE_PTR</b>.
 
 
 
@@ -248,7 +248,7 @@ The RR data type is <a href="/windows/win32/api/windns/ns-windns-dns_winsr_dataw
 
 ### -field Data.A
 
-The RR data type is <a href="/windows/win32/api/windns/ns-windns-dns_a_data">DNS_A_DATA</a>. The value of <b>wType</b> is <b>DNS_TYPE_A</b>.
+The RR data type is <a href="/windows/win32/api/windns/nf-windns-dnsquery_a">DNS_A_DATA</a>. The value of <b>wType</b> is <b>DNS_TYPE_A</b>.
 
 ### -field Data.SOA
 
@@ -433,7 +433,7 @@ When building a
 
 
 > [!NOTE]
-> The windns.h header defines DNS_RECORD as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The windns.h header defines DNS_RECORD as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 
@@ -445,7 +445,7 @@ When building a
 
 
 
-<a href="/windows/win32/api/windns/ns-windns-dns_a_data">DNS_A_DATA</a>
+<a href="/windows/win32/api/windns/nf-windns-dnsquery_a">DNS_A_DATA</a>
 
 
 
@@ -497,7 +497,7 @@ When building a
 
 
 
-<a href="/windows/win32/api/windns/ns-windns-dns_ptr_dataw">DNS_PTR_DATA</a>
+<a href="/windows/win32/api/windns/nf-windns-dnsquery_w">DNS_PTR_DATA</a>
 
 
 

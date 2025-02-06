@@ -1,8 +1,8 @@
 ---
 UID: NF:libloaderapi.GetModuleFileNameW
 title: GetModuleFileNameW function (libloaderapi.h)
-description: Retrieves the fully qualified path for the file that contains the specified module. The module must have been loaded by the current process.
-helpviewer_keywords: ["GetModuleFileName","GetModuleFileName function","GetModuleFileNameA","GetModuleFileNameW","_win32_getmodulefilename","base.getmodulefilename","libloaderapi/GetModuleFileName","libloaderapi/GetModuleFileNameA","libloaderapi/GetModuleFileNameW","winbase/GetModuleFileName","winbase/GetModuleFileNameA","winbase/GetModuleFileNameW"]
+description: Retrieves the fully qualified path for the file that contains the specified module. The module must have been loaded by the current process. (Unicode)
+helpviewer_keywords: ["GetModuleFileName", "GetModuleFileName function", "GetModuleFileNameW", "_win32_getmodulefilename", "base.getmodulefilename", "libloaderapi/GetModuleFileName", "libloaderapi/GetModuleFileNameW"]
 old-location: base\getmodulefilename.htm
 tech.root: base
 ms.assetid: f124c99f-8be1-4a9c-a84c-b1b323921f1a
@@ -87,7 +87,7 @@ The string returned will use the same format that was specified when the module 
 
 ### -param nSize [in]
 
-The size of the <i>lpFilename</i> buffer, in <b>TCHARs</b>.
+The size of the <i>lpFilename</i> buffer, in <b>WCHARs</b>.
 
 ## -returns
 
@@ -115,7 +115,7 @@ For an example, see
 
 
 > [!NOTE]
-> The libloaderapi.h header defines GetModuleFileName as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The libloaderapi.h header defines GetModuleFileName as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

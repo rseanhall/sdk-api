@@ -1,7 +1,7 @@
 ---
 UID: NC:winuser.PROPENUMPROCEXA
 title: PROPENUMPROCEXA (winuser.h)
-description: Application-defined callback function used with the EnumPropsEx function.
+description: Application-defined callback function used with the EnumPropsEx function. (ANSI)
 helpviewer_keywords: ["PropEnumProcEx","PropEnumProcEx callback","PropEnumProcEx callback function [Windows and Messages]","PropEnumProcExA","PropEnumProcExW","_win32_PropEnumProcEx","_win32_propenumprocex_cpp","winmsg.propenumprocex","winui._win32_propenumprocex","winuser/PropEnumProcEx","winuser/PropEnumProcExA","winuser/PropEnumProcExW"]
 old-location: winmsg\propenumprocex.htm
 tech.root: winmsg
@@ -101,7 +101,7 @@ The following restrictions apply to this callback function:
 
 
 > [!NOTE]
-> The winuser.h header defines PROPENUMPROCEX as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The winuser.h header defines PROPENUMPROCEX as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

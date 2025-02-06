@@ -1,8 +1,8 @@
 ---
 UID: NF:winuser.SetMenuItemInfoW
 title: SetMenuItemInfoW function (winuser.h)
-description: Changes information about a menu item.
-helpviewer_keywords: ["SetMenuItemInfo","SetMenuItemInfo function [Menus and Other Resources]","SetMenuItemInfoA","SetMenuItemInfoW","_win32_SetMenuItemInfo","_win32_setmenuiteminfo_cpp","menurc.setmenuiteminfo","winui._win32_setmenuiteminfo","winuser/SetMenuItemInfo","winuser/SetMenuItemInfoA","winuser/SetMenuItemInfoW"]
+description: Changes information about a menu item. (Unicode)
+helpviewer_keywords: ["SetMenuItemInfo", "SetMenuItemInfo function [Menus and Other Resources]", "SetMenuItemInfoW", "_win32_SetMenuItemInfo", "_win32_setmenuiteminfo_cpp", "menurc.setmenuiteminfo", "winui._win32_setmenuiteminfo", "winuser/SetMenuItemInfo", "winuser/SetMenuItemInfoW"]
 old-location: menurc\setmenuiteminfo.htm
 tech.root: menurc
 ms.assetid: VS|winui|~\winui\windowsuserinterface\resources\menus\menureference\menufunctions\setmenuiteminfo.htm
@@ -112,7 +112,7 @@ For an example, see <a href="/windows/desktop/menurc/using-menus">Example of Own
 
 
 > [!NOTE]
-> The winuser.h header defines SetMenuItemInfo as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The winuser.h header defines SetMenuItemInfo as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

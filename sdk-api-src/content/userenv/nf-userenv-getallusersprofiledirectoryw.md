@@ -1,8 +1,8 @@
 ---
 UID: NF:userenv.GetAllUsersProfileDirectoryW
 title: GetAllUsersProfileDirectoryW function (userenv.h)
-description: Retrieves the path to the root of the directory that contains program data shared by all users.
-helpviewer_keywords: ["GetAllUsersProfileDirectory","GetAllUsersProfileDirectory function [Windows Shell]","GetAllUsersProfileDirectoryA","GetAllUsersProfileDirectoryW","_shell_GetAllUsersProfileDirectory","shell.GetAllUsersProfileDirectory","userenv/GetAllUsersProfileDirectory","userenv/GetAllUsersProfileDirectoryA","userenv/GetAllUsersProfileDirectoryW"]
+description: Retrieves the path to the root of the directory that contains program data shared by all users. (Unicode)
+helpviewer_keywords: ["GetAllUsersProfileDirectory", "GetAllUsersProfileDirectory function [Windows Shell]", "GetAllUsersProfileDirectoryW", "_shell_GetAllUsersProfileDirectory", "shell.GetAllUsersProfileDirectory", "userenv/GetAllUsersProfileDirectory", "userenv/GetAllUsersProfileDirectoryW"]
 old-location: shell\GetAllUsersProfileDirectory.htm
 tech.root: shell
 ms.assetid: bd08947a-df57-4dd9-b9ba-a01b315bfdf1
@@ -101,7 +101,7 @@ To obtain the paths of subdirectories of this directory, use the <a href="/windo
 
 
 > [!NOTE]
-> The userenv.h header defines GetAllUsersProfileDirectory as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The userenv.h header defines GetAllUsersProfileDirectory as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

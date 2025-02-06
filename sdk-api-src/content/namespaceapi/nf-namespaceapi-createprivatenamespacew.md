@@ -2,9 +2,9 @@
 UID: NF:namespaceapi.CreatePrivateNamespaceW
 tech.root: Sync 
 title: CreatePrivateNamespaceW
-ms.date: 04/20/2021
+ms.date: 08/05/2022
 targetos: Windows
-description: Creates a private namespace. 
+description: The CreatePrivateNamespaceW (Unicode) function (namespaceapi.h) creates a private namespace. 
 req.assembly: 
 req.construct-type: function
 req.ddi-compliance: 
@@ -54,7 +54,7 @@ Creates a private namespace.
 
 ### -param lpPrivateNamespaceAttributes [in, optional]
 
-A pointer to a <a href="/previous-versions/windows/desktop/legacy/aa379560(v=vs.85)">SECURITY_ATTRIBUTES</a> structure that specifies the security attributes of the namespace object.
+A pointer to a <a href="/windows/win32/api/wtypesbase/ns-wtypesbase-security_attributes">SECURITY_ATTRIBUTES</a> structure that specifies the security attributes of the namespace object.
 
 ### -param lpBoundaryDescriptor [in]
 

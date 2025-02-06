@@ -1,8 +1,8 @@
 ---
 UID: NF:setupapi.SetupQueryInfVersionInformationA
 title: SetupQueryInfVersionInformationA function (setupapi.h)
-description: The SetupQueryInfVersionInformation function returns INF file version information from an SP_INF_INFORMATION structure to a buffer.
-helpviewer_keywords: ["SetupQueryInfVersionInformation","SetupQueryInfVersionInformation function [Setup API]","SetupQueryInfVersionInformationA","SetupQueryInfVersionInformationW","_setupapi_setupqueryinfversioninformation","setup.setupqueryinfversioninformation","setupapi/SetupQueryInfVersionInformation","setupapi/SetupQueryInfVersionInformationA","setupapi/SetupQueryInfVersionInformationW"]
+description: The SetupQueryInfVersionInformation function returns INF file version information from an SP_INF_INFORMATION structure to a buffer. (ANSI)
+helpviewer_keywords: ["SetupQueryInfVersionInformationA", "setupapi/SetupQueryInfVersionInformationA"]
 old-location: setup\setupqueryinfversioninformation.htm
 tech.root: setup
 ms.assetid: 58768b91-a0c7-4791-8667-2890b742798c
@@ -167,7 +167,7 @@ Provider="Microsoft"
 
 
 > [!NOTE]
-> The setupapi.h header defines SetupQueryInfVersionInformation as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The setupapi.h header defines SetupQueryInfVersionInformation as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

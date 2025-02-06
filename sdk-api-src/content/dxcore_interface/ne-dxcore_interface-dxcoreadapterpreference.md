@@ -2,14 +2,12 @@
 UID: NE:dxcore_interface.DXCoreAdapterPreference
 title: DXCoreAdapterPreference
 description: Defines constants that specify DXCore adapter preferences to be used as list-sorting criteria.
-author: windows-sdk-content
 tech.root: dxcore
-ms.author: windowssdkdev
 ms.date: 06/11/2019
 ms.keywords: DXCoreAdapterPreference enumeration, dxcore_interface.dxcoreadapterpreference
 ms.localizationpriority: low
 targetos: Windows
-ms.prod: windows
+ms.service: windows
 req.assembly: 
 req.construct-type: enumeration
 req.ddi-compliance: 
@@ -42,7 +40,7 @@ api_name:
 
 ## -description
 
-Defines constants that specify DXCore adapter preferences to be used as list-sorting criteria. You can sort a DXCore adapter list by passing an array of **DXCoreAdapterPreference** to [IDXCoreAdapterList::Sort](/windows/win32/api/dxcore_interface/nf-dxcore_interface-idxcoreadapterlist-sort).
+Defines constants that specify DXCore adapter preferences to be used as list-sorting criteria. You can sort a DXCore adapter list by passing an array of **DXCoreAdapterPreference** to [IDXCoreAdapterList::Sort](/windows/win32/dxcore/dxcore_interface/nf-dxcore_interface-idxcoreadapterlist-sort).
 
 ## -enum-fields
 
@@ -60,4 +58,4 @@ Specifies a preference for the highest-performance GPU, such as an external grap
 
 ## -see-also
 
-[IDXCoreAdapterList::Sort](/windows/win32/api/dxcore_interface/nf-dxcore_interface-idxcoreadapterlist-sort), [DXCore Reference](/windows/win32/dxcore/dxcore-reference), [Using DXCore to enumerate adapters](/windows/win32/dxcore/dxcore-enum-adapters)
+[IDXCoreAdapterList::Sort](/windows/win32/dxcore/dxcore_interface/nf-dxcore_interface-idxcoreadapterlist-sort), [DXCore reference](/windows/win32/dxcore/dxcore-reference), [Using DXCore to enumerate adapters](/windows/win32/dxcore/dxcore-enum-adapters)

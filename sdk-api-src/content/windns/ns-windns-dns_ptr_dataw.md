@@ -1,7 +1,7 @@
 ---
-UID: NS:windns.__unnamed_struct_3
+UID: NS:windns.DNS_PTR_DATAW
 title: DNS_PTR_DATAW (windns.h)
-description: The DNS_PTR_DATA structure represents a DNS pointer (PTR) record as specified in section 3.3.12 of RFC 1035.
+description: The DNS_PTR_DATA structure represents a DNS pointer (PTR) record as specified in section 3.3.12 of RFC 1035. (Unicode)
 helpviewer_keywords: ["*PDNS_PTR_DATA","*PDNS_PTR_DATAW","DNS_PTR_DATA","DNS_PTR_DATA structure [DNS]","DNS_PTR_DATAW","PDNS_PTR_DATA","PDNS_PTR_DATA structure pointer [DNS]","_dns_dns_ptr_data","dns.dns_ptr_data","windns/DNS_PTR_DATA","windns/PDNS_PTR_DATA"]
 old-location: dns\dns_ptr_data.htm
 tech.root: DNS
@@ -72,7 +72,7 @@ The
 
 
 > [!NOTE]
-> The windns.h header defines DNS_PTR_DATA as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The windns.h header defines DNS_PTR_DATA as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

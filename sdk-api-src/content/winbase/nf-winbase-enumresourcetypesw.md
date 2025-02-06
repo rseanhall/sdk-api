@@ -1,8 +1,8 @@
 ---
 UID: NF:winbase.EnumResourceTypesW
 title: EnumResourceTypesW function (winbase.h)
-description: Enumerates resource types within a binary module.
-helpviewer_keywords: ["EnumResourceTypes","EnumResourceTypes function [Menus and Other Resources]","EnumResourceTypesA","EnumResourceTypesW","_win32_EnumResourceTypes","_win32_enumresourcetypes_cpp","menurc.enumresourcetypes","winbase/EnumResourceTypes","winbase/EnumResourceTypesA","winbase/EnumResourceTypesW","winui._win32_enumresourcetypes"]
+description: Enumerates resource types within a binary module. (Unicode)
+helpviewer_keywords: ["EnumResourceTypes", "EnumResourceTypes function [Menus and Other Resources]", "EnumResourceTypesW", "_win32_EnumResourceTypes", "_win32_enumresourcetypes_cpp", "menurc.enumresourcetypes", "winbase/EnumResourceTypes", "winbase/EnumResourceTypesW", "winui._win32_enumresourcetypes"]
 old-location: menurc\enumresourcetypes.htm
 tech.root: menurc
 ms.assetid: VS|winui|~\winui\windowsuserinterface\resources\introductiontoresources\resourcereference\resourcefunctions\enumresourcetypes.htm
@@ -72,7 +72,7 @@ If this parameter is <b>NULL</b>, that is equivalent to passing in a handle to t
 
 Type: <b>ENUMRESTYPEPROC</b>
 
-A pointer to the callback function to be called for each enumerated resource type. For more information, see the <a href="/previous-versions/windows/desktop/legacy/ms648041(v=vs.85)">EnumResTypeProc</a> function.
+A pointer to the callback function to be called for each enumerated resource type. For more information, see the <a href="/windows/desktop/api/libloaderapi/nc-libloaderapi-enumrestypeprocw">EnumResTypeProc</a> function.
 
 ### -param lParam [in]
 
@@ -107,7 +107,7 @@ For an example, see <a href="/windows/desktop/menurc/using-resources">Creating a
 
 
 > [!NOTE]
-> The winbase.h header defines EnumResourceTypes as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The winbase.h header defines EnumResourceTypes as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 
@@ -115,7 +115,7 @@ For an example, see <a href="/windows/desktop/menurc/using-resources">Creating a
 
 
 
-<a href="/previous-versions/windows/desktop/legacy/ms648041(v=vs.85)">EnumResTypeProc</a>
+<a href="/windows/desktop/api/libloaderapi/nc-libloaderapi-enumrestypeprocw">EnumResTypeProc</a>
 
 
 
@@ -123,7 +123,7 @@ For an example, see <a href="/windows/desktop/menurc/using-resources">Creating a
 
 
 
-<a href="/windows/desktop/api/winbase/nf-winbase-enumresourcenamesa">EnumResourceNames</a>
+<a href="/windows/win32/api/libloaderapi/nf-libloaderapi-enumresourcenamesa">EnumResourceNames</a>
 
 
 

@@ -1,7 +1,7 @@
 ---
-UID: NS:windns.__unnamed_struct_30
+UID: NS:windns.DNS_SRV_DATAW
 title: DNS_SRV_DATAW (windns.h)
-description: The DNS_SRV_DATA structure represents a DNS service (SRV) record as specified in RFC 2782.
+description: The DNS_SRV_DATA structure represents a DNS service (SRV) record as specified in RFC 2782. (Unicode)
 helpviewer_keywords: ["*PDNS_SRV_DATA","*PDNS_SRV_DATAW","DNS_SRV_DATA","DNS_SRV_DATA structure [DNS]","DNS_SRV_DATAW","PDNS_SRV_DATA","PDNS_SRV_DATA structure pointer [DNS]","_dns_dns_srv_data","dns.dns_srv_data","windns/DNS_SRV_DATA","windns/PDNS_SRV_DATA"]
 old-location: dns\dns_srv_data.htm
 tech.root: DNS
@@ -88,7 +88,7 @@ The
 
 
 > [!NOTE]
-> The windns.h header defines DNS_SRV_DATA as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The windns.h header defines DNS_SRV_DATA as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

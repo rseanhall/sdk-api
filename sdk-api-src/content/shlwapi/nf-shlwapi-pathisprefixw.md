@@ -1,8 +1,8 @@
 ---
 UID: NF:shlwapi.PathIsPrefixW
 title: PathIsPrefixW function (shlwapi.h)
-description: Examines a path to determine if it starts with a prefix value passed by pszPrefix.
-helpviewer_keywords: ["PathIsPrefix","PathIsPrefix function [Windows Shell]","PathIsPrefixA","PathIsPrefixW","_win32_PathIsPrefix","shell.PathIsPrefix","shlwapi/PathIsPrefix","shlwapi/PathIsPrefixA","shlwapi/PathIsPrefixW"]
+description: Examines a path to determine if it starts with a prefix value passed by pszPrefix. (Unicode)
+helpviewer_keywords: ["PathIsPrefix", "PathIsPrefix function [Windows Shell]", "PathIsPrefixW", "_win32_PathIsPrefix", "shell.PathIsPrefix", "shlwapi/PathIsPrefix", "shlwapi/PathIsPrefixW"]
 old-location: shell\PathIsPrefix.htm
 tech.root: shell
 ms.assetid: b24f761e-6492-4a6d-9c7e-d5a5f2cbdaf3
@@ -81,5 +81,5 @@ Returns <b>TRUE</b> if <i>pszPath</i> starts with <i>pszPrefix</i>, or <b>FALSE<
 ## -remarks
 
 > [!NOTE]
-> The shlwapi.h header defines PathIsPrefix as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The shlwapi.h header defines PathIsPrefix as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 

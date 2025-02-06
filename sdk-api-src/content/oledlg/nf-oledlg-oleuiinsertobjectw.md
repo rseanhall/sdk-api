@@ -1,8 +1,8 @@
 ---
 UID: NF:oledlg.OleUIInsertObjectW
 title: OleUIInsertObjectW function (oledlg.h)
-description: Invokes the standard Insert Object dialog box, which allows the user to select an object source and class name, as well as the option of displaying the object as itself or as an icon.
-helpviewer_keywords: ["OleUIInsertObject","OleUIInsertObject function [COM]","OleUIInsertObjectA","OleUIInsertObjectW","_ole_OleUIInsertObject","com.oleuiinsertobject","oledlg/OleUIInsertObject","oledlg/OleUIInsertObjectA","oledlg/OleUIInsertObjectW"]
+description: Invokes the standard Insert Object dialog box, which allows the user to select an object source and class name, as well as the option of displaying the object as itself or as an icon. (Unicode)
+helpviewer_keywords: ["OleUIInsertObject", "OleUIInsertObject function [COM]", "OleUIInsertObjectW", "_ole_OleUIInsertObject", "com.oleuiinsertobject", "oledlg/OleUIInsertObject", "oledlg/OleUIInsertObjectW"]
 old-location: com\oleuiinsertobject.htm
 tech.root: com
 ms.assetid: f0ca8c0d-2538-4197-a830-d5ffb9f8b635
@@ -447,21 +447,21 @@ To free an <b>HMETAFILEPICT</b> returned from the <b>Insert Object</b> or <b>Pas
 
 
 ``` syntax
-void FreeHmetafilepict(HMETAFILEPICT hmfp) 
-{ 
-    if (hmfp != NULL) 
-        { 
-        LPMETAFILEPICT pmfp = GlobalLock(hmfp); 
- 
-        DeleteMetaFile(pmfp-&gt;hMF); 
-        GlobalUnlock(hmfp); 
-        GlobalFree(hmfp); 
-        } 
+void FreeHmetafilepict(HMETAFILEPICT hmfp)
+{
+    if (hmfp != NULL)
+    {
+        LPMETAFILEPICT pmfp = GlobalLock(hmfp);
+
+        DeleteMetaFile(pmfp->hMF);
+        GlobalUnlock(hmfp);
+        GlobalFree(hmfp);
+    }
     else
-        {
+    {
         // Handle null pointers here.
         exit(0);
-        }
+    }
 } 
 
 ```
@@ -471,7 +471,7 @@ void FreeHmetafilepict(HMETAFILEPICT hmfp)
 
 
 > [!NOTE]
-> The oledlg.h header defines OLEUIINSERTOBJECT as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The oledlg.h header defines OLEUIINSERTOBJECT as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

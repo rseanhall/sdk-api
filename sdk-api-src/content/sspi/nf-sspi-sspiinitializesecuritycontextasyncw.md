@@ -3,7 +3,7 @@ UID: NF:sspi.SspiInitializeSecurityContextAsyncW
 title: SspiInitializeSecurityContextAsyncW function
 ms.date: 11/4/2019
 targetos: Windows
-description: Initializes an async security context.
+description: Initializes an async security context. (Unicode)
 tech.root: security
 req.assembly: 
 req.construct-type: function
@@ -44,7 +44,7 @@ The **SspiInitializeSecurityContextAsyncW** function initiates the client side, 
 [SspiAcceptSecurityContextAsync](nf-sspi-sspiacceptsecuritycontextasync.md) call.
 
 > [!NOTE]
-> This function serves as the asynchronous counterpart to the[InitializeSecurityContext function](/windows/win32/secauthn/initializesecuritycontext--general).
+> This function serves as the asynchronous counterpart to the [InitializeSecurityContext function](/windows/win32/secauthn/initializesecuritycontext--general).
 
 ## -parameters
 

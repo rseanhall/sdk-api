@@ -1,8 +1,8 @@
 ---
 UID: NF:winreg.RegDeleteKeyTransactedW
 title: RegDeleteKeyTransactedW function (winreg.h)
-description: Deletes a subkey and its values from the specified platform-specific view of the registry as a transacted operation.
-helpviewer_keywords: ["KEY_WOW64_32KEY","KEY_WOW64_64KEY","RegDeleteKeyTransacted","RegDeleteKeyTransacted function","RegDeleteKeyTransactedA","RegDeleteKeyTransactedW","base.regdeletekeytransacted","winreg/RegDeleteKeyTransacted","winreg/RegDeleteKeyTransactedA","winreg/RegDeleteKeyTransactedW"]
+description: Deletes a subkey and its values from the specified platform-specific view of the registry as a transacted operation. (Unicode)
+helpviewer_keywords: ["KEY_WOW64_32KEY", "KEY_WOW64_64KEY", "RegDeleteKeyTransacted", "RegDeleteKeyTransacted function", "RegDeleteKeyTransactedW", "base.regdeletekeytransacted", "winreg/RegDeleteKeyTransacted", "winreg/RegDeleteKeyTransactedW"]
 old-location: base\regdeletekeytransacted.htm
 tech.root: winprog
 ms.assetid: 4c67e08b-4338-4441-8300-6b6ed31d4b21
@@ -152,7 +152,7 @@ If the function succeeds, <b>RegDeleteKeyTransacted</b> removes the specified ke
 
 
 > [!NOTE]
-> The winreg.h header defines RegDeleteKeyTransacted as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The winreg.h header defines RegDeleteKeyTransacted as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

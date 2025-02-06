@@ -56,7 +56,7 @@ Gets an <b>HBITMAP</b> that represents an <a href="/windows/desktop/api/shobjidl
 
 ### -param size [in]
 
-Type: <b><a href="/previous-versions/dd145106(v=vs.85)">SIZE</a></b>
+Type: <b><a href="/windows/win32/api/windef/ns-windef-size">SIZE</a></b>
 
 A structure that specifies the size of the image to be received.
 
@@ -142,4 +142,4 @@ If this method succeeds, it returns <b>S_OK</b>. Otherwise, it returns an <b>HRE
 
 Icon extraction can be time consuming. This method generally should not be called from a UI thread to avoid causing that thread to become unresponsive. You can call <b>IShellItemImageFactory::GetImage</b> on a UI thread if you set the <b>SIIGBF_INCACHEONLY</b> flag. However, if the image is not found in the cache, the calling application should be prepared to launch a background thread to extract the image. An extraction should never be done on a UI thread.
 
-See the <a href="/previous-versions/windows/desktop/legacy/dd940383(v=vs.85)">Using Image Factory</a> sample for a full example of how to use this method.
+See the <a href="/windows/win32/shell/samples-usingimagefactory">Using Image Factory</a> sample for a full example of how to use this method.

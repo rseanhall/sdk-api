@@ -1,8 +1,8 @@
 ---
 UID: NF:winsvc.EnumDependentServicesW
 title: EnumDependentServicesW function (winsvc.h)
-description: Retrieves the name and status of each service that depends on the specified service.
-helpviewer_keywords: ["EnumDependentServices","EnumDependentServices function","EnumDependentServicesA","EnumDependentServicesW","SERVICE_ACTIVE","SERVICE_INACTIVE","SERVICE_STATE_ALL","_win32_enumdependentservices","base.enumdependentservices","winsvc/EnumDependentServices","winsvc/EnumDependentServicesA","winsvc/EnumDependentServicesW"]
+description: Retrieves the name and status of each service that depends on the specified service. (Unicode)
+helpviewer_keywords: ["EnumDependentServices", "EnumDependentServices function", "EnumDependentServicesW", "SERVICE_ACTIVE", "SERVICE_INACTIVE", "SERVICE_STATE_ALL", "_win32_enumdependentservices", "base.enumdependentservices", "winsvc/EnumDependentServices", "winsvc/EnumDependentServicesW"]
 old-location: base\enumdependentservices.htm
 tech.root: security
 ms.assetid: 905d4453-96d4-4055-8a17-36714c547cdd
@@ -210,7 +210,7 @@ For an example, see
 
 
 > [!NOTE]
-> The winsvc.h header defines EnumDependentServices as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The winsvc.h header defines EnumDependentServices as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

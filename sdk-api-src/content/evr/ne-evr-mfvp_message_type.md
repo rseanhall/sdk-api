@@ -4,7 +4,7 @@ title: MFVP_MESSAGE_TYPE (evr.h)
 description: Defines messages for an enhanced video renderer (EVR) presenter.
 helpviewer_keywords: ["71b92702-79a0-4c18-bb56-5e7c9e49cad2","MFVP_MESSAGE_BEGINSTREAMING","MFVP_MESSAGE_CANCELSTEP","MFVP_MESSAGE_ENDOFSTREAM","MFVP_MESSAGE_ENDSTREAMING","MFVP_MESSAGE_FLUSH","MFVP_MESSAGE_INVALIDATEMEDIATYPE","MFVP_MESSAGE_PROCESSINPUTNOTIFY","MFVP_MESSAGE_STEP","MFVP_MESSAGE_TYPE","MFVP_MESSAGE_TYPE enumeration [Media Foundation]","evr/MFVP_MESSAGE_BEGINSTREAMING","evr/MFVP_MESSAGE_CANCELSTEP","evr/MFVP_MESSAGE_ENDOFSTREAM","evr/MFVP_MESSAGE_ENDSTREAMING","evr/MFVP_MESSAGE_FLUSH","evr/MFVP_MESSAGE_INVALIDATEMEDIATYPE","evr/MFVP_MESSAGE_PROCESSINPUTNOTIFY","evr/MFVP_MESSAGE_STEP","evr/MFVP_MESSAGE_TYPE","mf.mfvp_message_type"]
 old-location: mf\mfvp_message_type.htm
-tech.root: mf
+tech.root: mfarchive
 ms.assetid: 71b92702-79a0-4c18-bb56-5e7c9e49cad2
 ms.date: 12/05/2018
 ms.keywords: 71b92702-79a0-4c18-bb56-5e7c9e49cad2, MFVP_MESSAGE_BEGINSTREAMING, MFVP_MESSAGE_CANCELSTEP, MFVP_MESSAGE_ENDOFSTREAM, MFVP_MESSAGE_ENDSTREAMING, MFVP_MESSAGE_FLUSH, MFVP_MESSAGE_INVALIDATEMEDIATYPE, MFVP_MESSAGE_PROCESSINPUTNOTIFY, MFVP_MESSAGE_STEP, MFVP_MESSAGE_TYPE, MFVP_MESSAGE_TYPE enumeration [Media Foundation], evr/MFVP_MESSAGE_BEGINSTREAMING, evr/MFVP_MESSAGE_CANCELSTEP, evr/MFVP_MESSAGE_ENDOFSTREAM, evr/MFVP_MESSAGE_ENDSTREAMING, evr/MFVP_MESSAGE_FLUSH, evr/MFVP_MESSAGE_INVALIDATEMEDIATYPE, evr/MFVP_MESSAGE_PROCESSINPUTNOTIFY, evr/MFVP_MESSAGE_STEP, evr/MFVP_MESSAGE_TYPE, mf.mfvp_message_type
@@ -43,12 +43,15 @@ api_location:
  - evr.h
 api_name:
  - MFVP_MESSAGE_TYPE
+archived: true
 ---
 
 # MFVP_MESSAGE_TYPE enumeration
 
 
 ## -description
+
+[The component described on this page, [Enhanced Video Renderer](/windows/win32/medfound/enhanced-video-renderer), is a legacy feature. It has been superseded by the Simple Video Renderer (SVR) exposed through the [MediaPlayer](/uwp/api/windows.media.playback.mediaplayer) and [IMFMediaEngine](/windows/win32/api/mfmediaengine/nn-mfmediaengine-imfmediaengine) components. To play video content you should send data into one of these components and allow them to instantiate the new video renderer.  These components have been optimized for Windows 10 and Windows 11. Microsoft strongly recommends that new code use **MediaPlayer** or the lower level **IMFMediaEngine** APIs to play video media in Windows instead of the EVR, when possible. Microsoft suggests that existing code that uses the legacy APIs be rewritten to use the new APIs if possible.]
 
 Defines messages for an enhanced video renderer (EVR) presenter. This enumeration is used with the <a href="/windows/desktop/api/evr/nf-evr-imfvideopresenter-processmessage">IMFVideoPresenter::ProcessMessage</a> method.
 

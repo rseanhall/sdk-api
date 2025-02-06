@@ -1,7 +1,8 @@
 ---
 UID: NF:winuser.IsCharLowerW
 title: IsCharLowerW
-ms.date: 4/26/2019
+description: The IsCharLowerW (Unicode) function determines whether a character is lowercase. (IsCharLowerW)
+ms.date: 08/02/2022
 ms.keywords: IsCharLowerW
 targetos: Windows
 req.assembly: 
@@ -51,7 +52,7 @@ Determines whether a character is lowercase. This determination is based on the 
 
 ### -param ch
 
-Type: <b>TCHAR</b>
+Type: <b>WCHAR</b>
 
 The character to be tested.
 
@@ -66,7 +67,7 @@ If the character is not lowercase, the return value is zero. To get extended err
 ## -remarks
 
 > [!NOTE]
-> The winuser.h header defines IsCharLower as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The winuser.h header defines IsCharLower as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

@@ -1,7 +1,7 @@
 ---
 UID: NN:shobjidl_core.IShellLinkA
 title: IShellLinkA (shobjidl_core.h)
-description: Exposes methods that create, modify, and resolve Shell links.
+description: Exposes methods that create, modify, and resolve Shell links. (ANSI)
 helpviewer_keywords: ["IShellLink","IShellLink interface [Windows Shell]","IShellLink interface [Windows Shell]","described","IShellLinkA","IShellLinkW","_win32_IShellLink","_win32_IShellLink_cpp","shell.IShellLink","shobjidl_core/IShellLink"]
 old-location: shell\IShellLink.htm
 tech.root: shell
@@ -68,4 +68,4 @@ The <b>IShellLink</b> interface has an ANSI version (<b>IShellLinkA</b>) and a U
 
 
 > [!NOTE]
-> The shobjidl_core.h header defines IShellLink as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The shobjidl_core.h header defines IShellLink as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).

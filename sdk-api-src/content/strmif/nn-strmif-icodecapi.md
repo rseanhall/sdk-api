@@ -1,12 +1,12 @@
 ---
 UID: NN:strmif.ICodecAPI
 title: ICodecAPI (strmif.h)
-description: The ICodecAPI interface sets and retrieves settings on an encoder or decoder filter.
+description: The ICodecAPI interface (strmif.h) sets and retrieves settings on an encoder or decoder filter.
 helpviewer_keywords: ["ICodecAPI","ICodecAPI interface [DirectShow]","ICodecAPI interface [DirectShow]","described","ICodecAPIInterface","dshow.icodecapi","strmif/ICodecAPI"]
 old-location: dshow\icodecapi.htm
 tech.root: dshow
 ms.assetid: cc3f1bd9-1d36-45e6-94e2-07f2800fd073
-ms.date: 12/05/2018
+ms.date: 4/26/2023
 ms.keywords: ICodecAPI, ICodecAPI interface [DirectShow], ICodecAPI interface [DirectShow],described, ICodecAPIInterface, dshow.icodecapi, strmif/ICodecAPI
 req.header: strmif.h
 req.include-header: Dshow.h
@@ -50,6 +50,8 @@ api_name:
 
 
 ## -description
+
+\[The usage of the CodecAPI feature with [DirectShow](/windows/win32/directshow/directshow) is no longer recommended. DirectShow usage has been superseded by [MediaPlayer](/uwp/api/Windows.Media.Playback.MediaPlayer), [IMFMediaEngine](/windows/win32/api/mfmediaengine/nn-mfmediaengine-imfmediaengine), and [Audio/Video Capture in Media Foundation](/windows/win32/medfound/audio-video-capture-in-media-foundation). Those features have been optimized for Windows 11 and Windows 10. Instead of **DirectShow**, Microsoft strongly recommends when possible that new code use **MediaPlayer**, **IMFMediaEngine**, and **Audio/Video Capture in Media Foundation**. Microsoft suggests that existing code that uses the legacy APIs be rewritten to use the new APIs if possible.\]
 
 The <b>ICodecAPI</b> interface sets and retrieves settings on an encoder or decoder filter.
 
@@ -109,8 +111,5 @@ where {...} is a property GUID that the application can map into its user interf
 
 ## -see-also
 
-<a href="/windows/desktop/DirectShow/decoder-settings-for-windows-media-center-edition">Decoder Settings for Windows Media Center Edition</a>
-
-
-
-<a href="/windows/desktop/DirectShow/encoder-api">Encoder API</a>
+* [D3D12 video encoding](https://learn.microsoft.com/en-us/windows-hardware/drivers/display/video-encoding-d3d12)
+* [Announcing new DirectX 12 feature – Video Encoding!](https://devblogs.microsoft.com/directx/announcing-new-directx-12-feature-video-encoding/)

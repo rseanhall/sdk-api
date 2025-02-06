@@ -6,7 +6,7 @@ helpviewer_keywords: ["DML_OPERATOR_ACTIVATION_ELU","DML_OPERATOR_ACTIVATION_HAR
 old-location: direct3d12\dml_operator_type.htm
 tech.root: directml
 ms.assetid: 2D66A3DB-FE61-4EC2-B626-DD008FF14802
-ms.date: 01/19/2022
+ms.date: 08/22/2024
 req.header: directml.h
 req.include-header: 
 req.target-type: Windows
@@ -590,7 +590,7 @@ Indicates the operator described by the [DML_RESAMPLE1_OPERATOR_DESC](/windows/w
 
 ### -field DML_OPERATOR_REVERSE_SUBSEQUENCES
 
-Indicates the operator described by the [DML_REVERSE_SUBSEQUENCES_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_reverse_subsequences_operator_desc) structure.
+Indicates the operator described by the [DML_REVERSE_SUBSEQUENCES_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_reverse_subsequences_desc) structure.
 
 ### -field DML_OPERATOR_ROI_ALIGN
 
@@ -652,40 +652,122 @@ Indicates the operator described by the [DML_DYNAMIC_QUANTIZE_LINEAR_OPERATOR_DE
 
 Indicates the operator described by the [DML_ROI_ALIGN1_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_roi_align1_operator_desc) structure.
 
+### -field DML_OPERATOR_ROI_ALIGN_GRAD
+
+Indicates the operator described by the [DML_ROI_ALIGN_GRAD_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_roi_align_grad_operator_desc) structure.
+
+### -field DML_OPERATOR_BATCH_NORMALIZATION_TRAINING
+
+Indicates the operator described by the [DML_BATCH_NORMALIZATION_TRAINING_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_batch_normalization_training_operator_desc) structure.
+
+### -field DML_OPERATOR_BATCH_NORMALIZATION_TRAINING_GRAD
+
+Indicates the operator described by the [DML_BATCH_NORMALIZATION_TRAINING_GRAD_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_batch_normalization_training_grad_operator_desc) structure.
+
+### -field DML_OPERATOR_ELEMENT_WISE_CLIP1
+
+Indicates the operator described by the [DML_ELEMENT_WISE_CLIP1_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_element_wise_clip1_operator_desc) structure.
+
+### -field DML_OPERATOR_ELEMENT_WISE_CLIP_GRAD1
+
+Indicates the operator described by the [DML_ELEMENT_WISE_CLIP_GRAD1_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_element_wise_clip_grad1_operator_desc) structure.
+
+### -field DML_OPERATOR_PADDING1
+
+Indicates the operator described by the [DML_PADDING1_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_padding1_operator_desc) structure.
+
+### -field DML_OPERATOR_ELEMENT_WISE_NEGATE
+
+Indicates the operator described by the [DML_ELEMENT_WISE_NEGATE_OPERATOR_DESC](/windows/win32/api/directml/ns-directml-dml_element_wise_negate_operator_desc) structure.
+
 ## -remarks
 
-### DML_FEATURE_LEVEL_5_0
+### DML_FEATURE_LEVEL_6_4
 
-DirectML [feature level 5_0](/windows/ai/directml/dml-feature-level-history#dml_feature_level_5_0) introduces the following operator types.
+DirectML [feature level 6_4](/windows/ai/directml/dml-feature-level-history#dml_feature_level_6_4) introduces the following operator types.
 
-#### DML_OPERATOR_ELEMENT_WISE_CLIP1
+#### DML_OPERATOR_FOLD
 
-Indicates the operator described by the [DML_ELEMENT_WISE_CLIP1_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_element_wise_clip1_operator_desc) structure.
+Indicates the operator described by the [DML_FOLD_OPERATOR_DESC structure](/windows/ai/directml/api/ns-directml-dml_fold_operator_desc).
 
-#### DML_OPERATOR_ELEMENT_WISE_CLIP_GRAD1
+#### DML_OPERATOR_RESAMPLE3
 
-Indicates the operator described by the [DML_ELEMENT_WISE_CLIP_GRAD1_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_element_wise_clip_grad1_operator_desc) structure.
+Indicates the operator described by the [DML_RESAMPLE3_OPERATOR_DESC structure](/windows/ai/directml/api/ns-directml-dml_resample3_operator_desc).
 
-#### DML_OPERATOR_ELEMENT_WISE_NEGATE
+#### DML_OPERATOR_UNFOLD
 
-Indicates the operator described by the [DML_ELEMENT_WISE_NEGATE_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_element_wise_negate_operator_desc) structure.
+Indicates the operator described by the [DML_UNFOLD_OPERATOR_DESC structure](/windows/ai/directml/api/ns-directml-dml_unfold_operator_desc).
 
-#### DML_OPERATOR_PADDING1
+### DML_FEATURE_LEVEL_6_3
 
-Indicates the operator described by the [DML_PADDING1_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_padding1_operator_desc) structure.
+DirectML [feature level 6_3](/windows/ai/directml/dml-feature-level-history#dml_feature_level_6_3) introduces the following operator types.
 
-### DML_FEATURE_LEVEL_4_1
+TBD
 
-DirectML [feature level 4_1](/windows/ai/directml/dml-feature-level-history#dml_feature_level_4_1) introduces the following operator types.
+### DML_FEATURE_LEVEL_6_2
 
-#### DML_OPERATOR_BATCH_NORMALIZATION_TRAINING
+DirectML [feature level 6_2](/windows/ai/directml/dml-feature-level-history#dml_feature_level_6_2) introduces the following operator types.
 
-Indicates the operator described by the [DML_BATCH_NORMALIZATION_TRAINING_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_batch_normalization_training_operator_desc) structure.
+#### DML_OPERATOR_ACTIVATION_HARD_SWISH
 
-#### DML_OPERATOR_BATCH_NORMALIZATION_TRAINING_GRAD
+Indicates the operator described by the [DML_ACTIVATION_HARD_SWISH_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_activation_hard_swish_operator_desc) structure.
 
-Indicates the operator described by the [DML_BATCH_NORMALIZATION_TRAINING_GRAD_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_batch_normalization_training_grad_operator_desc) structure.
+#### DML_OPERATOR_ACTIVATION_SWISH
 
-#### DML_OPERATOR_ROI_ALIGN_GRAD
+Indicates the operator described by the [DML_ACTIVATION_SWISH_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_activation_swish_operator_desc) structure.
 
-Indicates the operator described by the [DML_ROI_ALIGN_GRAD_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_roi_align_grad_operator_desc) structure.
+#### DML_OPERATOR_AVERAGE_POOLING1
+
+Indicates the operator described by the [DML_AVERAGE_POOLING1_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_average_pooling1_operator_desc) structure.
+
+#### DML_OPERATOR_LP_POOLING1
+
+Indicates the operator described by the [DML_LP_POOLING1_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_lp_pooling1_operator_desc) structure.
+
+#### DML_OPERATOR_MATRIX_MULTIPLY_INTEGER_TO_FLOAT
+
+Indicates the operator described by the [DML_MATRIX_MULTIPLY_INTEGER_TO_FLOAT_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_matrix_multiply_integer_to_float_operator_desc) structure.
+
+#### DML_OPERATOR_MATRIX_MULTIPLY_INTEGER_TO_FLOAT
+
+Indicates the operator described by the [DML_MATRIX_MULTIPLY_INTEGER_TO_FLOAT_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_quantized_linear_average_pooling_operator_desc) structure.
+
+### DML_FEATURE_LEVEL_6_1
+
+DirectML [feature level 6_1](/windows/ai/directml/dml-feature-level-history#dml_feature_level_6_1) introduces the following operator type.
+
+#### DML_OPERATOR_MULTIHEAD_ATTENTION
+
+Indicates the operator described by the [DML_MULTIHEAD_ATTENTION_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_multihead_attention_operator_desc) structure.
+
+### DML_FEATURE_LEVEL_5_1
+
+DirectML [feature level 5_1](/windows/ai/directml/dml-feature-level-history#dml_feature_level_5_1) introduces the following operator types.
+
+#### DML_OPERATOR_ACTIVATION_GELU
+
+Indicates the operator described by the [DML_ACTIVATION_GELU_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_activation_gelu_operator_desc) structure.
+
+#### DML_OPERATOR_ACTIVATION_HARDMAX1
+
+Indicates the operator described by the [DML_ACTIVATION_HARDMAX1_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_activation_hardmax1_operator_desc) structure.
+
+#### DML_OPERATOR_ACTIVATION_LOG_SOFTMAX1
+
+Indicates the operator described by the [DML_ACTIVATION_LOG_SOFTMAX1_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_activation_log_softmax1_operator_desc) structure.
+
+#### DML_OPERATOR_ACTIVATION_SOFTMAX1
+
+Indicates the operator described by the [DML_ACTIVATION_SOFTMAX1_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_activation_softmax1_operator_desc) structure.
+
+#### DML_OPERATOR_DIAGONAL_MATRIX1
+
+Indicates the operator described by the [DML_DIAGONAL_MATRIX1_OPERATOR_DESC structure](/windows/ai/directml/api/ns-directml-dml_diagonal_matrix1_operator_desc) structure.
+
+#### DML_OPERATOR_RESAMPLE_GRAD1
+
+Indicates the operator described by the [DML_RESAMPLE_GRAD1_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_resample_grad1_operator_desc) structure.
+
+#### DML_OPERATOR_RESAMPLE2
+
+Indicates the operator described by the [DML_RESAMPLE2_OPERATOR_DESC](/windows/ai/directml/api/ns-directml-dml_resample2_operator_desc) structure.

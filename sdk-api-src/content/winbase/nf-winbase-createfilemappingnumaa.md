@@ -1,7 +1,7 @@
 ---
 UID: NF:winbase.CreateFileMappingNumaA
 title: CreateFileMappingNumaA function (winbase.h)
-description: Creates or opens a named or unnamed file mapping object for a specified file and specifies the NUMA node for the physical memory.
+description: Creates or opens a named or unnamed file mapping object for a specified file and specifies the NUMA node for the physical memory. (CreateFileMappingNumaA)
 helpviewer_keywords: ["CreateFileMappingNuma","CreateFileMappingNuma function","CreateFileMappingNumaA","CreateFileMappingNumaW","NUMA_NO_PREFERRED_NODE","PAGE_EXECUTE_READ","PAGE_EXECUTE_READWRITE","PAGE_EXECUTE_WRITECOPY","PAGE_READONLY","PAGE_READWRITE","PAGE_WRITECOPY","SEC_COMMIT","SEC_IMAGE","SEC_IMAGE_NO_EXECUTE","SEC_LARGE_PAGES","SEC_NOCACHE","SEC_RESERVE","SEC_WRITECOMBINE","base.createfilemappingnuma","winbase/CreateFileMappingNuma","winbase/CreateFileMappingNumaA","winbase/CreateFileMappingNumaW"]
 old-location: base\createfilemappingnuma.htm
 tech.root: base
@@ -85,7 +85,7 @@ If <i>hFile</i> is <b>INVALID_HANDLE_VALUE</b>, the calling process
 
 ### -param lpFileMappingAttributes [in, optional]
 
-A pointer to a <a href="/previous-versions/windows/desktop/legacy/aa379560(v=vs.85)">SECURITY_ATTRIBUTES</a> 
+A pointer to a <a href="/windows/win32/api/wtypesbase/ns-wtypesbase-security_attributes">SECURITY_ATTRIBUTES</a> 
        structure that determines whether a returned handle can be inherited by child processes. The 
        <b>lpSecurityDescriptor</b> member of the  
        <b>SECURITY_ATTRIBUTES</b> structure specifies a 
@@ -582,7 +582,7 @@ Yes
 
 
 
-<a href="/previous-versions/windows/desktop/legacy/aa379560(v=vs.85)">SECURITY_ATTRIBUTES</a>
+<a href="/windows/win32/api/wtypesbase/ns-wtypesbase-security_attributes">SECURITY_ATTRIBUTES</a>
 
 
 

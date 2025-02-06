@@ -38,7 +38,7 @@ Specifies the type of a per-service state directory.
 
 ### -field ServiceDirectoryPersistentState:0
 
-Mutable, persistent service state. This state is both readable and writable by the service, and is inaccessible outside of the service. This state persists across reboots and and OS updates.
+Mutable, persistent service state. This state is both readable and writable by the service, and is inaccessible outside of the service. This state persists across reboots and OS updates.
 
 ### -field ServiceDirectoryTypeMax:1
 
@@ -47,9 +47,9 @@ Reserved. Represents the maximum value of the enumeration.
 ## -remarks
 
 All per-service state directory types have a lifetime that is scoped to the lifetime of the service installation.
-Once the service is removed by calling [DeleteService](/windows/win32/api/winsvc/ne-winsvc-DeleteService) the state directories are deleted too.
+Once the service is removed by calling [DeleteService](/windows/win32/api/winsvc/nf-winsvc-deleteservice) the state directories are deleted too.
 
 ## -see-also
 
-[GetServiceDirectory](/windows/win32/api/winsvc/ne-winsvc-getservicedirectory)
+[GetServiceDirectory](/windows/win32/api/winsvc/nf-winsvc-getservicedirectory)
 

@@ -1,8 +1,8 @@
 ---
 UID: NF:shlwapi.StrRetToBufW
 title: StrRetToBufW function (shlwapi.h)
-description: Converts an STRRET structure returned by IShellFolder::GetDisplayNameOf to a string, and places the result in a buffer.
-helpviewer_keywords: ["StrRetToBuf","StrRetToBuf function [Windows Shell]","StrRetToBufA","StrRetToBufW","_win32_StrRetToBuf","shell.StrRetToBuf","shlwapi/StrRetToBuf","shlwapi/StrRetToBufA","shlwapi/StrRetToBufW"]
+description: Converts an STRRET structure returned by IShellFolder::GetDisplayNameOf to a string, and places the result in a buffer. (Unicode)
+helpviewer_keywords: ["StrRetToBuf", "StrRetToBuf function [Windows Shell]", "StrRetToBufW", "_win32_StrRetToBuf", "shell.StrRetToBuf", "shlwapi/StrRetToBuf", "shlwapi/StrRetToBufW"]
 old-location: shell\StrRetToBuf.htm
 tech.root: shell
 ms.assetid: 89dab3ee-e9f8-499a-97ec-6fe732315891
@@ -96,7 +96,7 @@ If the <b>uType</b> member of the structure pointed to by <i>pstr</i> is set to 
 
 
 > [!NOTE]
-> The shlwapi.h header defines StrRetToBuf as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The shlwapi.h header defines StrRetToBuf as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

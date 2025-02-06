@@ -1,8 +1,8 @@
 ---
 UID: NF:mmiscapi.mmioOpenA
 title: mmioOpenA function (mmiscapi.h)
-description: The mmioOpen function opens a file for unbuffered or buffered I/O; creates a file; deletes a file; or checks whether a file exists.
-helpviewer_keywords: ["_win32_mmioOpen","mmioOpen","mmioOpen function [Windows Multimedia]","mmioOpenA","mmioOpenW","mmsystem/mmioOpen","mmsystem/mmioOpenA","mmsystem/mmioOpenW","multimedia.mmioopen"]
+description: The mmioOpen function opens a file for unbuffered or buffered I/O; creates a file; deletes a file; or checks whether a file exists. (mmioOpenA)
+helpviewer_keywords: ["mmioOpenA"]
 old-location: multimedia\mmioopen.htm
 tech.root: Multimedia
 ms.assetid: 7361f0f2-1c3c-49f1-aec1-2927e05ef0f0
@@ -191,4 +191,4 @@ You must call <a href="/previous-versions/dd757316(v=vs.85)">mmioClose</a> to cl
 
 
 > [!NOTE]
-> The mmiscapi.h header defines mmioOpen as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The mmiscapi.h header defines mmioOpen as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).

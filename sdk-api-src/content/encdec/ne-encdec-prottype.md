@@ -50,6 +50,8 @@ api_name:
 
 ## -description
 
+\[The feature associated with this page, [Microsoft TV Technologies](/previous-versions/windows/desktop/mstv/microsoft-tv-technologies-portal), is a legacy feature. Microsoft strongly recommends that new code does not use this feature.\]
+
 This topic applies to Windows XP Service Pack 1 or later.
         
 
@@ -101,7 +103,7 @@ Error or invalid protection scheme. Treat as Copy Never.
 
 ## -see-also
 
-<a href="/previous-versions/windows/desktop/api/tvratings/ne-tvratings-entvrat_genericlevel">EnTvRat_GenericLevel</a>
+<a href="/previous-versions/dd375610(v=vs.85)">EnTvRat_GenericLevel</a>
 
 
 

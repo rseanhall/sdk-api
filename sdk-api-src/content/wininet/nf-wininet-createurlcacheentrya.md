@@ -1,8 +1,8 @@
 ---
 UID: NF:wininet.CreateUrlCacheEntryA
 title: CreateUrlCacheEntryA function (wininet.h)
-description: Creates a local file name for saving the cache entry based on the specified URL and the file name extension.
-helpviewer_keywords: ["CreateUrlCacheEntry","CreateUrlCacheEntry function [WinINet]","CreateUrlCacheEntryA","CreateUrlCacheEntryW","_inet_createurlcacheentry_function","wininet.createurlcacheentry","wininet/CreateUrlCacheEntry","wininet/CreateUrlCacheEntryA","wininet/CreateUrlCacheEntryW"]
+description: Creates a local file name for saving the cache entry based on the specified URL and the file name extension. (ANSI)
+helpviewer_keywords: ["CreateUrlCacheEntryA", "wininet/CreateUrlCacheEntryA"]
 old-location: wininet\createurlcacheentry.htm
 tech.root: wininet
 ms.assetid: 9a58cf05-2306-4a0f-876d-85f5e91c5a2b
@@ -95,9 +95,9 @@ WinINet attempts to decode Unicode  parameters according to the system code page
 
 ``` syntax
 DWORD CP_SHIFT_JIS = 932;  // ANSI/OEM  Japanese, Shift-JIS
-InternetSetOption( hRequest, 
+InternetSetOption( hRequest,
                    INTERNET_OPTION_CODEPAGE,
-                   &amp;CP_SHIFT_JIS, 
+                   &CP_SHIFT_JIS,
                    sizeof(DWORD) );
 ```
 
@@ -114,7 +114,7 @@ Like all other aspects of the WinINet API, this function cannot be safely called
 
 
 > [!NOTE]
-> The wininet.h header defines CreateUrlCacheEntry as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The wininet.h header defines CreateUrlCacheEntry as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

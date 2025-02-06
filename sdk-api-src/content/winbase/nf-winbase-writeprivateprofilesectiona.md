@@ -1,8 +1,8 @@
 ---
 UID: NF:winbase.WritePrivateProfileSectionA
 title: WritePrivateProfileSectionA function (winbase.h)
-description: Replaces the keys and values for the specified section in an initialization file.
-helpviewer_keywords: ["WritePrivateProfileSection","WritePrivateProfileSection function","WritePrivateProfileSectionA","WritePrivateProfileSectionW","_win32_writeprivateprofilesection","base.writeprivateprofilesection","winbase/WritePrivateProfileSection","winbase/WritePrivateProfileSectionA","winbase/WritePrivateProfileSectionW"]
+description: Replaces the keys and values for the specified section in an initialization file. (ANSI)
+helpviewer_keywords: ["WritePrivateProfileSectionA", "winbase/WritePrivateProfileSectionA"]
 old-location: base\writeprivateprofilesection.htm
 tech.root: winprog
 ms.assetid: 23f9e012-4196-437a-9e22-0524b37505b4
@@ -137,7 +137,7 @@ When looking at values in the registry that specify other registry locations, th
 
 
 > [!NOTE]
-> The winbase.h header defines WritePrivateProfileSection as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The winbase.h header defines WritePrivateProfileSection as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

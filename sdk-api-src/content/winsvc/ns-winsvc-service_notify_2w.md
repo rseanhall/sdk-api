@@ -1,7 +1,7 @@
 ---
 UID: NS:winsvc._SERVICE_NOTIFY_2W
 title: SERVICE_NOTIFY_2W (winsvc.h)
-description: Represents service status notification information.
+description: Represents service status notification information. (Unicode)
 helpviewer_keywords: ["*PSERVICE_NOTIFYW","*PSERVICE_NOTIFY_2W","PSERVICE_NOTIFY","PSERVICE_NOTIFY structure pointer","SERVICE_NOTIFY","SERVICE_NOTIFY structure","SERVICE_NOTIFYA","SERVICE_NOTIFYW","SERVICE_NOTIFY_2","SERVICE_NOTIFY_2W","base.service_notify","winsvc/PSERVICE_NOTIFY","winsvc/SERVICE_NOTIFY","winsvc/SERVICE_NOTIFYA","winsvc/SERVICE_NOTIFYW"]
 old-location: base\service_notify.htm
 tech.root: security
@@ -108,7 +108,7 @@ The callback function receives a pointer to the <b>SERVICE_NOTIFY</b> structure 
 
 
 > [!NOTE]
-> The winsvc.h header defines SERVICE_NOTIFY_2 as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The winsvc.h header defines SERVICE_NOTIFY_2 as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

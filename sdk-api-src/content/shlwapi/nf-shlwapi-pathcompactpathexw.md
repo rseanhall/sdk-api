@@ -1,8 +1,8 @@
 ---
 UID: NF:shlwapi.PathCompactPathExW
 title: PathCompactPathExW function (shlwapi.h)
-description: Truncates a path to fit within a certain number of characters by replacing path components with ellipses.
-helpviewer_keywords: ["PathCompactPathEx","PathCompactPathEx function [Windows Shell]","PathCompactPathExA","PathCompactPathExW","_win32_PathCompactPathEx","shell.PathCompactPathEx","shlwapi/PathCompactPathEx","shlwapi/PathCompactPathExA","shlwapi/PathCompactPathExW"]
+description: Truncates a path to fit within a certain number of characters by replacing path components with ellipses. (Unicode)
+helpviewer_keywords: ["PathCompactPathEx", "PathCompactPathEx function [Windows Shell]", "PathCompactPathExW", "_win32_PathCompactPathEx", "shell.PathCompactPathEx", "shlwapi/PathCompactPathEx", "shlwapi/PathCompactPathExW"]
 old-location: shell\PathCompactPathEx.htm
 tech.root: shell
 ms.assetid: ff108ee6-3d71-4ab2-a04a-d4bcce408f88
@@ -94,5 +94,5 @@ The '/' separator will be used instead of '\\' if the original string used it. I
 
 
 > [!NOTE]
-> The shlwapi.h header defines PathCompactPathEx as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The shlwapi.h header defines PathCompactPathEx as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 

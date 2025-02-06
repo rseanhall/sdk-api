@@ -1,12 +1,12 @@
 ---
 UID: NS:shtypes.tagLOGFONTW
 title: LOGFONTW (shtypes.h)
-description: Defines the attributes of a font.
+description: The LOGFONTW (Unicode) structure defines the attributes of a font. (LOGFONTW structure)
 helpviewer_keywords: ["LOGFONT","LOGFONT structure [Windows Shell]","LOGFONTA","LOGFONTW","_shell_LOGFONT","_shell_LOGFONT_cpp","dimm/LOGFONT","dimm/LOGFONTA","dimm/LOGFONTW","shell.LOGFONT"]
 old-location: shell\LOGFONT.htm
 tech.root: shell
 ms.assetid: 759c54d9-5b8f-4b48-8380-79e7bcae5bdb
-ms.date: 12/05/2018
+ms.date: 08/02/2022
 ms.keywords: LOGFONT, LOGFONT structure [Windows Shell], LOGFONTA, LOGFONTW, _shell_LOGFONT, _shell_LOGFONT_cpp, dimm/LOGFONT, dimm/LOGFONTA, dimm/LOGFONTW, shell.LOGFONT
 req.header: shtypes.h
 req.include-header: Shtypes.h, Dimm.h
@@ -478,7 +478,7 @@ This structure first appeared in Shtypes.idl and Shtypes.h in Windows Vista, fo
 
 
 > [!NOTE]
-> The shtypes.h header defines LOGFONT as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The shtypes.h header defines LOGFONT as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
 
 ## -see-also
 

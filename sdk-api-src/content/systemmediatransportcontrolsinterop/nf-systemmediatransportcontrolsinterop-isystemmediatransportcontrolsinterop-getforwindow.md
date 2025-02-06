@@ -64,12 +64,16 @@ A reference to the IID of the interface to retrieve.
 
 ### -param mediaTransportControl [out]
 
-The top-level app window for which the <a href="/previous-versions/windows/desktop/mediatransport/isystemmediatransportcontrols">ISystemMediaTransportControls</a> interface is retrieved.
+Receives the <a href="/previous-versions/windows/desktop/mediatransport/isystemmediatransportcontrols">ISystemMediaTransportControls</a> that corresponds to the <i>appWindow</i> window.
 
 ## -returns
 
 If this method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.
 
+## -remarks
+
+The <i>appWindow</i> parameter must refer to a top-level window that belongs to the calling process.
+
 ## -see-also
 
-<a href="/previous-versions/windows/desktop/api/systemmediatransportcontrolsinterop/nn-systemmediatransportcontrolsinterop-isystemmediatransportcontrolsinterop">ISystemMediaTransportControlsInterop</a>
+<a href="/windows/win32/api/systemmediatransportcontrolsinterop/nn-systemmediatransportcontrolsinterop-isystemmediatransportcontrolsinterop">ISystemMediaTransportControlsInterop</a>

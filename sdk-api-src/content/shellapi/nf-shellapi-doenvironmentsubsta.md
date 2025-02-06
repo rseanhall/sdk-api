@@ -1,8 +1,8 @@
 ---
 UID: NF:shellapi.DoEnvironmentSubstA
 title: DoEnvironmentSubstA function (shellapi.h)
-description: Parses an input string that contains references to one or more environment variables and replaces them with their fully expanded values.
-helpviewer_keywords: ["DoEnvironmentSubst","DoEnvironmentSubst function [Windows Shell]","DoEnvironmentSubstA","DoEnvironmentSubstW","_win32_DoEnvironmentSubst","shell.DoEnvironmentSubst","shellapi/DoEnvironmentSubst","shellapi/DoEnvironmentSubstA","shellapi/DoEnvironmentSubstW"]
+description: Parses an input string that contains references to one or more environment variables and replaces them with their fully expanded values. (ANSI)
+helpviewer_keywords: ["DoEnvironmentSubstA", "shellapi/DoEnvironmentSubstA"]
 old-location: shell\DoEnvironmentSubst.htm
 tech.root: shell
 ms.assetid: cdf8bf2d-f446-4e0d-8664-bff2c45f74ec
@@ -164,4 +164,4 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 > [!NOTE]
-> The shellapi.h header defines DoEnvironmentSubst as an alias which automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
+> The shellapi.h header defines DoEnvironmentSubst as an alias that automatically selects the ANSI or Unicode version of this function based on the definition of the UNICODE preprocessor constant. Mixing usage of the encoding-neutral alias with code that is not encoding-neutral can lead to mismatches that result in compilation or runtime errors. For more information, see [Conventions for Function Prototypes](/windows/win32/intl/conventions-for-function-prototypes).
